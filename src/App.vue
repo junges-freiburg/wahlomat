@@ -11,14 +11,33 @@
     </div>
 
     <template v-else>
+      <IntroScreen
+        v-if="screen === 'intro'"
+        :screens="config.intro.screens"
+        :colors="config.colors"
+        :texts="config.texts"
+        @done="finishIntro"
+      />
+
       <StartScreen
-        v-if="screen === 'start'"
+        v-else-if="screen === 'start'"
         :app-title="config.appTitle"
         :app-subtitle="config.appSubtitle"
         :texts="config.texts"
         :colors="config.colors"
         :party-count="parteien.length"
         :question-count="positionen.length"
+        :show-parties-button="config.settings.showPartiesBeforeStart"
+        @start="startQuiz"
+        @show-parties="showParties"
+      />
+
+      <PartiesOverview
+        v-else-if="screen === 'parties'"
+        :parteien="parteien"
+        :colors="config.colors"
+        :texts="config.texts"
+        @back="screen = 'start'"
         @start="startQuiz"
       />
 
@@ -66,6 +85,8 @@
         :results="results"
         :colors="config.colors"
         :texts="config.texts"
+        :share-url="config.shareUrl"
+        :hashtags="config.shareHashtags"
         @restart="restart"
       />
     </template>
@@ -76,7 +97,9 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { loadConfig, useConfig } from './composables/useConfig'
 import { useWahlomat } from './composables/useWahlomat'
+import IntroScreen from './components/IntroScreen.vue'
 import StartScreen from './components/StartScreen.vue'
+import PartiesOverview from './components/PartiesOverview.vue'
 import SwipeCard from './components/SwipeCard.vue'
 import ActionButtons from './components/ActionButtons.vue'
 import ProgressBar from './components/ProgressBar.vue'
@@ -113,9 +136,20 @@ const appStyles = computed(() => {
 async function initialize() {
   try {
     await Promise.all([loadConfig(), loadData()])
+    if (config.value?.settings?.showIntro && config.value?.intro?.enabled) {
+      screen.value = 'intro'
+    }
   } catch (e) {
     console.error('Initialization error:', e)
   }
+}
+
+function finishIntro() {
+  screen.value = 'start'
+}
+
+function showParties() {
+  screen.value = 'parties'
 }
 
 function startQuiz() {
@@ -153,8 +187,32 @@ function restart() {
 }
 
 function handleKeydown(e) {
+  if (screen.value === 'intro') {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') {
+      e.preventDefault()
+      finishIntro()
+    }
+    return
+  }
+
   if (screen.value === 'start') {
     if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      startQuiz()
+    }
+    if (e.key === 'p' || e.key === 'P') {
+      e.preventDefault()
+      showParties()
+    }
+    return
+  }
+
+  if (screen.value === 'parties') {
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      screen.value = 'start'
+    }
+    if (e.key === 'Enter') {
       e.preventDefault()
       startQuiz()
     }

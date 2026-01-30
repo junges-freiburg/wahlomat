@@ -51,6 +51,7 @@ export function parseParteien(csvData) {
     name: row.name,
     kurzname: row.kurzname,
     farbe: row.farbe,
-    logo: row.logo
+    logo: row.logo,
+    beschreibung: row.beschreibung || ''
   }))
 }

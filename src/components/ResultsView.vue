@@ -5,6 +5,17 @@
       <p>{{ texts.resultsSubtitle }}</p>
     </header>
 
+    <div v-if="topResult" class="top-result">
+      <div class="top-badge" :style="{ background: topResult.partei.farbe }">
+        {{ topResult.partei.kurzname }}
+      </div>
+      <div class="top-info">
+        <span class="top-label">Dein Top-Match</span>
+        <span class="top-name">{{ topResult.partei.name }}</span>
+        <span class="top-percentage">{{ Math.round(topResult.percentage) }}% Übereinstimmung</span>
+      </div>
+    </div>
+
     <div class="results-list">
       <div
         v-for="result in sortedResults"
@@ -69,6 +80,16 @@
       </div>
     </div>
 
+    <ShareButtons
+      v-if="shareUrl"
+      :share-url="shareUrl"
+      :share-text="texts.shareText"
+      :hashtags="hashtags"
+      :top-result="topResult"
+      :colors="colors"
+      :texts="texts"
+    />
+
     <button class="restart-btn" @click="$emit('restart')">
       {{ texts.restartButton }}
     </button>
@@ -77,6 +98,7 @@
 
 <script setup>
 import { computed, ref } from 'vue'
+import ShareButtons from './ShareButtons.vue'
 
 const props = defineProps({
   results: {
@@ -90,6 +112,14 @@ const props = defineProps({
   texts: {
     type: Object,
     required: true
+  },
+  shareUrl: {
+    type: String,
+    default: ''
+  },
+  hashtags: {
+    type: String,
+    default: ''
   }
 })
 
@@ -100,6 +130,8 @@ const expandedParty = ref(null)
 const sortedResults = computed(() =>
   [...props.results].sort((a, b) => b.percentage - a.percentage)
 )
+
+const topResult = computed(() => sortedResults.value[0] || null)
 
 const viewStyles = computed(() => ({
   '--primary-color': props.colors.primary,
@@ -158,6 +190,54 @@ function getAnswerText(answer) {
 .results-header p {
   color: var(--text-secondary);
   font-size: 1rem;
+}
+
+.top-result {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 2px solid var(--primary-color);
+}
+
+.top-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.top-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-label {
+  font-size: 12px;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.top-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.top-percentage {
+  font-size: 14px;
+  color: var(--text-secondary);
 }
 
 .results-list {

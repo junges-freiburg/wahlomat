@@ -1,6 +1,8 @@
 {
   "appTitle": "Wahlomat",
   "appSubtitle": "Finde deine politische Übereinstimmung",
+  "shareUrl": "https://example.com/wahlomat",
+  "shareHashtags": "Wahlomat,Politik,Wahl2025",
   "colors": {
     "primary": "#6366f1",
     "secondary": "#8b5cf6",
@@ -27,12 +29,42 @@
     "explanationLabel": "Erklärung",
     "partyPositionLabel": "Position der Partei",
     "noMoreCards": "Alle Thesen beantwortet!",
-    "showResults": "Ergebnisse anzeigen"
+    "showResults": "Ergebnisse anzeigen",
+    "showPartiesButton": "Parteien ansehen",
+    "backButton": "Zurück",
+    "partiesTitle": "Die Parteien",
+    "partiesSubtitle": "Lerne die Parteien kennen, bevor du startest",
+    "shareTitle": "Teile dein Ergebnis",
+    "shareText": "Ich habe den Wahlomat gemacht! Finde heraus, welche Partei am besten zu dir passt.",
+    "copyLinkButton": "Link kopieren",
+    "linkCopied": "Link kopiert!"
+  },
+  "intro": {
+    "enabled": true,
+    "screens": [
+      {
+        "title": "Willkommen beim Wahlomat",
+        "text": "Mit diesem Tool kannst du herausfinden, welche Partei am besten zu deinen politischen Positionen passt.",
+        "icon": "welcome"
+      },
+      {
+        "title": "So funktioniert's",
+        "text": "Dir werden verschiedene Thesen präsentiert. Entscheide für jede These, ob du zustimmst, ablehnst oder neutral bist.",
+        "icon": "how"
+      },
+      {
+        "title": "Wische oder tippe",
+        "text": "Wische nach rechts für Zustimmung, nach links für Ablehnung. Oder nutze die Buttons unten. Am Desktop kannst du auch die Pfeiltasten verwenden.",
+        "icon": "swipe"
+      }
+    ]
   },
   "settings": {
     "showPartyLogos": true,
     "showExplanations": true,
     "enableSwipeGestures": true,
-    "cardAnimationDuration": 300
+    "cardAnimationDuration": 300,
+    "showIntro": true,
+    "showPartiesBeforeStart": true
   }
 }

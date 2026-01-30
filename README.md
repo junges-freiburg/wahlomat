@@ -7,6 +7,9 @@ Ein interaktiver Wahlomat im Tinder-Stil, der es Nutzern ermöglicht, ihre polit
 - **Swipe-Mechanik**: Wische nach rechts für Zustimmung, nach links für Ablehnung
 - **Touch-optimiert**: Optimiert für Smartphones, funktioniert auch auf Desktop
 - **Tastatursteuerung**: Pfeiltasten und WASD für Desktop-Nutzer
+- **Intro-Screens**: Optionale Einführungsbildschirme zur Erklärung der Bedienung
+- **Parteienübersicht**: Übersicht aller Parteien/Kandidaten vor dem Start
+- **Social-Media-Sharing**: Ergebnisse auf Twitter/X, Facebook, WhatsApp, Telegram teilen
 - **Konfigurierbar**: Farben, Texte und Einstellungen über JSON-Datei anpassbar
 - **CSV-basiert**: Parteien und Positionen werden aus CSV-Dateien geladen
 - **Detaillierte Ergebnisse**: Übereinstimmung mit jeder Partei inkl. Aufschlüsselung
@@ -20,6 +23,7 @@ Ein interaktiver Wahlomat im Tinder-Stil, der es Nutzern ermöglicht, ihre polit
 | `↓` / `S` / `Leertaste` | Neutral |
 | `Enter` | Start / Ergebnisse anzeigen |
 | `Esc` / `R` | Neustart (auf Ergebnisseite) |
+| `P` | Parteienübersicht anzeigen (auf Startseite) |
 
 ## Schnellstart
 
@@ -131,6 +135,43 @@ Alle UI-Texte können in der `texts`-Sektion angepasst werden.
 | `showExplanations` | Erklärungen zu Thesen anzeigen |
 | `enableSwipeGestures` | Swipe-Gesten aktivieren |
 | `cardAnimationDuration` | Animationsdauer in ms |
+| `showIntro` | Intro-Screens beim Start anzeigen |
+| `showPartiesBeforeStart` | Button für Parteienübersicht auf Startseite |
+
+#### Intro-Screens
+
+Optionale Einführungsbildschirme können in der `intro`-Sektion konfiguriert werden:
+
+```json
+{
+  "intro": {
+    "enabled": true,
+    "screens": [
+      {
+        "icon": "welcome",
+        "title": "Willkommen",
+        "text": "Erklärungstext..."
+      }
+    ]
+  }
+}
+```
+
+Verfügbare Icons: `welcome`, `how`, `swipe`, `info`
+
+#### Social-Media-Sharing
+
+```json
+{
+  "shareUrl": "https://example.com/wahlomat",
+  "shareHashtags": "Wahlomat,Politik,Wahl2025"
+}
+```
+
+| Schlüssel | Beschreibung |
+|-----------|--------------|
+| `shareUrl` | URL die beim Teilen verwendet wird |
+| `shareHashtags` | Komma-getrennte Hashtags (ohne #) |
 
 ## Daten
 
@@ -139,9 +180,9 @@ Alle UI-Texte können in der `texts`-Sektion angepasst werden.
 Format (Semikolon-getrennt):
 
 ```csv
-id;name;kurzname;farbe;logo
-a;Soziale Fortschrittspartei;SFP;#e11d48;sfp.svg
-b;Bürgerliche Mitte;BM;#0ea5e9;bm.svg
+id;name;kurzname;farbe;logo;beschreibung
+a;Soziale Fortschrittspartei;SFP;#e11d48;sfp.svg;Die SFP setzt sich für...
+b;Bürgerliche Mitte;BM;#0ea5e9;bm.svg;Die BM steht für...
 ```
 
 | Spalte | Beschreibung |
@@ -151,6 +192,7 @@ b;Bürgerliche Mitte;BM;#0ea5e9;bm.svg
 | `kurzname` | Abkürzung (max. 4 Zeichen) |
 | `farbe` | Hex-Farbcode |
 | `logo` | Dateiname des Logos (optional) |
+| `beschreibung` | Kurzbeschreibung der Partei (optional, für Übersicht) |
 
 ### Positionen (public/data/positionen.csv)
 
@@ -186,11 +228,14 @@ wahlomat/
 │   ├── main.js              # Einstiegspunkt
 │   ├── style.css            # Globale Styles
 │   ├── components/
+│   │   ├── IntroScreen.vue  # Einführungsbildschirme
 │   │   ├── StartScreen.vue  # Startbildschirm
+│   │   ├── PartiesOverview.vue # Parteienübersicht
 │   │   ├── SwipeCard.vue    # Swipe-Karte
 │   │   ├── ActionButtons.vue # Aktionsbuttons
 │   │   ├── ProgressBar.vue  # Fortschrittsanzeige
-│   │   └── ResultsView.vue  # Ergebnisansicht
+│   │   ├── ResultsView.vue  # Ergebnisansicht
+│   │   └── ShareButtons.vue # Social-Media-Teilen
 │   └── composables/
 │       ├── useConfig.js     # Konfiguration laden
 │       ├── useCSV.js        # CSV-Parser
