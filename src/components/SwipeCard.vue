@@ -102,14 +102,17 @@ const startX = ref(0)
 const startY = ref(0)
 const isDragging = ref(false)
 const isAnimating = ref(false)
+const didMove = ref(false)
 
 const SWIPE_THRESHOLD = 100
+const TAP_THRESHOLD = 12
 
 watch(() => props.position, () => {
   offsetX.value = 0
   offsetY.value = 0
   isAnimating.value = false
   explanationOpen.value = false
+  didMove.value = false
 })
 
 const swipeDirection = computed(() => {
@@ -141,13 +144,41 @@ const weightButtonLabel = computed(() => {
   return props.texts.weightToggleLabel || 'Doppelt gewichten'
 })
 
+function updateMovementFlag() {
+  if (Math.abs(offsetX.value) > TAP_THRESHOLD || Math.abs(offsetY.value) > TAP_THRESHOLD) {
+    didMove.value = true
+  }
+}
+
+function emitNeutralAnswer() {
+  didMove.value = false
+  offsetX.value = 0
+  offsetY.value = 0
+  emit('swipe', 0)
+}
+
+function normalizeTarget(target) {
+  if (!target) return null
+  const base = target.nodeType === 3 ? target.parentElement : target
+  return base instanceof Element ? base : null
+}
+
+function isInteractiveElement(target) {
+  const element = normalizeTarget(target)
+  if (!element) return false
+  return Boolean(element.closest('button, a, input, textarea, select'))
+}
+
 function toggleExplanation() {
   explanationOpen.value = !explanationOpen.value
 }
 
 function onTouchStart(e) {
   if (!props.enableSwipe) return
+  const target = e.touches?.[0]?.target || e.target
+  if (isInteractiveElement(target)) return
   isDragging.value = true
+  didMove.value = false
   startX.value = e.touches[0].clientX
   startY.value = e.touches[0].clientY
 }
@@ -156,6 +187,7 @@ function onTouchMove(e) {
   if (!isDragging.value || !props.enableSwipe) return
   offsetX.value = e.touches[0].clientX - startX.value
   offsetY.value = (e.touches[0].clientY - startY.value) * 0.3
+  updateMovementFlag()
 }
 
 function onTouchEnd() {
@@ -165,7 +197,9 @@ function onTouchEnd() {
 
 function onMouseDown(e) {
   if (!props.enableSwipe) return
+  if (isInteractiveElement(e.target)) return
   isDragging.value = true
+  didMove.value = false
   startX.value = e.clientX
   startY.value = e.clientY
 
@@ -173,6 +207,7 @@ function onMouseDown(e) {
     if (!isDragging.value) return
     offsetX.value = e.clientX - startX.value
     offsetY.value = (e.clientY - startY.value) * 0.3
+    updateMovementFlag()
   }
 
   const onMouseUp = () => {
@@ -201,12 +236,16 @@ function finishSwipe() {
       emit('swipe', -1)
     }, 300)
   } else {
-    isAnimating.value = true
-    offsetX.value = 0
-    offsetY.value = 0
-    setTimeout(() => {
-      isAnimating.value = false
-    }, 300)
+    if (!didMove.value) {
+      emitNeutralAnswer()
+    } else {
+      isAnimating.value = true
+      offsetX.value = 0
+      offsetY.value = 0
+      setTimeout(() => {
+        isAnimating.value = false
+      }, 300)
+    }
   }
 }
 
