@@ -11,7 +11,7 @@ Ein interaktiver Wahlomat im Tinder-Stil, der es Nutzern ermöglicht, ihre polit
 - **Parteienübersicht**: Übersicht aller Parteien/Kandidaten vor dem Start
 - **Social-Media-Sharing**: Ergebnisse auf Twitter/X, Facebook, WhatsApp, Telegram teilen
 - **Konfigurierbar**: Farben, Texte und Einstellungen über JSON-Datei anpassbar
-- **CSV-basiert**: Parteien und Positionen werden aus CSV-Dateien geladen
+- **JSON-Daten**: Parteien und Positionen werden aus JSON-Dateien geladen
 - **Detaillierte Ergebnisse**: Übereinstimmung mit jeder Partei inkl. Aufschlüsselung
 
 ## Tastatursteuerung
@@ -245,8 +245,8 @@ wahlomat/
 │   ├── config.json          # Konfigurationsdatei
 │   ├── favicon.svg          # Favicon
 │   └── data/
-│       ├── parteien.csv     # Parteiendaten
-│       └── positionen.csv   # Thesen und Positionen
+│       ├── parteien.json    # Parteiendaten
+│       └── positionen.json  # Thesen und Positionen
 ├── src/
 │   ├── App.vue              # Hauptkomponente
 │   ├── main.js              # Einstiegspunkt
@@ -262,7 +262,6 @@ wahlomat/
 │   │   └── ShareButtons.vue # Social-Media-Teilen
 │   └── composables/
 │       ├── useConfig.js     # Konfiguration laden
-│       ├── useCSV.js        # CSV-Parser
 │       └── useWahlomat.js   # Hauptlogik
 ├── index.html
 ├── package.json
@@ -272,8 +271,8 @@ wahlomat/
 
 ## Eigene Inhalte erstellen
 
-1. **Parteien definieren**: Bearbeite `public/data/parteien.csv`
-2. **Thesen erstellen**: Bearbeite `public/data/positionen.csv`
+1. **Parteien definieren**: Bearbeite `public/data/parteien.json`
+2. **Thesen erstellen**: Bearbeite `public/data/positionen.json`
 3. **Design anpassen**: Bearbeite `public/config.json`
 4. **Build erstellen**: `npm run build`
 5. **Deployen**: `dist/`-Ordner auf Webserver hochladen
