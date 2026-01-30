@@ -1,0 +1,38 @@
+{
+  "appTitle": "Wahlomat",
+  "appSubtitle": "Finde deine politische Übereinstimmung",
+  "colors": {
+    "primary": "#6366f1",
+    "secondary": "#8b5cf6",
+    "agree": "#22c55e",
+    "disagree": "#ef4444",
+    "neutral": "#f59e0b",
+    "background": "#0f172a",
+    "cardBackground": "#1e293b",
+    "textPrimary": "#f8fafc",
+    "textSecondary": "#94a3b8"
+  },
+  "texts": {
+    "startButton": "Los geht's",
+    "agreeButton": "Stimme zu",
+    "disagreeButton": "Stimme nicht zu",
+    "neutralButton": "Neutral",
+    "skipButton": "Überspringen",
+    "resultsTitle": "Deine Ergebnisse",
+    "resultsSubtitle": "So stimmst du mit den Parteien überein",
+    "matchLabel": "Übereinstimmung",
+    "restartButton": "Nochmal starten",
+    "introText": "Wische nach rechts für Zustimmung, nach links für Ablehnung, oder tippe auf Neutral.",
+    "positionLabel": "These",
+    "explanationLabel": "Erklärung",
+    "partyPositionLabel": "Position der Partei",
+    "noMoreCards": "Alle Thesen beantwortet!",
+    "showResults": "Ergebnisse anzeigen"
+  },
+  "settings": {
+    "showPartyLogos": true,
+    "showExplanations": true,
+    "enableSwipeGestures": true,
+    "cardAnimationDuration": 300
+  }
+}

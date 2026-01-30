@@ -1,0 +1,358 @@
+<template>
+  <div
+    class="swipe-card"
+    :style="cardStyle"
+    @touchstart="onTouchStart"
+    @touchmove="onTouchMove"
+    @touchend="onTouchEnd"
+    @mousedown="onMouseDown"
+  >
+    <div class="card-content">
+      <div class="card-header">
+        <span class="card-number">{{ texts.positionLabel }} {{ currentIndex + 1 }}/{{ totalCards }}</span>
+      </div>
+
+      <div class="card-body">
+        <h2 class="these-text">{{ position.these }}</h2>
+
+        <div v-if="showExplanation && position.erklaerung" class="explanation">
+          <button class="explanation-toggle" @click.stop="toggleExplanation">
+            <span>{{ texts.explanationLabel }}</span>
+            <svg
+              :class="{ rotated: explanationOpen }"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6,9 12,15 18,9"></polyline>
+            </svg>
+          </button>
+          <Transition name="slide">
+            <p v-if="explanationOpen" class="explanation-text">
+              {{ position.erklaerung }}
+            </p>
+          </Transition>
+        </div>
+      </div>
+
+      <div class="swipe-indicator" :class="swipeDirection">
+        <span v-if="swipeDirection === 'right'" class="indicator agree">{{ texts.agreeButton }}</span>
+        <span v-if="swipeDirection === 'left'" class="indicator disagree">{{ texts.disagreeButton }}</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed, watch } from 'vue'
+
+const props = defineProps({
+  position: {
+    type: Object,
+    required: true
+  },
+  currentIndex: {
+    type: Number,
+    required: true
+  },
+  totalCards: {
+    type: Number,
+    required: true
+  },
+  colors: {
+    type: Object,
+    required: true
+  },
+  texts: {
+    type: Object,
+    required: true
+  },
+  showExplanation: {
+    type: Boolean,
+    default: true
+  },
+  enableSwipe: {
+    type: Boolean,
+    default: true
+  }
+})
+
+const emit = defineEmits(['swipe'])
+
+const explanationOpen = ref(false)
+const offsetX = ref(0)
+const offsetY = ref(0)
+const startX = ref(0)
+const startY = ref(0)
+const isDragging = ref(false)
+const isAnimating = ref(false)
+
+const SWIPE_THRESHOLD = 100
+
+watch(() => props.position, () => {
+  offsetX.value = 0
+  offsetY.value = 0
+  isAnimating.value = false
+  explanationOpen.value = false
+})
+
+const swipeDirection = computed(() => {
+  if (offsetX.value > 50) return 'right'
+  if (offsetX.value < -50) return 'left'
+  return ''
+})
+
+const cardStyle = computed(() => {
+  const rotate = offsetX.value * 0.1
+  const opacity = Math.max(0.5, 1 - Math.abs(offsetX.value) / 500)
+  return {
+    transform: `translateX(${offsetX.value}px) translateY(${offsetY.value}px) rotate(${rotate}deg)`,
+    opacity,
+    transition: isAnimating.value ? 'transform 0.3s ease, opacity 0.3s ease' : 'none',
+    '--card-bg': props.colors.cardBackground,
+    '--text-primary': props.colors.textPrimary,
+    '--text-secondary': props.colors.textSecondary,
+    '--agree-color': props.colors.agree,
+    '--disagree-color': props.colors.disagree,
+    '--primary-color': props.colors.primary
+  }
+})
+
+function toggleExplanation() {
+  explanationOpen.value = !explanationOpen.value
+}
+
+function onTouchStart(e) {
+  if (!props.enableSwipe) return
+  isDragging.value = true
+  startX.value = e.touches[0].clientX
+  startY.value = e.touches[0].clientY
+}
+
+function onTouchMove(e) {
+  if (!isDragging.value || !props.enableSwipe) return
+  offsetX.value = e.touches[0].clientX - startX.value
+  offsetY.value = (e.touches[0].clientY - startY.value) * 0.3
+}
+
+function onTouchEnd() {
+  if (!props.enableSwipe) return
+  finishSwipe()
+}
+
+function onMouseDown(e) {
+  if (!props.enableSwipe) return
+  isDragging.value = true
+  startX.value = e.clientX
+  startY.value = e.clientY
+
+  const onMouseMove = (e) => {
+    if (!isDragging.value) return
+    offsetX.value = e.clientX - startX.value
+    offsetY.value = (e.clientY - startY.value) * 0.3
+  }
+
+  const onMouseUp = () => {
+    finishSwipe()
+    document.removeEventListener('mousemove', onMouseMove)
+    document.removeEventListener('mouseup', onMouseUp)
+  }
+
+  document.addEventListener('mousemove', onMouseMove)
+  document.addEventListener('mouseup', onMouseUp)
+}
+
+function finishSwipe() {
+  isDragging.value = false
+
+  if (offsetX.value > SWIPE_THRESHOLD) {
+    isAnimating.value = true
+    offsetX.value = 400
+    setTimeout(() => {
+      emit('swipe', 1)
+    }, 300)
+  } else if (offsetX.value < -SWIPE_THRESHOLD) {
+    isAnimating.value = true
+    offsetX.value = -400
+    setTimeout(() => {
+      emit('swipe', -1)
+    }, 300)
+  } else {
+    isAnimating.value = true
+    offsetX.value = 0
+    offsetY.value = 0
+    setTimeout(() => {
+      isAnimating.value = false
+    }, 300)
+  }
+}
+
+function swipeLeft() {
+  isAnimating.value = true
+  offsetX.value = -400
+  setTimeout(() => {
+    emit('swipe', -1)
+  }, 300)
+}
+
+function swipeRight() {
+  isAnimating.value = true
+  offsetX.value = 400
+  setTimeout(() => {
+    emit('swipe', 1)
+  }, 300)
+}
+
+defineExpose({ swipeLeft, swipeRight })
+</script>
+
+<style scoped>
+.swipe-card {
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  min-height: 350px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  cursor: grab;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.swipe-card:active {
+  cursor: grabbing;
+}
+
+.card-content {
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-number {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.these-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.explanation {
+  margin-top: auto;
+}
+
+.explanation-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.explanation-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.explanation-toggle svg.rotated {
+  transform: rotate(180deg);
+}
+
+.explanation-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.swipe-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.swipe-indicator.right {
+  right: -10px;
+}
+
+.swipe-indicator.left {
+  left: -10px;
+}
+
+.indicator {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.indicator.agree {
+  background: var(--agree-color);
+  color: white;
+}
+
+.indicator.disagree {
+  background: var(--disagree-color);
+  color: white;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+  max-height: 0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  opacity: 1;
+  max-height: 200px;
+}
+
+@media (min-width: 768px) {
+  .swipe-card {
+    min-height: 400px;
+  }
+
+  .these-text {
+    font-size: 1.6rem;
+  }
+}
+</style>
