@@ -175,14 +175,23 @@ Verfügbare Icons: `welcome`, `how`, `swipe`, `info`
 
 ## Daten
 
-### Parteien (public/data/parteien.csv)
-
-Format (Semikolon-getrennt):
-
-```csv
-id;name;kurzname;farbe;logo;beschreibung
 a;Soziale Fortschrittspartei;SFP;#e11d48;sfp.svg;Die SFP setzt sich für...
 b;Bürgerliche Mitte;BM;#0ea5e9;bm.svg;Die BM steht für...
+### Parteien (public/data/parteien.json)
+
+Format (JSON-Array):
+
+```json
+[
+  {
+    "id": "a",
+    "name": "Soziale Fortschrittspartei",
+    "kurzname": "SFP",
+    "farbe": "#e11d48",
+    "logo": "sfp.svg",
+    "beschreibung": "Die SFP setzt sich für..."
+  }
+]
 ```
 
 | Spalte | Beschreibung |
@@ -194,13 +203,28 @@ b;Bürgerliche Mitte;BM;#0ea5e9;bm.svg;Die BM steht für...
 | `logo` | Dateiname des Logos (optional) |
 | `beschreibung` | Kurzbeschreibung der Partei (optional, für Übersicht) |
 
-### Positionen (public/data/positionen.csv)
+### Positionen (public/data/positionen.json)
 
-Format (Semikolon-getrennt):
+Format (JSON-Array):
 
-```csv
-id;these;erklaerung;partei_a;partei_b;partei_c;erklaerung_a;erklaerung_b;erklaerung_c
-1;Die These hier...;Erklärung zur These;1;-1;0;Begründung A;Begründung B;Begründung C
+```json
+[
+  {
+    "id": "1",
+    "these": "Die These hier...",
+    "erklaerung": "Erklärung zur These",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0
+    },
+    "erklaerungen": {
+      "a": "Begründung A",
+      "b": "Begründung B",
+      "c": "Begründung C"
+    }
+  }
+]
 ```
 
 | Spalte | Beschreibung |
@@ -208,10 +232,10 @@ id;these;erklaerung;partei_a;partei_b;partei_c;erklaerung_a;erklaerung_b;erklaer
 | `id` | Eindeutige ID |
 | `these` | Die These/Frage |
 | `erklaerung` | Hintergrundinformation zur These |
-| `partei_X` | Position der Partei: `1` (Zustimmung), `-1` (Ablehnung), `0` (Neutral) |
-| `erklaerung_X` | Begründung der Partei für ihre Position |
+| `positionen` | Objekt mit Partei-IDs als Schlüssel und Position (`1`, `0`, `-1`) als Wert |
+| `erklaerungen` | Objekt mit Partei-IDs als Schlüssel und Begründung als Wert |
 
-**Wichtig**: Die Spalten `partei_X` und `erklaerung_X` müssen für jede Partei-ID existieren (z.B. `partei_a`, `partei_b`, `erklaerung_a`, `erklaerung_b`).
+**Wichtig**: Die Schlüssel in `positionen` und `erklaerungen` müssen für jede Partei-ID existieren.
 
 ## Projektstruktur
 
