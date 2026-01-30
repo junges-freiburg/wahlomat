@@ -93,6 +93,21 @@
                 </p>
               </div>
             </div>
+            <div v-if="getWeightedPositions(result.positions).length" class="weighted-summary">
+              <p class="weighted-title">
+                {{ texts.weightedSummaryTitle || 'Doppelt gewichtete Thesen' }}
+              </p>
+              <ul class="weighted-list">
+                <li
+                  v-for="weighted in getWeightedPositions(result.positions)"
+                  :key="weighted.id"
+                  class="weighted-item"
+                >
+                  <span class="weighted-dot"></span>
+                  <span class="weighted-these">{{ weighted.these }}</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </Transition>
       </div>
@@ -182,6 +197,10 @@ function getAnswerText(answer) {
   if (answer === 1) return 'Ja'
   if (answer === -1) return 'Nein'
   return 'Neutral'
+}
+
+function getWeightedPositions(positions = []) {
+  return positions.filter((pos) => Number(pos.weight) > 1)
 }
 </script>
 
@@ -428,6 +447,45 @@ function getAnswerText(answer) {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.weighted-summary {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.weighted-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.weighted-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
+.weighted-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.weighted-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  flex-shrink: 0;
 }
 
 .position-item {
