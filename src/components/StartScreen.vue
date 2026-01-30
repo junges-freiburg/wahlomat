@@ -50,7 +50,10 @@
       </button>
 
       <button v-if="showPartiesButton" class="parties-btn" @click="$emit('show-parties')">
-        {{ texts.showPartiesButton }}
+        <span>{{ texts.showPartiesButton }}</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="7 7 17 12 7 17"></polyline>
+        </svg>
       </button>
 
       <p class="party-count">{{ partyCount }} Parteien · {{ questionCount }} Thesen</p>
@@ -223,6 +226,34 @@ const screenStyles = computed(() => ({
 
 .start-btn:active {
   transform: translateY(0);
+}
+
+.parties-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.4);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.parties-btn:hover {
+  border-color: var(--primary-color);
+  background: rgba(99, 102, 241, 0.18);
+  transform: translateY(-1px);
+}
+
+.parties-btn svg {
+  color: var(--text-secondary);
 }
 
 .party-count {

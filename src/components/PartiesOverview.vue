@@ -19,8 +19,17 @@
         :style="{ '--party-color': partei.farbe }"
       >
         <div class="party-header">
-          <div class="party-badge" :style="{ background: partei.farbe }">
-            {{ partei.kurzname }}
+          <div class="party-avatar" :style="{ borderColor: partei.farbe }">
+            <img
+              v-if="partei.logo"
+              class="party-photo"
+              :src="partei.logo"
+              :alt="`${partei.name} Logo`"
+              loading="lazy"
+            />
+            <div v-else class="party-badge" :style="{ background: partei.farbe }">
+              {{ partei.kurzname }}
+            </div>
           </div>
           <div class="party-info">
             <h2>{{ partei.name }}</h2>
@@ -146,6 +155,27 @@ const viewStyles = computed(() => ({
   align-items: center;
   gap: 16px;
   margin-bottom: 12px;
+}
+
+.party-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  border: 1px solid var(--party-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.party-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
 }
 
 .party-badge {

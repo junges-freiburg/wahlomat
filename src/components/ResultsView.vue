@@ -6,8 +6,17 @@
     </header>
 
     <div v-if="topResult" class="top-result">
-      <div class="top-badge" :style="{ background: topResult.partei.farbe }">
-        {{ topResult.partei.kurzname }}
+      <div class="top-avatar" :style="{ borderColor: topResult.partei.farbe }">
+        <img
+          v-if="topResult.partei.logo"
+          class="top-photo"
+          :src="topResult.partei.logo"
+          :alt="`${topResult.partei.name} Logo`"
+          loading="lazy"
+        />
+        <div v-else class="top-badge" :style="{ background: topResult.partei.farbe }">
+          {{ topResult.partei.kurzname }}
+        </div>
       </div>
       <div class="top-info">
         <span class="top-label">Dein Top-Match</span>
@@ -25,8 +34,17 @@
       >
         <div class="result-main">
           <div class="party-info">
-            <div class="party-badge" :style="{ background: result.partei.farbe }">
-              {{ result.partei.kurzname }}
+            <div class="party-identity" :style="{ borderColor: result.partei.farbe }">
+              <img
+                v-if="result.partei.logo"
+                class="result-photo"
+                :src="result.partei.logo"
+                :alt="`${result.partei.name} Logo`"
+                loading="lazy"
+              />
+              <div v-else class="party-badge" :style="{ background: result.partei.farbe }">
+                {{ result.partei.kurzname }}
+              </div>
             </div>
             <span class="party-name">{{ result.partei.name }}</span>
           </div>
@@ -203,6 +221,28 @@ function getAnswerText(answer) {
   border: 2px solid var(--primary-color);
 }
 
+.top-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  border: 1px solid var(--primary-color);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.6);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.top-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
 .top-badge {
   width: 64px;
   height: 64px;
@@ -214,6 +254,12 @@ function getAnswerText(answer) {
   font-size: 18px;
   color: white;
   flex-shrink: 0;
+}
+
+.top-avatar .top-badge {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
 }
 
 .top-info {
@@ -271,6 +317,31 @@ function getAnswerText(answer) {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.party-identity {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.party-identity .party-badge {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.result-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .party-badge {
