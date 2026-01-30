@@ -8,7 +8,7 @@ export async function loadConfig() {
   if (config.value) return config.value
 
   try {
-    const response = await fetch(`${import.meta.env.BASE_URL}config.json`)
+    const response = await fetch('./config.json')
     config.value = await response.json()
     loading.value = false
     return config.value
