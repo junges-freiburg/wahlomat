@@ -75,10 +75,11 @@
                 v-for="pos in result.positions"
                 :key="pos.id"
                 class="position-item"
-                :class="getMatchClass(pos)"
+                :class="[getMatchClass(pos), { weighted: isWeightedPosition(pos) }]"
               >
                 <div class="position-header">
                   <span class="position-these">{{ pos.these }}</span>
+                  <span v-if="isWeightedPosition(pos)" class="weight-chip">x2</span>
                   <div class="position-comparison">
                     <span class="user-answer" :class="getAnswerClass(pos.userAnswer)">
                       Du: {{ getAnswerText(pos.userAnswer) }}
@@ -199,8 +200,12 @@ function getAnswerText(answer) {
   return 'Neutral'
 }
 
+function isWeightedPosition(pos) {
+  return Number(pos?.weight) > 1
+}
+
 function getWeightedPositions(positions = []) {
-  return positions.filter((pos) => Number(pos.weight) > 1)
+  return positions.filter(isWeightedPosition)
 }
 </script>
 
@@ -477,14 +482,18 @@ function getWeightedPositions(positions = []) {
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  background: rgba(99, 102, 241, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
 }
 
 .weighted-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--primary-color);
+  background: var(--text-primary);
   flex-shrink: 0;
 }
 
@@ -507,10 +516,26 @@ function getWeightedPositions(positions = []) {
   border-left-color: var(--disagree-color);
 }
 
+.position-item.weighted {
+  background: rgba(99, 102, 241, 0.15);
+  border-left-color: var(--primary-color);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25);
+}
+
 .position-header {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.weight-chip {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  padding: 2px 8px;
 }
 
 .position-these {

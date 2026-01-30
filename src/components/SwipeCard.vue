@@ -192,6 +192,7 @@ function onTouchMove(e) {
 
 function onTouchEnd() {
   if (!props.enableSwipe) return
+  if (!isDragging.value) return
   finishSwipe()
 }
 
@@ -211,7 +212,9 @@ function onMouseDown(e) {
   }
 
   const onMouseUp = () => {
-    finishSwipe()
+    if (isDragging.value) {
+      finishSwipe()
+    }
     document.removeEventListener('mousemove', onMouseMove)
     document.removeEventListener('mouseup', onMouseUp)
   }
