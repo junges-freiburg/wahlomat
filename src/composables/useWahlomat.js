@@ -12,9 +12,10 @@ export function useWahlomat() {
   async function loadData() {
     try {
       isLoading.value = true
+      const baseUrl = import.meta.env.BASE_URL
       const [parteienData, positionenData] = await Promise.all([
-        loadCSV('/data/parteien.csv'),
-        loadCSV('/data/positionen.csv')
+        loadCSV(`${baseUrl}data/parteien.csv`),
+        loadCSV(`${baseUrl}data/positionen.csv`)
       ])
 
       parteien.value = parseParteien(parteienData)
