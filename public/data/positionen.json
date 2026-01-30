@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1",
+    "these": "Der Mindestlohn sollte auf 15 Euro erhöht werden.",
+    "erklaerung": "Der aktuelle Mindestlohn beträgt 12,82 Euro. Eine Erhöhung könnte Arbeitnehmer entlasten, aber auch Arbeitsplätze gefährden.",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
+      "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
+      "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."
+    }
+  },
+  {
+    "id": "2",
+    "these": "Deutschland sollte mehr Geld in erneuerbare Energien investieren.",
+    "erklaerung": "Die Energiewende erfordert massive Investitionen in Solar, Wind und Speichertechnologien.",
+    "positionen": {
+      "a": 1,
+      "b": 0,
+      "c": -1,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Klimaschutz ist die wichtigste Aufgabe unserer Zeit.",
+      "b": "Wir unterstützen einen technologieoffenen Ansatz.",
+      "c": "Fossile Energien sind weiterhin unverzichtbar für die Wirtschaft.",
+      "d": "Die Energiewende muss sozial gerecht gestaltet werden."
+    }
+  },
+  {
+    "id": "3",
+    "these": "Die Vermögenssteuer sollte wieder eingeführt werden.",
+    "erklaerung": "Eine Vermögenssteuer würde hohe Privatvermögen besteuern und könnte zu Mehreinnahmen führen.",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": -1,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Starke Schultern müssen mehr tragen.",
+      "b": "Vermögenssteuern vertreiben Investoren und Arbeitsplätze.",
+      "c": "Eigentum muss geschützt, nicht bestraft werden.",
+      "d": "Extreme Ungleichheit gefährdet unsere Demokratie."
+    }
+  },
+  {
+    "id": "4",
+    "these": "Das Tempolimit auf Autobahnen sollte eingeführt werden.",
+    "erklaerung": "Ein generelles Tempolimit könnte CO2-Emissionen reduzieren und die Verkehrssicherheit erhöhen.",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": -1,
+      "d": 0
+    },
+    "erklaerungen": {
+      "a": "Weniger Unfälle, weniger Emissionen - was spricht dagegen?",
+      "b": "Freie Fahrt für freie Bürger!",
+      "c": "Deutsche Autobahnen sind auch ohne Limit sicher.",
+      "d": "Wir priorisieren den Ausbau des öffentlichen Nahverkehrs."
+    }
+  },
+  {
+    "id": "5",
+    "these": "Cannabis sollte vollständig legalisiert werden.",
+    "erklaerung": "Die Legalisierung könnte den Schwarzmarkt bekämpfen und Steuereinnahmen generieren.",
+    "positionen": {
+      "a": 1,
+      "b": 0,
+      "c": -1,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Prohibition ist gescheitert, Regulierung ist besser.",
+      "b": "Wir sind für eine kontrollierte Freigabe zu medizinischen Zwecken.",
+      "c": "Drogen bleiben Drogen und gehören verboten.",
+      "d": "Legalisierung mit starkem Jugendschutz ist der richtige Weg."
+    }
+  },
+  {
+    "id": "6",
+    "these": "Die Bundeswehr sollte besser ausgestattet werden.",
+    "erklaerung": "Nach Jahren der Unterfinanzierung gibt es Diskussionen über höhere Verteidigungsausgaben.",
+    "positionen": {
+      "a": 0,
+      "b": 1,
+      "c": 1,
+      "d": -1
+    },
+    "erklaerungen": {
+      "a": "Diplomatie sollte Vorrang vor Aufrüstung haben.",
+      "b": "Sicherheit ist eine Kernaufgabe des Staates.",
+      "c": "Eine starke Armee schützt unsere Freiheit.",
+      "d": "Wir brauchen Abrüstung, keine Aufrüstung."
+    }
+  },
+  {
+    "id": "7",
+    "these": "Mieten in Großstädten sollten stärker reguliert werden.",
+    "erklaerung": "Steigende Mieten belasten viele Haushalte. Mietpreisbremsen sind umstritten.",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": -1,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wohnen ist ein Grundrecht, keine Ware.",
+      "b": "Regulierung verhindert Neubau und verschärft die Wohnungsnot.",
+      "c": "Der Markt regelt Angebot und Nachfrage am besten.",
+      "d": "Wir fordern einen bundesweiten Mietendeckel."
+    }
+  },
+  {
+    "id": "8",
+    "these": "Das Renteneintrittsalter sollte angehoben werden.",
+    "erklaerung": "Die Bevölkerung altert, weniger Beitragszahler müssen mehr Rentner finanzieren.",
+    "positionen": {
+      "a": -1,
+      "b": 1,
+      "c": 1,
+      "d": -1
+    },
+    "erklaerungen": {
+      "a": "Menschen haben ein Recht auf einen würdigen Ruhestand.",
+      "b": "Längere Lebensarbeitszeit ist demografisch notwendig.",
+      "c": "Wer länger lebt, kann auch länger arbeiten.",
+      "d": "Abschlagsfreie Rente nach 40 Beitragsjahren!"
+    }
+  },
+  {
+    "id": "9",
+    "these": "Geflüchtete sollten schneller Zugang zum Arbeitsmarkt erhalten.",
+    "erklaerung": "Schnellere Integration in den Arbeitsmarkt könnte sowohl Geflüchteten als auch der Wirtschaft helfen.",
+    "positionen": {
+      "a": 1,
+      "b": 0,
+      "c": -1,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Integration gelingt am besten durch Arbeit.",
+      "b": "Wir prüfen jeden Einzelfall sorgfältig.",
+      "c": "Erst muss der Aufenthaltsstatus geklärt sein.",
+      "d": "Arbeit ist der Schlüssel zur Integration."
+    }
+  },
+  {
+    "id": "10",
+    "these": "Unternehmen sollten verpflichtet werden, Frauen in Führungspositionen zu fördern.",
+    "erklaerung": "Quotenregelungen sollen die Gleichstellung in der Wirtschaft beschleunigen.",
+    "positionen": {
+      "a": 1,
+      "b": 0,
+      "c": -1,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Gleichstellung muss aktiv gefördert werden.",
+      "b": "Wir setzen auf freiwillige Selbstverpflichtungen.",
+      "c": "Qualifikation zählt, nicht das Geschlecht.",
+      "d": "Verbindliche Quoten sind längst überfällig."
+    }
+  }
+]

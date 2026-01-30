@@ -1,5 +1,4 @@
 import { ref, computed } from 'vue'
-import { loadCSV, parsePositionen, parseParteien } from './useCSV'
 
 const parteien = ref([])
 const positionen = ref([])
@@ -10,16 +9,25 @@ const error = ref(null)
 const weightedPositions = ref(new Set())
 
 export function useWahlomat() {
+  async function loadJSON(url) {
+    const response = await fetch(url)
+    if (!response.ok) {
+      throw new Error(`Failed to load ${url}: ${response.status} ${response.statusText}`)
+    }
+    return response.json()
+  }
+
   async function loadData() {
     try {
       isLoading.value = true
+      error.value = null
       const [parteienData, positionenData] = await Promise.all([
-        loadCSV('./data/parteien.csv'),
-        loadCSV('./data/positionen.csv')
+        loadJSON('./data/parteien.json'),
+        loadJSON('./data/positionen.json')
       ])
 
-      parteien.value = parseParteien(parteienData)
-      positionen.value = parsePositionen(positionenData, parteien.value)
+      parteien.value = parteienData
+      positionen.value = positionenData
       weightedPositions.value = new Set()
       isLoading.value = false
     } catch (e) {

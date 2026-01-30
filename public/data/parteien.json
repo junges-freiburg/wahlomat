@@ -1,0 +1,34 @@
+[
+  {
+    "id": "a",
+    "name": "Soziale Fortschrittspartei",
+    "kurzname": "SFP",
+    "farbe": "#e11d48",
+    "logo": "sfp.svg",
+    "beschreibung": "Die SFP setzt sich für soziale Gerechtigkeit, starke Arbeitnehmerrechte und einen ausgebauten Sozialstaat ein."
+  },
+  {
+    "id": "b",
+    "name": "Bürgerliche Mitte",
+    "kurzname": "BM",
+    "farbe": "#0ea5e9",
+    "logo": "bm.svg",
+    "beschreibung": "Die BM steht für eine starke Wirtschaft, solide Finanzen und einen schlanken Staat mit Fokus auf Eigenverantwortung."
+  },
+  {
+    "id": "c",
+    "name": "Freiheitliche Volkspartei",
+    "kurzname": "FVP",
+    "farbe": "#eab308",
+    "logo": "fvp.svg",
+    "beschreibung": "Die FVP betont individuelle Freiheit, traditionelle Werte und eine restriktive Migrationspolitik."
+  },
+  {
+    "id": "d",
+    "name": "Grüne Alternative",
+    "kurzname": "GA",
+    "farbe": "#22c55e",
+    "logo": "ga.svg",
+    "beschreibung": "Die GA kämpft für Klimaschutz, Nachhaltigkeit und eine ökologische Transformation der Wirtschaft."
+  }
+]
