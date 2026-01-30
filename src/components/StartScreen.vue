@@ -49,6 +49,10 @@
         </svg>
       </button>
 
+      <button v-if="showPartiesButton" class="parties-btn" @click="$emit('show-parties')">
+        {{ texts.showPartiesButton }}
+      </button>
+
       <p class="party-count">{{ partyCount }} Parteien · {{ questionCount }} Thesen</p>
     </div>
   </div>
