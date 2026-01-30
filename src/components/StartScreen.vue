@@ -85,10 +85,14 @@ const props = defineProps({
   questionCount: {
     type: Number,
     required: true
+  },
+  showPartiesButton: {
+    type: Boolean,
+    default: false
   }
 })
 
-defineEmits(['start'])
+defineEmits(['start', 'show-parties'])
 
 const screenStyles = computed(() => ({
   '--primary-color': props.colors.primary,

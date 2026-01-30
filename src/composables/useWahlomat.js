@@ -7,6 +7,7 @@ const userAnswers = ref({})
 const currentIndex = ref(0)
 const isLoading = ref(true)
 const error = ref(null)
+const weightedPositions = ref(new Set())
 
 export function useWahlomat() {
   async function loadData() {
@@ -19,6 +20,7 @@ export function useWahlomat() {
 
       parteien.value = parseParteien(parteienData)
       positionen.value = parsePositionen(positionenData, parteien.value)
+      weightedPositions.value = new Set()
       isLoading.value = false
     } catch (e) {
       error.value = e
@@ -35,6 +37,26 @@ export function useWahlomat() {
     current: Object.keys(userAnswers.value).length,
     total: positionen.value.length
   }))
+
+  function toggleWeight(positionId) {
+    if (!positionId) return
+    const updated = new Set(weightedPositions.value)
+    if (updated.has(positionId)) {
+      updated.delete(positionId)
+    } else {
+      updated.add(positionId)
+    }
+    weightedPositions.value = updated
+  }
+
+  function isPositionWeighted(positionId) {
+    if (!positionId) return false
+    return weightedPositions.value.has(positionId)
+  }
+
+  function getWeight(positionId) {
+    return weightedPositions.value.has(positionId) ? 2 : 1
+  }
 
   function answerPosition(answer) {
     if (!currentPosition.value) return
@@ -57,15 +79,17 @@ export function useWahlomat() {
         if (userAnswer === undefined) return
 
         const partyAnswer = position.positionen[partei.id]
-        maxPoints += 2
+        const weight = getWeight(position.id)
+        maxPoints += 2 * weight
+        let pointsForPosition = 0
 
         if (userAnswer === partyAnswer) {
-          totalPoints += 2
+          pointsForPosition = 2
           if (userAnswer === 1) agrees++
           else if (userAnswer === -1) disagrees++
           else neutrals++
         } else if (userAnswer === 0 || partyAnswer === 0) {
-          totalPoints += 1
+          pointsForPosition = 1
           neutrals++
         } else {
           if (userAnswer === 1 || userAnswer === -1) {
@@ -74,12 +98,15 @@ export function useWahlomat() {
           }
         }
 
+        totalPoints += pointsForPosition * weight
+
         positions.push({
           id: position.id,
           these: position.these,
           userAnswer,
           partyAnswer,
-          partyExplanation: position.erklaerungen[partei.id]
+          partyExplanation: position.erklaerungen[partei.id],
+          weight
         })
       })
 
@@ -99,6 +126,7 @@ export function useWahlomat() {
   function reset() {
     userAnswers.value = {}
     currentIndex.value = 0
+    weightedPositions.value = new Set()
   }
 
   return {
@@ -114,6 +142,8 @@ export function useWahlomat() {
     loadData,
     answerPosition,
     calculateResults,
+    toggleWeight,
+    isPositionWeighted,
     reset
   }
 }

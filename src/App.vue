@@ -66,7 +66,9 @@
             :texts="config.texts"
             :show-explanation="config.settings.showExplanations"
             :enable-swipe="config.settings.enableSwipeGestures"
+            :is-weighted="isCurrentPositionWeighted"
             @swipe="handleSwipe"
+            @toggle-weight="toggleWeightForCurrent"
           />
         </div>
 
@@ -118,12 +120,18 @@ const {
   loadData,
   answerPosition,
   calculateResults,
+  toggleWeight,
+  isPositionWeighted,
   reset
 } = useWahlomat()
 
 const screen = ref('start')
 const results = ref([])
 const swipeCard = ref(null)
+const isCurrentPositionWeighted = computed(() => {
+  if (!currentPosition.value) return false
+  return isPositionWeighted(currentPosition.value.id)
+})
 
 const appStyles = computed(() => {
   if (!config.value) return {}
@@ -174,6 +182,11 @@ function handleDisagree() {
 
 function handleNeutral() {
   answerPosition(0)
+}
+
+function toggleWeightForCurrent() {
+  if (!currentPosition.value) return
+  toggleWeight(currentPosition.value.id)
 }
 
 function showResults() {

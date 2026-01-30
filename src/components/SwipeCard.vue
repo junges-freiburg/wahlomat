@@ -1,6 +1,7 @@
 <template>
   <div
     class="swipe-card"
+    :class="{ 'is-weighted': isWeighted }"
     :style="cardStyle"
     @touchstart="onTouchStart"
     @touchmove="onTouchMove"
@@ -10,6 +11,14 @@
     <div class="card-content">
       <div class="card-header">
         <span class="card-number">{{ texts.positionLabel }} {{ currentIndex + 1 }}/{{ totalCards }}</span>
+        <button class="weight-toggle" :class="{ active: isWeighted }" @click.stop="emit('toggle-weight')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5V19"></path>
+            <path d="M5 12H19"></path>
+          </svg>
+          <span>{{ weightButtonLabel }}</span>
+          <span v-if="isWeighted" class="weight-badge">x2</span>
+        </button>
       </div>
 
       <div class="card-body">
@@ -77,10 +86,14 @@ const props = defineProps({
   enableSwipe: {
     type: Boolean,
     default: true
+  },
+  isWeighted: {
+    type: Boolean,
+    default: false
   }
 })
 
-const emit = defineEmits(['swipe'])
+const emit = defineEmits(['swipe', 'toggle-weight'])
 
 const explanationOpen = ref(false)
 const offsetX = ref(0)
@@ -119,6 +132,13 @@ const cardStyle = computed(() => {
     '--disagree-color': props.colors.disagree,
     '--primary-color': props.colors.primary
   }
+})
+
+const weightButtonLabel = computed(() => {
+  if (props.isWeighted) {
+    return props.texts.weightToggleActiveLabel || props.texts.weightToggleLabel || 'Doppelt gewichtet'
+  }
+  return props.texts.weightToggleLabel || 'Doppelt gewichten'
 })
 
 function toggleExplanation() {
@@ -246,6 +266,38 @@ defineExpose({ swipeLeft, swipeRight })
   font-size: 14px;
   color: var(--text-secondary);
   font-weight: 500;
+}
+
+.weight-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.weight-toggle svg {
+  display: block;
+}
+
+.weight-toggle.active {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.weight-badge {
+  font-weight: 700;
+}
+
+.swipe-card.is-weighted {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(99, 102, 241, 0.5);
 }
 
 .card-body {
