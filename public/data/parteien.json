@@ -1,34 +1,42 @@
 [
   {
     "id": "a",
-    "name": "Soziale Fortschrittspartei",
-    "kurzname": "SFP",
+    "name": "Martin Horn",
+    "kurzname": "MH",
     "farbe": "#e11d48",
     "logo": "sfp.svg",
-    "beschreibung": "Die SFP setzt sich für soziale Gerechtigkeit, starke Arbeitnehmerrechte und einen ausgebauten Sozialstaat ein."
+    "beschreibung": "Parteiloser amtierender Bürgermeister"
   },
   {
     "id": "b",
-    "name": "Bürgerliche Mitte",
-    "kurzname": "BM",
+    "name": "Monika Stein",
+    "kurzname": "MS",
     "farbe": "#0ea5e9",
     "logo": "bm.svg",
-    "beschreibung": "Die BM steht für eine starke Wirtschaft, solide Finanzen und einen schlanken Staat mit Fokus auf Eigenverantwortung."
+    "beschreibung": "Ehemalige Stadträtin und Lehrerin"
   },
   {
     "id": "c",
-    "name": "Freiheitliche Volkspartei",
-    "kurzname": "FVP",
+    "name": "Dejan Mihajlovic",
+    "kurzname": "DM",
     "farbe": "#eab308",
     "logo": "fvp.svg",
-    "beschreibung": "Die FVP betont individuelle Freiheit, traditionelle Werte und eine restriktive Migrationspolitik."
+    "beschreibung": "Parteilos"
   },
   {
     "id": "d",
-    "name": "Grüne Alternative",
+    "name": "Valerie Tabea Schult",
     "kurzname": "GA",
     "farbe": "#22c55e",
     "logo": "ga.svg",
-    "beschreibung": "Die GA kämpft für Klimaschutz, Nachhaltigkeit und eine ökologische Transformation der Wirtschaft."
-  }
+    "beschreibung": "parteilose Politologin"
+  },
+    {
+        "id": "e",
+        "name": "Achim Wiehle",
+        "kurzname": "AW",
+        "farbe": "#8b5cf6",
+        "logo": "mut.svg",
+        "beschreibung": "CDU Unternehmer aus Freiburg"
+}
 ]
