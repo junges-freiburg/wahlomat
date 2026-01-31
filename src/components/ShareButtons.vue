@@ -95,9 +95,10 @@ const fullShareText = computed(() => {
   if (props.topResult?.partei) {
     const name = props.topResult.partei.name
     const percentage = Math.round(props.topResult.percentage)
-    return `${base} Mein Top-Match: ${name} (${percentage}%)`
+    const suffix = props.shareUrl ? ` ${props.shareUrl}` : ''
+    return `${base} Mein Top-Match: ${name} (${percentage}%)${suffix}`
   }
-  return base
+  return props.shareUrl ? `${base} ${props.shareUrl}`.trim() : base
 })
 
 const isGenerating = ref(false)
