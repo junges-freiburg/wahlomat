@@ -37,15 +37,18 @@ function coverImage(ctx, image) {
 
 function fitText(ctx, text, maxWidth, baseSize, weight = 700) {
   let fontSize = baseSize
-  do {
-    ctx.font = `${weight} ${fontSize}px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif`
+  while (fontSize >= 36) {
+    const font = `${weight} ${fontSize}px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif`
+    ctx.font = font
     if (ctx.measureText(text).width <= maxWidth) {
-      return ctx.font
+      return { font, size: fontSize }
     }
     fontSize -= 2
-  } while (fontSize >= 36)
+  }
 
-  return ctx.font
+  const fallbackFont = `${weight} 36px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif`
+  ctx.font = fallbackFont
+  return { font: fallbackFont, size: 36 }
 }
 
 function drawRoundedRect(ctx, { x, y, width, height, radius }) {
@@ -109,28 +112,6 @@ function drawHearts(ctx) {
   ctx.setLineDash([])
 }
 
-function drawTag(ctx, text, color) {
-  const tagPaddingX = 32
-  const tagPaddingY = 18
-  ctx.font = "600 38px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  const textWidth = ctx.measureText(text).width
-  const tagWidth = textWidth + tagPaddingX * 2
-  const tagHeight = 68
-  const x = (CANVAS_WIDTH - tagWidth) / 2
-  const y = 300
-
-  ctx.globalAlpha = 0.9
-  ctx.fillStyle = color
-  drawRoundedRect(ctx, { x, y, width: tagWidth, height: tagHeight, radius: 999 })
-  ctx.fill()
-  ctx.globalAlpha = 1
-
-  ctx.fillStyle = '#0f172a'
-  ctx.textAlign = 'center'
-  ctx.textBaseline = 'middle'
-  ctx.fillText(text, CANVAS_WIDTH / 2, y + tagHeight / 2)
-}
-
 function drawFooter(ctx, footerText, appTitle) {
   ctx.fillStyle = 'rgba(255, 255, 255, 0.85)'
   ctx.textAlign = 'center'
@@ -186,79 +167,92 @@ export async function generateShareImage({
 
   const partyColor = topResult.partei?.farbe || colors?.primary || '#f472b6'
   const title = shareConfig?.title || "It's a match!"
-  const subtitlePrefix = shareConfig?.subtitlePrefix || 'Dein Match'
   const percentageLabel = shareConfig?.percentageLabel || 'Übereinstimmung'
   const footerText = shareConfig?.footerText || texts?.shareText || ''
   const partyName = topResult.partei?.name || 'Deine Partei'
-  const partyShort = topResult.partei?.kurzname || ''
   const percentage = Math.round(topResult.percentage)
+  const statsTitle = shareConfig?.statsTitle || 'Deine Antworten'
+
+  const stats = {
+    agrees: topResult.agrees ?? 0,
+    neutrals: topResult.neutrals ?? 0,
+    disagrees: topResult.disagrees ?? 0
+  }
 
   ctx.fillStyle = '#ffffff'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'top'
-  ctx.font = "800 120px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  ctx.fillText(title, CANVAS_WIDTH / 2, SAFE_AREA)
 
-  drawTag(ctx, `${subtitlePrefix}${partyShort ? ` • ${partyShort}` : ''}`, '#fdf2f8')
+  let currentY = SAFE_AREA
+  const titleFontSize = 118
+  ctx.font = `800 ${titleFontSize}px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif`
+  ctx.fillText(title, CANVAS_WIDTH / 2, currentY)
+  currentY += titleFontSize + 56
 
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
-  ctx.font = "600 48px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  ctx.fillText(percentageLabel, CANVAS_WIDTH / 2, 410)
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.85)'
+  ctx.font = "600 56px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
+  ctx.fillText(percentageLabel, CANVAS_WIDTH / 2, currentY)
+  currentY += 78
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = "900 200px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  ctx.fillText(`${percentage}%`, CANVAS_WIDTH / 2, 460)
+  const percentageFontSize = 200
+  ctx.font = `900 ${percentageFontSize}px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif`
+  ctx.fillText(`${percentage}%`, CANVAS_WIDTH / 2, currentY)
+  currentY += percentageFontSize + 48
 
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.9)'
-  ctx.font = fitText(ctx, partyName, CANVAS_WIDTH - SAFE_AREA * 2, 96, 800)
-  ctx.fillText(partyName, CANVAS_WIDTH / 2, 690)
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
+  const fitted = fitText(ctx, partyName, CANVAS_WIDTH - SAFE_AREA * 2, 96, 800)
+  ctx.font = fitted.font
+  const nameLines = wrapText(ctx, partyName, CANVAS_WIDTH - SAFE_AREA * 2)
+  const lineHeight = fitted.size + 12
+  nameLines.forEach((line, index) => {
+    ctx.fillText(line, CANVAS_WIDTH / 2, currentY + index * lineHeight)
+  })
+  currentY += nameLines.length * lineHeight + 60
 
-  ctx.globalAlpha = 0.9
+  const cardHeight = 240
+  const cardX = SAFE_AREA
+  const cardWidth = CANVAS_WIDTH - SAFE_AREA * 2
+  const cardY = Math.max(currentY, 820)
+
+  ctx.globalAlpha = 0.92
   ctx.fillStyle = '#0f172a'
   drawRoundedRect(ctx, {
-    x: SAFE_AREA,
-    y: 840,
-    width: CANVAS_WIDTH - SAFE_AREA * 2,
-    height: 180,
-    radius: 32
+    x: cardX,
+    y: cardY,
+    width: cardWidth,
+    height: cardHeight,
+    radius: 36
   })
   ctx.fill()
-  ctx.fillStyle = '#ffffff'
   ctx.globalAlpha = 1
 
-  ctx.textAlign = 'left'
-  ctx.textBaseline = 'alphabetic'
-  ctx.fillStyle = 'rgba(15, 23, 42, 0.75)'
-  ctx.font = "500 64px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  ctx.fillText('Scoreboard', SAFE_AREA + 48, 920)
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'top'
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.85)'
+  ctx.font = "600 44px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
+  ctx.fillText(statsTitle, CANVAS_WIDTH / 2, cardY + 32)
 
-  const barWidth = CANVAS_WIDTH - SAFE_AREA * 2 - 96
-  const matchWidth = Math.max(barWidth * (topResult.percentage / 100), 80)
+  const statsArray = [
+    { label: texts.agreeButton || 'Zustimmung', value: stats.agrees, color: colors.agree || '#22c55e' },
+    { label: texts.neutralButton || 'Neutral', value: stats.neutrals, color: colors.neutral || '#f59e0b' },
+    { label: texts.disagreeButton || 'Ablehnung', value: stats.disagrees, color: colors.disagree || '#ef4444' }
+  ]
 
-  ctx.fillStyle = 'rgba(15, 23, 42, 0.15)'
-  drawRoundedRect(ctx, {
-    x: SAFE_AREA + 48,
-    y: 960,
-    width: barWidth,
-    height: 34,
-    radius: 17
+  const statAreaWidth = cardWidth - 96
+  const statWidth = statAreaWidth / statsArray.length
+  const statStartX = cardX + 48
+  const statY = cardY + 110
+
+  statsArray.forEach((stat, index) => {
+    const centerX = statStartX + statWidth * index + statWidth / 2
+    ctx.fillStyle = stat.color
+    ctx.font = "800 72px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
+    ctx.fillText(String(stat.value ?? 0), centerX, statY)
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
+    ctx.font = "500 30px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
+    ctx.fillText(stat.label, centerX, statY + 86)
   })
-  ctx.fill()
-
-  ctx.fillStyle = partyColor
-  drawRoundedRect(ctx, {
-    x: SAFE_AREA + 48,
-    y: 960,
-    width: matchWidth,
-    height: 34,
-    radius: 17
-  })
-  ctx.fill()
-
-  ctx.textAlign = 'right'
-  ctx.fillStyle = 'rgba(15, 23, 42, 0.65)'
-  ctx.font = "500 50px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  ctx.fillText(`${percentage}%`, CANVAS_WIDTH - SAFE_AREA - 48, 940)
 
   drawFooter(ctx, footerText, appTitle || 'Dein-Freiburg-Match')
 
