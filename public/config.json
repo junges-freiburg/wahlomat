@@ -3,6 +3,13 @@
   "appSubtitle": "Finde deine politische Übereinstimmung",
   "shareUrl": "https://example.com/wahlomat",
   "shareHashtags": "Wahlomat,Politik,Wahl2025",
+  "shareImage": {
+    "background": "/share/match-bg.svg",
+    "title": "It's a match!",
+    "subtitlePrefix": "Dein Match",
+    "percentageLabel": "Übereinstimmung",
+    "footerText": "Swipe dich durch die Thesen und finde dein politisches Match."
+  },
   "colors": {
     "primary": "#6366f1",
     "secondary": "#8b5cf6",
@@ -39,6 +46,10 @@
     "partiesSubtitle": "Lerne die Parteien kennen, bevor du startest",
     "shareTitle": "Teile dein Ergebnis",
     "shareText": "Ich habe den Wahlomat gemacht! Finde heraus, welche Partei am besten zu dir passt.",
+    "shareButtonLabel": "Match teilen",
+    "shareImageGenerating": "Sharepic wird erstellt...",
+    "shareDownloadButton": "Sharepic speichern",
+    "shareImageError": "Sharepic konnte nicht erstellt werden.",
     "copyLinkButton": "Link kopieren",
     "linkCopied": "Link kopiert!"
   },

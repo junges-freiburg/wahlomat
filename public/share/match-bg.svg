@@ -1,0 +1,33 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+    <radialGradient id="pulse" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.45)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)" />
+  <circle cx="200" cy="250" r="200" fill="url(#pulse)" />
+  <circle cx="880" cy="980" r="260" fill="url(#pulse)" />
+  <g fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3">
+    <rect x="120" y="160" width="840" height="1030" rx="160" />
+    <rect x="150" y="190" width="780" height="970" rx="140" />
+    <rect x="180" y="220" width="720" height="910" rx="120" />
+  </g>
+  <g fill="rgba(255,255,255,0.3)">
+    <path d="M235 470c30-90 140-80 140 10s-110 150-140 180c-30-30-140-100-140-190s110-90 140 0z" />
+    <path d="M840 280c25-70 120-60 120 8s-92 120-120 144c-28-24-120-80-120-152s95-78 120 0z" opacity="0.6" />
+    <path d="M870 830c25-70 120-60 120 8s-92 120-120 144c-28-24-120-80-120-152s95-78 120 0z" opacity="0.4" />
+  </g>
+  <circle cx="180" cy="1020" r="14" fill="#f472b6" opacity="0.8" />
+  <circle cx="900" cy="360" r="10" fill="#facc15" opacity="0.8" />
+  <circle cx="540" cy="1200" r="12" fill="#34d399" opacity="0.8" />
+</svg>

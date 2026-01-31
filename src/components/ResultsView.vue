@@ -122,6 +122,8 @@
       :top-result="topResult"
       :colors="colors"
       :texts="texts"
+      :share-config="shareConfig"
+      :app-title="appTitle"
     />
 
     <button class="restart-btn" @click="$emit('restart')">
@@ -152,6 +154,14 @@ const props = defineProps({
     default: ''
   },
   hashtags: {
+    type: String,
+    default: ''
+  },
+  shareConfig: {
+    type: Object,
+    default: () => ({})
+  },
+  appTitle: {
     type: String,
     default: ''
   }

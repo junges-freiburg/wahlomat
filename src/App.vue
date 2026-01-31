@@ -89,6 +89,8 @@
         :texts="config.texts"
         :share-url="config.shareUrl"
         :hashtags="config.shareHashtags"
+        :share-config="config.shareImage"
+        :app-title="config.appTitle"
         @restart="restart"
       />
     </template>
