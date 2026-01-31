@@ -182,10 +182,10 @@ async function shareUniversal() {
     }
   }
 
+  const payloadText = fullShareText.value
   const payload = {
     title: props.appTitle || 'Dein Match',
-    text: fullShareText.value,
-    url: props.shareUrl
+    text: payloadText
   }
 
   if (files.length && navigator.canShare?.({ files })) {
@@ -216,7 +216,7 @@ async function shareUniversal() {
     return
   }
 
-  const shareUrl = `mailto:?subject=${encodeURIComponent(payload.title)}&body=${encodeURIComponent(`${payload.text}\n${payload.url}`)}`
+  const shareUrl = `mailto:?subject=${encodeURIComponent(payload.title)}&body=${encodeURIComponent(payloadText)}`
   window.open(shareUrl, '_blank')
 }
 </script>
