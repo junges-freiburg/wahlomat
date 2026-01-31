@@ -90,7 +90,15 @@ const shareStyles = computed(() => ({
   '--card-bg': props.colors.cardBackground
 }))
 
-const fullShareText = computed(() => props.shareText)
+const fullShareText = computed(() => {
+  const base = props.shareText?.trim() || ''
+  if (props.topResult?.partei) {
+    const name = props.topResult.partei.name
+    const percentage = Math.round(props.topResult.percentage)
+    return `${base} Mein Top-Match: ${name} (${percentage}%)`
+  }
+  return base
+})
 
 const isGenerating = ref(false)
 const downloadUrl = ref('')
