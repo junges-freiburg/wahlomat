@@ -11,7 +11,7 @@
     "id": "b",
     "name": "Monika Stein",
     "kurzname": "MS",
-    "farbe": "#0ea5e9",
+    "farbe": "#27ae60",
     "logo": "bm.svg",
     "beschreibung": "Ehemalige Stadträtin und Lehrerin (Parteilos)"
   },
@@ -19,7 +19,7 @@
     "id": "c",
     "name": "Dejan Mihajlovic",
     "kurzname": "DM",
-    "farbe": "#eab308",
+    "farbe": "#8e44ad",
     "logo": "fvp.svg",
     "beschreibung": "Lehrer (Parteilos)"
   },
@@ -27,7 +27,7 @@
     "id": "d",
     "name": "Valerie Tabea Schult",
     "kurzname": "GA",
-    "farbe": "#22c55e",
+    "farbe": "#16a085",
     "logo": "ga.svg",
     "beschreibung": "Politologin (Parteilos)"
   },
@@ -35,7 +35,7 @@
     "id": "e",
     "name": "Achim Wiehle",
     "kurzname": "AW",
-    "farbe": "#8b5cf6",
+    "farbe": "#2c3e50",
     "logo": "mut.svg",
     "beschreibung": "Unternehmer (CDU)"
 }
