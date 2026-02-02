@@ -18,7 +18,7 @@
     "neutral": "#f59e0b",
     "background": "#2f2f2f",
     "cardBackground": "#e27b29",
-    "textPrimary": "#f8fafc",
+    "textPrimary": "##f2f2f2",
     "textSecondary": "#94a3b8"
   },
   "texts": {
