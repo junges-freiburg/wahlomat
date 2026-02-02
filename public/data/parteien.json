@@ -5,7 +5,7 @@
     "kurzname": "MH",
     "farbe": "#e11d48",
     "logo": "sfp.svg",
-    "beschreibung": "Parteiloser amtierender Bürgermeister"
+    "beschreibung": "Amtierender Oberbürgermeister (Parteilos)"
   },
   {
     "id": "b",
@@ -13,7 +13,7 @@
     "kurzname": "MS",
     "farbe": "#0ea5e9",
     "logo": "bm.svg",
-    "beschreibung": "Ehemalige Stadträtin und Lehrerin"
+    "beschreibung": "Ehemalige Stadträtin und Lehrerin (Parteilos)"
   },
   {
     "id": "c",
@@ -21,7 +21,7 @@
     "kurzname": "DM",
     "farbe": "#eab308",
     "logo": "fvp.svg",
-    "beschreibung": "Parteilos"
+    "beschreibung": "Lehrer (Parteilos)"
   },
   {
     "id": "d",
@@ -29,14 +29,14 @@
     "kurzname": "GA",
     "farbe": "#22c55e",
     "logo": "ga.svg",
-    "beschreibung": "parteilose Politologin"
+    "beschreibung": "Politologin (Parteilos)"
   },
-    {
-        "id": "e",
-        "name": "Achim Wiehle",
-        "kurzname": "AW",
-        "farbe": "#8b5cf6",
-        "logo": "mut.svg",
-        "beschreibung": "CDU Unternehmer aus Freiburg"
+  {
+    "id": "e",
+    "name": "Achim Wiehle",
+    "kurzname": "AW",
+    "farbe": "#8b5cf6",
+    "logo": "mut.svg",
+    "beschreibung": "Unternehmer (CDU)"
 }
 ]
