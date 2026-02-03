@@ -1,8 +1,8 @@
 [
   {
     "id": "1",
-    "these": "Der Mindestlohn sollte auf 15 Euro erhöht werden.",
-    "erklaerung": "Der aktuelle Mindestlohn beträgt 12,82 Euro. Eine Erhöhung könnte Arbeitnehmer entlasten, aber auch Arbeitsplätze gefährden.",
+    "these": "Das Nachtleben (z.B. Clubs, Bars und Konzerte) soll leichter zugänglich gemacht und stärker gefördert werden",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": -1,
@@ -18,8 +18,8 @@
   },
   {
     "id": "2",
-    "these": "Deutschland sollte mehr Geld in erneuerbare Energien investieren.",
-    "erklaerung": "Die Energiewende erfordert massive Investitionen in Solar, Wind und Speichertechnologien.",
+    "these": "Zur Gestaltung von Schulhöfen soll mehr Geld bereitgestellt werden",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": 0,
@@ -35,8 +35,8 @@
   },
   {
     "id": "3",
-    "these": "Die Vermögenssteuer sollte wieder eingeführt werden.",
-    "erklaerung": "Eine Vermögenssteuer würde hohe Privatvermögen besteuern und könnte zu Mehreinnahmen führen.",
+    "these": "In Freiburg gibt es genug überdachte Orte, an denen man sich kostenlos aufhalten kann",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": -1,
@@ -52,8 +52,8 @@
   },
   {
     "id": "4",
-    "these": "Das Tempolimit auf Autobahnen sollte eingeführt werden.",
-    "erklaerung": "Ein generelles Tempolimit könnte CO2-Emissionen reduzieren und die Verkehrssicherheit erhöhen.",
+    "these": "Kinder und Jugendliche sollen bei Entscheidungen der Stadt mehr mit einbezogen werden",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": -1,
@@ -69,8 +69,8 @@
   },
   {
     "id": "5",
-    "these": "Cannabis sollte vollständig legalisiert werden.",
-    "erklaerung": "Die Legalisierung könnte den Schwarzmarkt bekämpfen und Steuereinnahmen generieren.",
+    "these": "Das Verbot von Musikboxen und Instrumenten in Parks ab 22 Uhr soll wie bisher fortbestehen",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": 0,
@@ -86,8 +86,8 @@
   },
   {
     "id": "6",
-    "these": "Die Bundeswehr sollte besser ausgestattet werden.",
-    "erklaerung": "Nach Jahren der Unterfinanzierung gibt es Diskussionen über höhere Verteidigungsausgaben.",
+    "these": "Die/Der Oberbürgermeister*in sollte nicht auf Social Media präsent sein",
+    "erklaerung": "wip",
     "positionen": {
       "a": 0,
       "b": 1,
@@ -103,8 +103,8 @@
   },
   {
     "id": "7",
-    "these": "Mieten in Großstädten sollten stärker reguliert werden.",
-    "erklaerung": "Steigende Mieten belasten viele Haushalte. Mietpreisbremsen sind umstritten.",
+    "these": "Die Stadt sollte das Fahren mit Straßenbahnen und Bussen für junge Menschen zukünftig kostengünstiger gestalten",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": -1,
@@ -120,8 +120,8 @@
   },
   {
     "id": "8",
-    "these": "Das Renteneintrittsalter sollte angehoben werden.",
-    "erklaerung": "Die Bevölkerung altert, weniger Beitragszahler müssen mehr Rentner finanzieren.",
+    "these": "In neuen Wohngebieten soll ein fester Anteil bezahlbaren Wohnraums explizit für Studierende und Auszubildende reserviert werden",
+    "erklaerung": "wip",
     "positionen": {
       "a": -1,
       "b": 1,
@@ -137,8 +137,8 @@
   },
   {
     "id": "9",
-    "these": "Geflüchtete sollten schneller Zugang zum Arbeitsmarkt erhalten.",
-    "erklaerung": "Schnellere Integration in den Arbeitsmarkt könnte sowohl Geflüchteten als auch der Wirtschaft helfen.",
+    "these": "Die Stadt soll einen konkreten Plan entwickeln, damit Schultoiletten sauberer werden und funktionieren",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": 0,
@@ -154,8 +154,8 @@
   },
   {
     "id": "10",
-    "these": "Unternehmen sollten verpflichtet werden, Frauen in Führungspositionen zu fördern.",
-    "erklaerung": "Quotenregelungen sollen die Gleichstellung in der Wirtschaft beschleunigen.",
+    "these": "Einwegverpackungen von To-go-Speisen sollen weiterhin besteuert werden",
+    "erklaerung": "wip",
     "positionen": {
       "a": 1,
       "b": 0,
@@ -167,6 +167,108 @@
       "b": "Wir setzen auf freiwillige Selbstverpflichtungen.",
       "c": "Qualifikation zählt, nicht das Geschlecht.",
       "d": "Verbindliche Quoten sind längst überfällig."
+      }
+  },
+  {
+    "id": "11",
+    "these": "Wichtige Busverbindungen in die Ortschaften und ins Freiburger Umland sollen an Wochenenden auch nach Mitternacht stündlich befahren werden",
+    "erklaerung": "wip",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
+      "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
+      "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
     }
-  }
+ },
+  {
+    "id": "12",
+    "these": "Die Freiburger Innenstadt soll vollständig mit kostenfreiem WLAN ausgestattet werden",
+    "erklaerung": "wip",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
+      "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
+      "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+    }
+    },
+{
+    "id": "13",
+    "these": "In Schulmensen soll ausschließlich vegetarisches Essen angeboten werden",
+    "erklaerung": "wip",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
+      "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
+      "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+    }
+ },
+{
+    "id": "14",
+    "these": "Die Rempartstraße sollte schnellstmöglich für Autos gesperrt werden, um den Universitätscampus autofrei zu machen",
+    "erklaerung": "wip",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
+      "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
+      "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+    }
+ },
+{
+    "id": "15",
+    "these": "Polizei und Vollzugsdienst sollen nachts häufiger an öffentlichen Orten unterwegs sein",
+    "erklaerung": "wip",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
+      "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
+      "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+    }
+ },
+{
+    "id": "16",
+    "these": "Schulen sollten Ruheräume haben, in die sich Schüler*innen zurückziehen können",
+    "erklaerung": "wip",
+    "positionen": {
+      "a": 1,
+      "b": -1,
+      "c": 0,
+      "d": 1
+    },
+    "erklaerungen": {
+      "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
+      "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
+      "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+    }
+  },
 ]
