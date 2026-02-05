@@ -194,7 +194,7 @@ function goToScreen(index) {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 167, 84, 0.3);
 }
 
 .btn-secondary {
