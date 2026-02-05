@@ -216,6 +216,6 @@ function goToScreen(index) {
 }
 
 .skip-btn:hover {
-  color: var(--text-primary);
+  color: #f2f2f2;
 }
 </style>
