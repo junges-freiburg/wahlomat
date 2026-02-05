@@ -56,7 +56,7 @@
         </svg>
       </button>
 
-      <p class="party-count">{{ partyCount }} Parteien · {{ questionCount }} Thesen</p>
+      <p class="party-count">{{ partyCount }} Kandidaten · {{ questionCount }} Thesen</p>
     </div>
   </div>
 </template>
@@ -224,7 +224,7 @@ const screenStyles = computed(() => ({
 
 .start-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 167, 84, 0.3);
 }
 
 .start-btn:active {
@@ -237,7 +237,7 @@ const screenStyles = computed(() => ({
   padding: 16px 32px;
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.4);
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(99, 102, 241, 0.4);
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
