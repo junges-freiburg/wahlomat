@@ -136,7 +136,7 @@ function goToScreen(index) {
 .intro-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #f2f2f2;
+  color: #ffa754;
   margin-bottom: 16px;
 }
 
@@ -216,6 +216,6 @@ function goToScreen(index) {
 }
 
 .skip-btn:hover {
-  color: #f2f2f2;
+  color: #ffa754;
 }
 </style>
