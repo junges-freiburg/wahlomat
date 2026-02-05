@@ -21,7 +21,7 @@
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </div>
-          <span>Nach rechts = Zustimmung</span>
+          <span>Zustimmung</span>
         </div>
         <div class="instruction-item">
           <div class="instruction-icon swipe-left">
@@ -29,7 +29,7 @@
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </div>
-          <span>Nach links = Ablehnung</span>
+          <span>Ablehnung</span>
         </div>
         <div class="instruction-item">
           <div class="instruction-icon tap">
@@ -37,7 +37,7 @@
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </div>
-          <span>Tippen = Neutral</span>
+          <span>Neutral</span>
         </div>
       </div>
 
@@ -169,7 +169,7 @@ const screenStyles = computed(() => ({
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 16px;
+  gap: 8px;
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
