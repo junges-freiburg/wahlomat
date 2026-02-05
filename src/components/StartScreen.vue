@@ -166,7 +166,9 @@ const screenStyles = computed(() => ({
 
 .instruction-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 16px;
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.05);
