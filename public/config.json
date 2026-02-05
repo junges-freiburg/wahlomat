@@ -2,7 +2,7 @@
   "appTitle": "Dein-Freiburg-Match",
   "appSubtitle": "Dein Info-Tool zur OB-Wahl Freiburg 2026",
   "shareUrl": "https://example.com/wahlomat",
-  "shareHashtags": "Wahlomat,Politik,Wahl2026, Freiburg",
+  "shareHashtags": "Wahlomat,Politik,Wahl2026,Freiburg",
   "shareImage": {
     "background": "/share/match-bg.svg",
     "title": "It's a match!",
