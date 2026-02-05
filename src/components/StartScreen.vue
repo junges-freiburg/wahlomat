@@ -236,8 +236,8 @@ const screenStyles = computed(() => ({
   margin-top: 16px;
   padding: 16px 32px;
   border-radius: 16px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  background: rgba(99, 102, 241, 0.4);
+  border: 1px solid rgba(242, 242, 242), 0.4);
+  background: rgba(255, 167, 84, 0.4);
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
@@ -251,7 +251,7 @@ const screenStyles = computed(() => ({
 
 .parties-btn:hover {
   border-color: var(--primary-color);
-  background: rgba(99, 102, 241, 0.18);
+  background: rgba(255, 167, 84, 0.18);
   transform: translateY(-1px);
 }
 
