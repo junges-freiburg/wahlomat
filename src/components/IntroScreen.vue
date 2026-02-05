@@ -209,7 +209,7 @@ function goToScreen(index) {
 .skip-btn {
   background: none;
   border: none;
-  color: var(--text-secondary);
+  color: #ffa754;
   font-size: 14px;
   cursor: pointer;
   padding: 8px 16px;
