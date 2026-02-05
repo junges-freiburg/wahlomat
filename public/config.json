@@ -1,5 +1,5 @@
 {
-  "appTitle": "Dein-Freiburg-Match",
+  "appTitle": "Dein-Freiburg-<br>Match",
   "appSubtitle": "Dein Info-Tool zur OB-Wahl Freiburg 2026",
   "shareUrl": "https://example.com/wahlomat",
   "shareHashtags": "Wahlomat,Politik,Wahl2026,Freiburg",
@@ -18,8 +18,8 @@
     "neutral": "#f59e0b",
     "background": "#2f2f2f",
     "cardBackground": "#e99f58",
-    "textPrimary": "#f2f2f2",
-    "textSecondary": "#2f2f2f"
+    "textPrimary": "#2f2f2f",
+    "textSecondary": "#f2f2f2"
   },
   "texts": {
     "startButton": "Los geht's",
