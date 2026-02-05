@@ -2,7 +2,7 @@
   "appTitle": "Dein-Freiburg-<br>Match",
   "appSubtitle": "Dein Info-Tool zur OB-Wahl Freiburg 2026",
   "shareUrl": "https://example.com/wahlomat",
-  "shareHashtags": "Wahlomat,Politik,Wahl2026,Freiburg",
+  "shareHashtags": "Wahlomat,Politik,Wahl2026,Freiburg,Oberbürgermeister",
   "shareImage": {
     "background": "/share/match-bg.svg",
     "title": "It's a match!",
@@ -57,7 +57,7 @@
     "enabled": true,
     "screens": [
       {
-        "title": "Willkommen bei Dein-Freiburg-Match",
+        "title": "Willkommen bei<br>Dein-Freiburg-Match",
         "text": "Mit diesem Tool kannst du herausfinden, welche*r Oberbürgermeister Kandidat*in am besten zu dir passt.",
         "icon": "welcome"
       },
