@@ -148,6 +148,7 @@ const screenStyles = computed(() => ({
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
 }
 
 .app-subtitle {
