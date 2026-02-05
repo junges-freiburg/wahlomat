@@ -25,7 +25,7 @@
         </svg>
       </div>
 
-      <h1 class="intro-title">{{ currentScreen.title }}</h1>
+      <h1 class="intro-title" v-html="currentScreen.title"></h1>
       <p class="intro-text">{{ currentScreen.text }}</p>
 
       <div class="intro-dots">
