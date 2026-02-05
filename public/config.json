@@ -57,7 +57,7 @@
     "enabled": true,
     "screens": [
       {
-        "title": "Willkommen bei<br>Dein-Freiburg-Match",
+        "title": "Willkommen bei <br> Dein-Freiburg-Match",
         "text": "Mit diesem Tool kannst du herausfinden, welche*r Oberbürgermeister Kandidat*in am besten zu dir passt.",
         "icon": "welcome"
       },
