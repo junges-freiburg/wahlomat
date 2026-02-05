@@ -12,12 +12,12 @@
   },
   "colors": {
     "primary": "#e27b29",
-    "secondary": "#e99f58",
+    "secondary": "#ffa754",
     "agree": "#22c55e",
     "disagree": "#ef4444",
     "neutral": "#f59e0b",
     "background": "#2f2f2f",
-    "cardBackground": "#e99f58",
+    "cardBackground": "#ffa754",
     "textPrimary": "#2f2f2f",
     "textSecondary": "#f2f2f2"
   },
