@@ -143,7 +143,8 @@ const screenStyles = computed(() => ({
 }
 
 .app-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  white-space: nowrap;
   font-weight: 700;
   margin-bottom: 8px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
