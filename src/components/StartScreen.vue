@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <h1 class="app-title">{{ appTitle }}</h1>
+      <h1 class="app-title" v-html="currentScreen.title"></h1>
       <p class="app-subtitle">{{ appSubtitle }}</p>
 
       <div class="instructions">
