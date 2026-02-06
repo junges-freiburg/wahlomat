@@ -210,7 +210,7 @@ const screenStyles = computed(() => ({
   padding: 18px 32px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  border: none;
+  border: 1px solid rgba(242, 242, 242, 0.4);
   border-radius: 16px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -236,8 +236,8 @@ const screenStyles = computed(() => ({
   margin-top: 16px;
   padding: 16px 32px;
   border-radius: 16px;
-  border: 1px solid rgba(242, 242, 242), 0.4);
-  background: rgba(255, 167, 84, 0.4);
+  border: none;
+  background: rgba(255, 167, 84, 0.2);
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
