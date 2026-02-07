@@ -292,15 +292,19 @@ const screenStyles = computed(() => ({
   }
 
   .logo-icon {
-    width: 44px;
-    height: 44px;
-    padding: 6px;
-    border-radius: 10px;
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .logo-icon svg {
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
   }
  } 
 @media (min-width: 768px) {
