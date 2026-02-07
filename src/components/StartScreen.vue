@@ -240,7 +240,7 @@ const screenStyles = computed(() => ({
   padding: 16px 32px;
   border-radius: 16px;
   border: none;
-  background: rgba(255, 167, 84, 0.2);
+  background: rgba(255, 167, 84, 0.8);
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
