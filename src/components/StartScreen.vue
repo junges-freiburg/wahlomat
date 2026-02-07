@@ -270,7 +270,7 @@ const screenStyles = computed(() => ({
 
 @media (min-width: 768px) {
   .app-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .app-subtitle {
