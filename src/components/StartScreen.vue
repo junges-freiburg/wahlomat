@@ -290,6 +290,11 @@ const screenStyles = computed(() => ({
     height: 32px;
     font-size: 14px;
   }
+
+  .logo-icon svg {
+    width: 40px;
+    height: 40px;
+  }
  } 
 @media (min-width: 768px) {
   .app-title {
