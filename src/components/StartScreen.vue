@@ -268,6 +268,29 @@ const screenStyles = computed(() => ({
   color: var(--text-secondary);
 }
 
+@media (max-width: 767px) {
+  .app-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .app-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    opacity: 0.85;
+  }
+
+  .legend-item {
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .legend-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+ } 
 @media (min-width: 768px) {
   .app-title {
     font-size: 2.5rem;
