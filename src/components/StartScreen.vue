@@ -254,7 +254,7 @@ const screenStyles = computed(() => ({
 
 .parties-btn:hover {
   border-color: var(--primary-color);
-  background: rgba(255, 167, 84, 0.18);
+  background: rgb(255, 167, 84);
   transform: translateY(-1px);
 }
 
