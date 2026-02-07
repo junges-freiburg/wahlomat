@@ -286,25 +286,30 @@ const screenStyles = computed(() => ({
   }
 
   .legend-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .logo-icon {
-    width: 56px;
-    height: 56px;
-    padding: 8px;
-    border-radius: 14px;
+    width: 72px;
+    height: 72px;
+    padding: 12px;
+    border-radius: 18px;
 
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
   
   .logo-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
  } 
 @media (min-width: 768px) {
