@@ -322,6 +322,7 @@ defineExpose({ swipeLeft, swipeRight })
   padding: 6px 12px;
   cursor: pointer;
   transition: all 0.2s ease;
+		font-weight: 700;
 }
 
 .weight-toggle svg {
