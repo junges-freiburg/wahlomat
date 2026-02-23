@@ -138,9 +138,9 @@ const cardStyle = computed(() => {
 
 const weightButtonLabel = computed(() => {
   if (props.isWeighted) {
-    return props.texts.weightToggleActiveLabel || props.texts.weightToggleLabel || 'Doppelt gewichtet'
+    return 'These doppelt gewichtet'
   }
-  return props.texts.weightToggleLabel || 'Doppelt gewichten'
+  return 'These doppelt gewichten'
 })
 
 function updateMovementFlag() {
