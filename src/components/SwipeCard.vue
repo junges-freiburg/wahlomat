@@ -330,8 +330,8 @@ defineExpose({ swipeLeft, swipeRight })
 }
 
 .weight-toggle.active {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  border-color: #2f2f2f;
+  color: #2f2f2f;
   background: rgba(99, 102, 241, 0.15);
 }
 
