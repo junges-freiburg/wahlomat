@@ -10,7 +10,6 @@
   >
     <div class="card-content">
       <div class="card-header">
-        <span class="card-number">{{ texts.positionLabel }} {{ currentIndex + 1 }}/{{ totalCards }}</span>
         <button class="weight-toggle" :class="{ active: isWeighted }" @click.stop="emit('toggle-weight')">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 5V19"></path>
