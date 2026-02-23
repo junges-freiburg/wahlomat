@@ -314,7 +314,7 @@ defineExpose({ swipeLeft, swipeRight })
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 999px;
   background: transparent;
   color: var(--text-secondary);
