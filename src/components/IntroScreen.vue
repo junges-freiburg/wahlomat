@@ -2,44 +2,21 @@
   <div class="intro-screen" :style="screenStyles">
     <div class="intro-content">
       <div class="intro-icon">
-        <svg v-if="screen.icon === 'welcome'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-          <path d="M2 17l10 5 10-5"></path>
-          <path d="M2 12l10 5 10-5"></path>
-        </svg>
-
-        <svg v-else-if="screen.icon === 'how'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-          <line x1="12" y1="17" x2="12.01" y2="17"></line>
-        </svg>
-
-        <svg v-else-if="screen.icon === 'swipe'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <path d="M12 18v-6"></path>
-          <path d="M9 15l3 3 3-3"></path>
-        </svg>
-
-        <svg v-else width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-        </svg>
+        <img src="/logo.svg" alt="Logo" width="64">
       </div>
 
      <h1 class="intro-title">Dein-Freiburg-Match</h1>
 
-<h2 class="intro-subtitle">Disclaimer</h2>
+     <h2 class="intro-subtitle">Disclaimer</h2>
 
-<p class="intro-text">
-  Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
-  bereitgestellt wird. <br>
-  Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen
-  Anspruch auf vollständige politische Neutralität. <br><br>
-  Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für
-  politische Bildung.
-</p>
+     <p class="intro-text">
+        Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
+        bereitgestellt wird. <br>
+        Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen
+        Anspruch auf vollständige politische Neutralität. <br><br>
+        Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für
+        politische Bildung.
+     </p>
 
       <div class="intro-buttons">
         <button class="btn-primary" @click="$emit('done')">
