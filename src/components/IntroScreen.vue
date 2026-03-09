@@ -114,6 +114,13 @@ const screenStyles = computed(() => ({
   color: #ffa754;
   margin-bottom: 16px;
 }
+  
+  .intro-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffa754;
+  margin-bottom: 8px;
+}
 
 .intro-text {
   font-size: 1.1rem;
