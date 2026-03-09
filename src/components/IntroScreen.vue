@@ -82,17 +82,20 @@ const screenStyles = computed(() => ({
 }
 
   .intro-subtitle {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: #ffa754;
-  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
 }
 
 .intro-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 32px;
+  max-width: 420px;
+  margin: 0 auto 18px;
 }
 
 .intro-buttons {
