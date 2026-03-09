@@ -2,7 +2,7 @@
   <div class="intro-screen" :style="screenStyles">
     <div class="intro-content">
       <div class="intro-icon">
-        <img src="/logo.svg" alt="Logo" width="64">
+        <img src="/logo.svg" alt="Logo" class="intro-logo">
       </div>
 
      <h1 class="intro-title">Dein-Freiburg-Match</h1>
@@ -73,7 +73,7 @@ const screenStyles = computed(() => ({
   max-width: 400px;
 }
 
-.intro-icon {
+.intro-logo {
   width: 120px;
   height: 120px;
   margin: 0 auto 32px;
