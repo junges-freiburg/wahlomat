@@ -28,7 +28,7 @@
       <h1 class="intro-title" v-html="currentScreen.title"></h1>
       <p class="intro-text">{{ currentScreen.text }}</p>
 
-      <div class="intro-dots">
+      <div v-if="screens.length > 1" class="intro-dots">
         <span
           v-for="(screen, index) in screens"
           :key="index"
@@ -38,7 +38,7 @@
         ></span>
       </div>
 
-      <div class="intro-buttons">
+      <div v-if="screens.length > 1" class="intro-buttons">
         <button v-if="currentIndex > 0" class="btn-secondary" @click="prev">
           Zurück
         </button>
@@ -79,7 +79,7 @@ defineEmits(['done'])
 
 const currentIndex = ref(0)
 
-const currentScreen = computed(() => props.screens[currentIndex.value])
+const currentScreen = computed(() => props.screens[0])
 
 const screenStyles = computed(() => ({
   '--primary-color': props.colors.primary,
