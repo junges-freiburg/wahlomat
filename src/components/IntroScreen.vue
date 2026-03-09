@@ -36,10 +36,6 @@
           {{ texts.startButton }}
         </button>
       </div>
-
-      <button class="skip-btn" @click="$emit('done')">
-        Überspringen
-      </button>
     </div>
   </div>
 </template>
