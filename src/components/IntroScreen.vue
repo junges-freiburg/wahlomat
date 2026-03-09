@@ -68,9 +68,10 @@ const screenStyles = computed(() => ({
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 20px;
+  padding-top: 10vh;
 }
 
 .intro-content {
@@ -81,7 +82,7 @@ const screenStyles = computed(() => ({
 .intro-logo {
   width: 200px;
   height: auto;
-  margin: 0 auto 18px;
+  margin: 0 auto 20px;
   display: block;
   align-items: center;
   justify-content: center;
@@ -89,8 +90,8 @@ const screenStyles = computed(() => ({
 }
   
 .intro-tagline {
-  font-size: 1rem;
-  opacity: 0.7;
+  font-size: 0.95rem;
+  opacity: 0.75;
   margin-bottom: 24px;
   max-width: 420px;
   margin-left: auto;
@@ -99,7 +100,7 @@ const screenStyles = computed(() => ({
   
 .intro-disclaimer {
   max-width: 460px;
-  margin: 16px auto 28px;
+  margin: 12px auto 22px;
   padding: 18px 22px;
 
   background: rgba(255,255,255,0.04);
@@ -140,9 +141,9 @@ const screenStyles = computed(() => ({
 }
 
 .btn-primary{
-  padding: 14px 32px;
+  padding: 16px 38px;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
