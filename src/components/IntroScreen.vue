@@ -95,6 +95,7 @@ const screenStyles = computed(() => ({
 
   backdrop-filter: blur(4px);
 }
+  
 .intro-subtitle {
   font-size: 0.9rem;
   font-weight: 600;
@@ -107,10 +108,17 @@ const screenStyles = computed(() => ({
   font-size: 0.75rem;
   line-height: 1.6;
   color: var(--text-secondary);
-  max-width: 420px;
-  margin: 0 auto 18px;
+  opacity: 0.9;
+  margin-bottom: 10px;
 }
-
+  
+.intro-note {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+  
 .intro-buttons {
   display: flex;
   gap: 12px;
