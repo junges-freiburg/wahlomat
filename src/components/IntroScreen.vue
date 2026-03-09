@@ -34,9 +34,9 @@
 
 <p class="intro-text">
   Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
-  bereitgestellt wird.
+  bereitgestellt wird. <br>
   Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen
-  Anspruch auf vollständige politische Neutralität.
+  Anspruch auf vollständige politische Neutralität. <br><br>
   Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für
   politische Bildung.
 </p>
