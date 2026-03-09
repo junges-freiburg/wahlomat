@@ -7,7 +7,11 @@
 
      <div class="intro-disclaimer">
   <h2 class="intro-subtitle">Disclaimer</h2>
-
+       
+  <p class="intro-tagline">
+  Finde heraus, welche Freiburger Parteien am besten zu deinen Positionen passen.
+  </p>
+       
   <p class="intro-text">
     Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
     bereitgestellt wird. Die Inhalte spiegeln die Perspektive des Vereins wider
@@ -84,9 +88,19 @@ const screenStyles = computed(() => ({
   color: white;
 }
   
+  .intro-tagline {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-top: 6px;
+  margin-bottom: 36px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
 .intro-disclaimer {
   max-width: 460px;
-  margin: 24px auto 28px;
+  margin: 28px auto 36px;
   padding: 18px 22px;
 
   background: rgba(255,255,255,0.04);
@@ -134,6 +148,7 @@ const screenStyles = computed(() => ({
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
+  margin-top: 12px;
 }
 
 .btn-primary {
