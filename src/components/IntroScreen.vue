@@ -112,21 +112,6 @@ const screenStyles = computed(() => ({
   margin-bottom: 32px;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--card-bg);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.dot.active {
-  background: var(--primary-color);
-  width: 24px;
-  border-radius: 5px;
-}
-
 .intro-buttons {
   display: flex;
   gap: 12px;
@@ -134,8 +119,7 @@ const screenStyles = computed(() => ({
   margin-bottom: 16px;
 }
 
-.btn-primary,
-.btn-secondary {
+.btn-primary{
   padding: 14px 32px;
   border-radius: 12px;
   font-size: 1rem;
@@ -155,12 +139,4 @@ const screenStyles = computed(() => ({
   box-shadow: 0 8px 25px rgba(255, 167, 84, 0.3);
 }
 
-.btn-secondary {
-  background: var(--card-bg);
-  color: var(--text-primary);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
 </style>
