@@ -113,7 +113,7 @@ const screenStyles = computed(() => ({
 }
   
 .intro-note {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   opacity: 0.65;
   margin-top: 8px;
   line-height: 1.5;
