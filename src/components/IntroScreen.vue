@@ -4,13 +4,13 @@
       <div class="intro-icon">
         <img src="/logo.svg" alt="Logo" class="intro-logo">
       </div>
-
+      
+  <p class="intro-tagline">
+    Finde heraus, welche Freiburger Parteien am besten zu deinen Positionen passen.
+  </p>
+      
      <div class="intro-disclaimer">
   <h2 class="intro-subtitle">Disclaimer</h2>
-       
-  <p class="intro-tagline">
-  Finde heraus, welche Freiburger Parteien am besten zu deinen Positionen passen.
-  </p>
        
   <p class="intro-text">
     Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
