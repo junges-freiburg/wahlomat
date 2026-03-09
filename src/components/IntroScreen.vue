@@ -28,8 +28,24 @@
         </svg>
       </div>
 
-      <h1 class="intro-title" v-html="screen.title"></h1>
-      <p class="intro-text">{{ screen.text }}</p>
+     <h1 class="intro-title">Dein-Freiburg-Match</h1>
+
+<h2 class="intro-subtitle">Disclaimer</h2>
+
+<p class="intro-text">
+  Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
+  bereitgestellt wird.
+</p>
+
+<p class="intro-text">
+  Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen
+  Anspruch auf vollständige politische Neutralität.
+</p>
+
+<p class="intro-text intro-note">
+  Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für
+  politische Bildung.
+</p>
 
       <div class="intro-buttons">
         <button class="btn-primary" @click="$emit('done')">
