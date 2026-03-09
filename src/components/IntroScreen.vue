@@ -5,16 +5,19 @@
         <img src="/logo.svg" alt="Logo" class="intro-logo">
       </div>
 
-     <h1 class="intro-subtitle">Disclaimer</h1>
+     <div class="intro-disclaimer">
+  <h2 class="intro-subtitle">Disclaimer</h2>
 
-     <p class="intro-text">
-        Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
-        bereitgestellt wird. <br>
-        Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen
-        Anspruch auf vollständige politische Neutralität. <br><br>
-        Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für
-        politische Bildung.
-     </p>
+  <p class="intro-text">
+    Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
+    bereitgestellt wird. Die Inhalte spiegeln die Perspektive des Vereins wider
+    und erheben keinen Anspruch auf vollständige politische Neutralität.
+  </p>
+
+  <p class="intro-note">
+    Alternative: Kommunal-O-Mat der Landeszentrale für politische Bildung.
+  </p>
+</div>
 
       <div class="intro-buttons">
         <button class="btn-primary" @click="$emit('done')">
@@ -80,13 +83,24 @@ const screenStyles = computed(() => ({
   justify-content: center;
   color: white;
 }
+  
+.intro-disclaimer {
+  max-width: 460px;
+  margin: 24px auto 28px;
+  padding: 18px 22px;
 
-  .intro-subtitle {
-  font-size: 0.95rem;
-  font-weight: 500;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+
+  backdrop-filter: blur(4px);
+}
+.intro-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
   color: #ffa754;
-  margin-top: 8px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 0.05px;
 }
 
 .intro-text {
