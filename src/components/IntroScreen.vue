@@ -79,20 +79,19 @@ const screenStyles = computed(() => ({
 }
 
 .intro-logo {
-  width: 300px;
-  height: 300px;
-  margin: 0 auto 0px;
-  display: flex;
+  width: 200px;
+  height: auto;
+  margin: 0 auto 18px;
+  display: block;
   align-items: center;
   justify-content: center;
   color: white;
 }
   
-  .intro-tagline {
+.intro-tagline {
   font-size: 1rem;
   opacity: 0.7;
-  margin-top: 6px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
@@ -100,7 +99,7 @@ const screenStyles = computed(() => ({
   
 .intro-disclaimer {
   max-width: 460px;
-  margin: 28px auto 36px;
+  margin: 16px auto 28px;
   padding: 18px 22px;
 
   background: rgba(255,255,255,0.04);
@@ -114,8 +113,7 @@ const screenStyles = computed(() => ({
   font-size: 0.9rem;
   font-weight: 600;
   color: #ffa754;
-  margin-top: 10px;
-  margin-bottom: 0.05px;
+  margin-bottom: 10px;
 }
 
 .intro-text {
@@ -137,6 +135,7 @@ const screenStyles = computed(() => ({
   display: flex;
   gap: 12px;
   justify-content: center;
+  margin-top: 12px;
   margin-bottom: 16px;
 }
 
