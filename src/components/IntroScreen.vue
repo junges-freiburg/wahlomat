@@ -81,7 +81,7 @@ const screenStyles = computed(() => ({
 
 .intro-logo {
   width: 200px;
-  height: auto;
+  height: 160px;
   margin: 0 auto 20px;
   display: block;
   align-items: center;
