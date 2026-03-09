@@ -74,11 +74,11 @@ const screenStyles = computed(() => ({
 }
 
 .intro-logo {
-  width: 120px;
-  height: 120px;
+  width: 380px;
+  height: 380px;
   margin: 0 auto 32px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  border-radius: 30px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
