@@ -87,11 +87,10 @@ const screenStyles = computed(() => ({
   color: #ffa754;
   margin-top: 8px;
   margin-bottom: 10px;
-  letter-spacing: 0.08em;
 }
 
 .intro-text {
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 1.6;
   color: var(--text-secondary);
   max-width: 420px;
