@@ -5,9 +5,7 @@
         <img src="/logo.svg" alt="Logo" class="intro-logo">
       </div>
 
-     <h1 class="intro-title">Dein-Freiburg-Match</h1>
-
-     <h2 class="intro-subtitle">Disclaimer</h2>
+     <h1 class="intro-subtitle">Disclaimer</h1>
 
      <p class="intro-text">
         Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
@@ -77,7 +75,6 @@ const screenStyles = computed(() => ({
   width: 380px;
   height: 380px;
   margin: 0 auto 32px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -85,13 +82,6 @@ const screenStyles = computed(() => ({
   color: white;
 }
 
-.intro-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffa754;
-  margin-bottom: 16px;
-}
-  
   .intro-subtitle {
   font-size: 1.5rem;
   font-weight: 700;
