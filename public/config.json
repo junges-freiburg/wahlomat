@@ -52,26 +52,16 @@
     "copyLinkButton": "Link kopieren",
     "linkCopied": "Link kopiert!"
   },
-  "intro": {
-    "enabled": true,
-    "screens": [
-      {
-        "title": "Dein-Freiburg-Match <br> Disclaimer",
-        "text": "Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V. bereitgestellt wird. Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen Anspruch auf vollständige politische Neutralität. Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für politische Bildung.",
-        "icon": "welcome"
-      },
-      {
-        "title": "So funktioniert's",
-        "text": "Dir werden verschiedene Thesen präsentiert. Entscheide für jede These, ob du zustimmst, ablehnst oder neutral bist.",
-        "icon": "how"
-      },
-      {
-        "title": "Wische oder tippe",
-        "text": "Wische nach rechts für Zustimmung, nach links für Ablehnung. Oder nutze die Buttons unten. Am Desktop kannst du auch die Pfeiltasten verwenden.",
-        "icon": "swipe"
-      }
-    ]
-  },
+ "intro": {
+  "enabled": true,
+  "screens": [
+    {
+      "title": "Dein-Freiburg-Match <br> Disclaimer",
+      "text": "Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V. bereitgestellt wird. Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen Anspruch auf vollständige politische Neutralität. Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für politische Bildung.",
+      "icon": "welcome"
+    }
+  ]
+},
   "settings": {
     "showPartyLogos": true,
     "showExplanations": true,
