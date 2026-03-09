@@ -2,22 +2,25 @@
   <div class="intro-screen" :style="screenStyles">
     <div class="intro-content">
       <div class="intro-icon">
-        <svg v-if="currentScreen.icon === 'welcome'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg v-if="screen.icon === 'welcome'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
           <path d="M2 17l10 5 10-5"></path>
           <path d="M2 12l10 5 10-5"></path>
         </svg>
-        <svg v-else-if="currentScreen.icon === 'how'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+        <svg v-else-if="screen.icon === 'how'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="10"></circle>
           <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
           <line x1="12" y1="17" x2="12.01" y2="17"></line>
         </svg>
-        <svg v-else-if="currentScreen.icon === 'swipe'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+        <svg v-else-if="screen.icon === 'swipe'" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
           <polyline points="14 2 14 8 20 8"></polyline>
           <path d="M12 18v-6"></path>
           <path d="M9 15l3 3 3-3"></path>
         </svg>
+
         <svg v-else width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="10"></circle>
           <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -25,27 +28,11 @@
         </svg>
       </div>
 
-      <h1 class="intro-title" v-html="currentScreen.title"></h1>
-      <p class="intro-text">{{ currentScreen.text }}</p>
+      <h1 class="intro-title" v-html="screen.title"></h1>
+      <p class="intro-text">{{ screen.text }}</p>
 
-      <div v-if="screens.length > 1" class="intro-dots">
-        <span
-          v-for="(screen, index) in screens"
-          :key="index"
-          class="dot"
-          :class="{ active: index === currentIndex }"
-          @click="goToScreen(index)"
-        ></span>
-      </div>
-
-      <div v-if="screens.length > 1" class="intro-buttons">
-        <button v-if="currentIndex > 0" class="btn-secondary" @click="prev">
-          Zurück
-        </button>
-        <button v-if="currentIndex < screens.length - 1" class="btn-primary" @click="next">
-          Weiter
-        </button>
-        <button v-else class="btn-primary" @click="$emit('done')">
+      <div class="intro-buttons">
+        <button class="btn-primary" @click="$emit('done')">
           {{ texts.startButton }}
         </button>
       </div>
@@ -58,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   screens: {
@@ -77,9 +64,7 @@ const props = defineProps({
 
 defineEmits(['done'])
 
-const currentIndex = ref(0)
-
-const currentScreen = computed(() => props.screens[0])
+const screen = computed(() => props.screens[0])
 
 const screenStyles = computed(() => ({
   '--primary-color': props.colors.primary,
@@ -88,22 +73,6 @@ const screenStyles = computed(() => ({
   '--text-secondary': props.colors.textSecondary,
   '--card-bg': props.colors.cardBackground
 }))
-
-function next() {
-  if (currentIndex.value < props.screens.length - 1) {
-    currentIndex.value++
-  }
-}
-
-function prev() {
-  if (currentIndex.value > 0) {
-    currentIndex.value--
-  }
-}
-
-function goToScreen(index) {
-  currentIndex.value = index
-}
 </script>
 
 <style scoped>
@@ -144,13 +113,6 @@ function goToScreen(index) {
   font-size: 1.1rem;
   line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 32px;
-}
-
-.intro-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
   margin-bottom: 32px;
 }
 
@@ -204,18 +166,5 @@ function goToScreen(index) {
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
-}
-
-.skip-btn {
-  background: none;
-  border: #ffa754;
-  color: #e47d2d;
-  font-size: 14px;
-  cursor: pointer;
-  padding: 8px 16px;
-}
-
-.skip-btn:hover {
-  color: #ffa754;
 }
 </style>
