@@ -31,7 +31,6 @@
     "resultsSubtitle": "So stimmst du mit den Kandidat*innen überein",
     "matchLabel": "Übereinstimmung",
     "restartButton": "Nochmal starten",
-    "introText": "Wische nach rechts für Zustimmung, nach links für Ablehnung, oder tippe auf Neutral.",
     "positionLabel": "These",
     "explanationLabel": "Erklärung",
     "partyPositionLabel": "Position des Kandidaten",
@@ -57,8 +56,8 @@
     "enabled": true,
     "screens": [
       {
-        "title": "Willkommen bei <br> Dein-Freiburg-Match",
-        "text": "Mit diesem Tool kannst du herausfinden, welche*r Oberbürgermeister Kandidat*in am besten zu dir passt.",
+        "title": "Dein-Freiburg-Match <br> Disclaimer",
+        "text": "Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V. bereitgestellt wird. Die Inhalte spiegeln die Perspektive des Vereins wider und erheben keinen Anspruch auf vollständige politische Neutralität. Als Alternative empfehlen wir den Kommunal-O-Mat der Landeszentrale für politische Bildung.",
         "icon": "welcome"
       },
       {
