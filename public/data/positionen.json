@@ -7,7 +7,7 @@
       "a": 1,
       "b": -1,
       "c": 1,
-      "d": 1,
+      "d": 0,
       "e": 1,
       "f": 1
     },
@@ -15,7 +15,7 @@
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Das Nachtleben sollte gefördert werden, weil ich als junger Mensch (Student) bzw. meine Generation in Freiburg deutlich mehr Möglichkeiten hatte. (Verstehe nur nicht was "leichter zugänglich" hier bedeutet soll.)",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang.",
+      "d": "Ich setze mich für eine neue Kampagne namens „Alkoholfreies Nachtleben" ein, denn Alkohol ist ein Neurotoxin. Alkoholisierte Freiburger:innen lassen Grenzüberschreitungen leichter zu – sie werden leichter zu Opfern und zu Tätern unter Alkoholeinfluss. Damit wir alle Spaß haben, fördere ich gerne kulturelle Konzerte und Tanzveranstaltungen, die explizit auf Drogen verzichten, sowohl am Tag als auch in der Nacht.",
       "e": "A...",
       "f": "Schnellere und günstigere Genehmigungen"
     }
@@ -36,7 +36,7 @@
       "a": "Klimaschutz ist die wichtigste Aufgabe unserer Zeit.",
       "b": "Wir unterstützen einen technologieoffenen Ansatz.",
       "c": "Wichtig wäre es, dass dabei die Schüler*innen beteiligt werden und mitentscheiden können müssten, wie und wofür das Geld eingesetzt werden sollte.",
-      "d": "Die Energiewende muss sozial gerecht gestaltet werden.",
+      "d": "Ich setze mich dafür ein, dass jede Schule einen Schulgarten besitzt und Schüler:innen in Kontakt mit Tieren sein können. Prinzipiell halte ich das Aufbrechen des Asphalts auf Schulhöfen und die Begrünung der Böden für den richtigen Weg – es macht mehr Spaß, auf Wiesen zu sitzen als auf Teer. Bewegungsangebote wie Klettergerüste und Calisthenics-Elemente auf Schulhöfen sind wichtig – wer jungen Menschen Raum gibt, sich auszutoben, investiert langfristig in ihre körperliche und mentale Gesundheit.",
       "e": "A...",
       "f": "Schulhöfe sind wichtige Lebensräume"
     }
@@ -49,7 +49,7 @@
       "a": 1,
       "b": -1,
       "c": -1,
-      "d": 1,
+      "d": -1,
       "e": 1,
       "f": -1
     },
@@ -57,7 +57,7 @@
       "a": "Starke Schultern müssen mehr tragen.",
       "b": "Vermögenssteuern vertreiben Investoren und Arbeitsplätze.",
       "c": "Junge Menschen haben je nach Stadtteil kaum bis gar keine Möglichkeiten, sich an überdachten Orten aufzuhalten. Im Winter kommt erschwerend die Kälte hinzu. Hier braucht es deshalb offene, kostenlose geschlossene Räume, in denen nicht konsumiert werden muss.",
-      "d": "Extreme Ungleichheit gefährdet unsere Demokratie.",
+      "d": "Es gibt kaum dritte Orte in Freiburg im Winter, wo man sich konsumfrei aufhalten kann. Leider. Ich möchte, dass jeder Stadtteil einen dritten Ort bekommt, wo sich jede Generation einfach treffen kann – Essen mitbringen, auf Sofas fläzen oder Spiele spielen – einen großen Ort in der Nachbarschaft, wo man einfach sein darf. Die Stadthalle wäre dafür ideal geeignet.,
       "e": "A...",
       "f": "Es kann nie genug solcher Orte geben."
     }
@@ -78,7 +78,7 @@
       "a": "Weniger Unfälle, weniger Emissionen - was spricht dagegen?",
       "b": "Freie Fahrt für freie Bürger!",
       "c": "Sie sollten von Beginn an beteiligt werden. Dafür müssten aber auch Prozesse mit jungen Menschen entwickelt werden, die berücksichtigen, dass sie anders denken, arbeiten und sich organisieren. Beteiligungsprozesse sind in der Regel von Erwachsenen für Erwachsene (entwickelt worden).",
-      "d": "Wir priorisieren den Ausbau des öffentlichen Nahverkehrs.",
+      "d": "Ich plädiere für die Neuauflage eines Jugendparlaments mit der Maßgabe, dass sich möglichst viele Jugendliche beteiligen und es viele Schüler:innen erreicht – also ein echtes demokratisches und repräsentatives Gremium darstellt.",
       "e": "A...",
       "f": "Es braucht eine institutionelle Beteiligung"
     }
@@ -99,7 +99,7 @@
       "a": "Prohibition ist gescheitert, Regulierung ist besser.",
       "b": "Wir sind für eine kontrollierte Freigabe zu medizinischen Zwecken.",
       "c": "Bräuchte es diese Maßnahme noch, wenn es z.B. ausreichend Räume für junge Menschen gäbe, in denen sie sich aufhalten und Musik hören können? Es braucht Ursachenanalysen und wirksame Lösungs- statt Maßnahmen-Debatten. (Das Problem ist komplexer, wie die meisten.)",
-      "d": "Legalisierung mit starkem Jugendschutz ist der richtige Weg.",
+      "d": "Keine Antwort",
       "e": "A...",
       "f": "Rücksicht auf die arbeitende Bevölkerung"
     }
@@ -112,7 +112,7 @@
       "a": 0,
       "b": 1,
       "c": 0,
-      "d": -1,
+      "d": 1,
       "e": 1,
       "f": 1
     },
@@ -120,7 +120,7 @@
       "a": "Diplomatie sollte Vorrang vor Aufrüstung haben.",
       "b": "Sicherheit ist eine Kernaufgabe des Staates.",
       "c": "Das ist ein sehr komplexes Thema und die Aussage wenig hilfreich. Das OB-Amt hat eine große Verantwortung, auch in Social Media. Weshalb man z.B. auf Plattformen wie, die Faschisten gehören, nicht sein sollte. Ein*e OB*in sollte auch keine Influencer*in, sondern Politiker*in sein.",
-      "d": "Wir brauchen Abrüstung, keine Aufrüstung.",
+      "d": "Social Media gehört zur demokratischen Willensbildung dazu.",
       "e": "A...",
       "f": "Nur auf eigenen Kanälen"
     }
@@ -141,7 +141,7 @@
       "a": "Wohnen ist ein Grundrecht, keine Ware.",
       "b": "Regulierung verhindert Neubau und verschärft die Wohnungsnot.",
       "c": "Junge Menschen sollten sich möglichst frei im Raum Freiburg bewegen können, weil Mobilität auch Teilhabe bedeutet und deshalb demokratisch wichtig ist. Langfristig sollte der ÖPNV aus demokratische und ökologischen Gründen kostenfrei für alle sein.",
-      "d": "Wir fordern einen bundesweiten Mietendeckel.",
+      "d": "Ich halte die Idee des kostenlosen ÖPNV für sehr gut – für alle, nicht nur für junge Menschen.",
       "e": "A...",
       "f": "Keiner sollte einen Fahrschein brauchen"
     }
@@ -162,7 +162,7 @@
       "a": "Menschen haben ein Recht auf einen würdigen Ruhestand.",
       "b": "Längere Lebensarbeitszeit ist demografisch notwendig.",
       "c": "Welche Maßnahme hier die wirksamste wäre, müsste erarbeitet werden. Auf jeden Fall gehören viele junge Menschen zu denen, die über eine geringe Lobby in der Gesellschaft und wenig finanzielle Mittel verfügen. Jede Investition an dieser Stelle ist eine Investition in die Zukunft.",
-      "d": "Abschlagsfreie Rente nach 40 Beitragsjahren!",
+      "d": "Wir sollten evaluieren, ob ein Viertel aus Baumhäusern („unter den Sternen schlafen") für Studierende geeigneter ist, und bezahlbaren Wohnraum in Form von Modulbauten oder Tiny Houses auf Parkplätzen fördern. Diese Stadt braucht weniger Autos, die Verkehrsflächen sollten mehr für Wohnraum genutzt werden.",
       "e": "A...",
       "f": "Kleine einfache Wohnungen"
     }
@@ -175,7 +175,7 @@
       "a": 1,
       "b": 0,
       "c": 1,
-      "d": 1,
+      "d": 0,
       "e": 1,
       "f": 1
     },
@@ -183,7 +183,7 @@
       "a": "Integration gelingt am besten durch Arbeit.",
       "b": "Wir prüfen jeden Einzelfall sorgfältig.",
       "c": "Habe nicht die Einblicke, weshalb man dieses wesentliche und schon so lange bekannte Problem nicht gelöst hat. Würde mich sehr stark für eine zeitnahe Lösung einsetzen. Weshalb sollte alle Zuständigen (inklusive OB und vielleicht damit mir) bis zur Erarbeitung eines Planes ausschließlich schulische Toiletten besuchen dürfen? :-)",
-      "d": "Arbeit ist der Schlüssel zur Integration.",
+      "d": "Freiburg gibt bereits über zwei Millionen Euro pro Jahr für Schultoiletten aus – viel davon für Vandalismusschäden. Der effektivste Ansatz ist nicht mehr Geld allein, sondern mehr Eigenverantwortung: Schulen, die Schüler:innen einbeziehen, haben weniger Schäden. Insofern setze ich mich dafür ein, dass Schüler:innen die Innenarchitektur ihrer eigenen Toiletten kreativ mitgestalten können und selbst einen Plan entwickeln, wie diese nicht von ihren Mitschüler:innen demoliert werden.",
       "e": "A...",
       "f": "Das ist eine Selbstverständlichkeit"
     }
@@ -196,7 +196,7 @@
       "a": 1,
       "b": 0,
       "c": 0,
-      "d": 1,
+      "d": 0,
       "e": 1,
       "f": -1
     },
@@ -204,7 +204,7 @@
       "a": "Gleichstellung muss aktiv gefördert werden.",
       "b": "Wir setzen auf freiwillige Selbstverpflichtungen.",
       "c": "Muss zugeben, dass ich mit der Debatte in Freiburg (inhaltlich und wie sie geführt wird) wenig anfangen kann. Auch, dass so viele involvierte Personen öffentlich über statt miteinander sprechen. Hier bräuchte es mehr evidenzbasierte Informationen und einen öffentliche Raum, der komplexe Sachverhalte zulässt.",
-      "d": "Verbindliche Quoten sind längst überfällig.",
+      "d": "Keine Antwort",
       "e": "A...",
       "f": "Nein, das ist ungerecht ggü dem LEH"
       }
@@ -217,7 +217,7 @@
       "a": 1,
       "b": -1,
       "c": 1,
-      "d": 1,
+      "d": 0,
       "e": 1,
       "f": 1
     },
@@ -225,7 +225,7 @@
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Es sollten an sich (mehr) die Bedarfe und Bedürfnisse bei solchen Planungen berücksichtigt werden. Welche Kosten und sonstige Folgen eine Umsetzung dieser Idee hätte, müsste man mit jungen Menschen und allen anderen davon Betroffenen gemeinsam besprechen und eine sinnvolle Lösung aushandeln.",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang.",
+      "d": "Wenn es den Bedarf gibt: ja. Wenn die Busse leer sind: nein.",
       "e": "A...",
       "f": "Alle sollten sicher nach Hause kommen"
     }
@@ -246,7 +246,7 @@
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Auch hier ist die Umsetzung ein zentraler Aspekt. Es gibt z.B. Städte mit einem Freifunk-Netz, das von den Bürger*innen bzw. der Stadtgesellschaft ermöglicht wird. ",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang.",
+      "d": "Zugang zum Internet ist ein Menschenrecht.",
       "e": "A...",
       "f": "zb Vernetzung der vorhandenen Router?"
     }
@@ -259,7 +259,7 @@
       "a": 1,
       "b": -1,
       "c": 0,
-      "d": 1,
+      "d": 0,
       "e": 1,
       "f": -1
     },
@@ -267,7 +267,7 @@
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Aus ökologischen und anderen Gründen eine nachvollziehbare Forderung. Zeitgleich muss eine Schulgemeinschaft auch selbst entscheiden und hinter so einem Beschluss stehen können, wenn er wirksam und nachhaltig sein soll.",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang.",  
+      "d": "Das Essen sollte aus dem Umland stammen und biologisch sowie saisonal angebaut werden. So unterstützen wir kleinbäuerliche Wirtschaft vor unserer Haustür – egal ob vegetarisch oder nicht. Kurze Transportwege von erntereifem Obst und Gemüse garantieren eine bessere Versorgung mit Vitaminen und Mineralstoffen.",  
       "e": "A...",
       "f": "Das sollen doch die Kunden entscheiden."
     }
@@ -288,7 +288,7 @@
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Auch hier wird eine Maßnahme zur Debatte gestellt, die viele mittragen müssen, damit sie tatsächlich wirksam und nachhaltig bzw. wirklich sinnvoll sein kann. Dafür braucht es einen demokratischen Prozess, über den man das notwendige Wissen erwerben und mündig, vernünftig entscheiden kann. ",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang.",  
+      "d": "Ich stehe für die autofreie Stadt bis 2035 – nicht nur die Rempartstraße, sondern viel mehr Wohnviertel sollten Superblocks erhalten. Autos sollten um die Stadtviertel herumfahren und nicht durch sie hindurch.",  
       "e": "A...",
       "f": "Habe ich schon vor 25 Jahren gefordert"
     }
@@ -301,7 +301,7 @@
       "a": 1,
       "b": -1,
       "c": -1,
-      "d": 1,
+      "d": -1,
       "e": 1,
       "f": 1
     },
@@ -309,7 +309,7 @@
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Mehr Polizeipräsenz führt laut einer Studie (Justus-Liebig-Universität Gießen in Kassel, 2024) nicht zwangsläufig zu einem höheren Sicherheitsgefühl und kann das subjektive Sicherheitsgefühl sogar verschlechtern (Präsenzparadoxon). ",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang.", 
+      "d": "Die Stadt hat gute Erfahrungen mit den Nachtmediatoren gemacht, die bei Konfliktfällen vermitteln. Insofern sehe ich hier keinen Bedarf.", 
       "e": "A...",
       "f": "Das Sicherheitsgefühl muss gestärkt werden"
     }
@@ -330,7 +330,7 @@
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Schüler*innen sollten immer bei der Gestaltung von Schule und Räumen ausreichend beteiligt werden, da sie 90% der Personen einer Schule ausmachen. (Solche Rückzugsräume sollte es für alle am Schulleben Beteiligte geben.)",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang.",
+      "d": "Ein Mittagsschlaf ist gesund, fördert die Herz-Kreislauf-Gesundheit und steigert Leistungsfähigkeit, Konzentration und Kreativität.",
       "e": "A...",
       "f": "Wenn es Kapazitäten gibt, gute Idee"
     }
