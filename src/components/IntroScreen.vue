@@ -1,6 +1,10 @@
 <template>
   <div class="intro-screen" :style="screenStyles">
     <div class="intro-content">
+      <div class="brand-signature">
+        <span class="brand-by">by</span>
+        <img src="/jflogo.svg" alt="Junges Freiburg">
+      </div>
       <div class="intro-icon">
         <img src="/logo.svg" alt="Logo" class="intro-logo">
       </div>
