@@ -6,7 +6,7 @@
       </div>
       
   <p class="intro-tagline">
-    Finde heraus, welche Freiburger Parteien am besten zu deinen Positionen passen.
+    Finde heraus, welche*r Oberbürgermeister-Kandidat*in am besten zu dir passt.
   </p>
       
      <div class="intro-disclaimer">
