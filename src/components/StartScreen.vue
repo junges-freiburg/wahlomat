@@ -132,14 +132,14 @@ const screenStyles = computed(() => ({
 
   display: flex;
   align-items: center;
-  gap: 6px;
 
   font-size: 0.75rem;
   opacity: 0.7;
 }
   
 .brand-signature img {
-  height: 32px;
+  height: 64px;
+  width: auto;
 }
   
 .intro-logo {
@@ -150,18 +150,6 @@ const screenStyles = computed(() => ({
   align-items: center;
   justify-content: center;
   color: white;
-}
-
-.app-title {
-  font-size: 2rem;
-  white-space: nowrap;
-  font-weight: 700;
-  margin-bottom: 8px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
 }
 
 .app-subtitle {
