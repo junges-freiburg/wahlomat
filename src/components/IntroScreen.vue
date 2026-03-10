@@ -6,7 +6,7 @@
       </div>
       
   <p class="intro-tagline">
-    Finde heraus, welche*r Oberbürgermeister-Kandidat*in am besten zu dir passt.
+    Swipe deinen Oberbürgermeister-Kandidaten für Freiburg.
   </p>
       
      <div class="intro-disclaimer">
