@@ -141,9 +141,10 @@ const screenStyles = computed(() => ({
 }
 
 .app-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+  opacity: 0.9;
 }
 
 .instructions {
@@ -159,9 +160,10 @@ const screenStyles = computed(() => ({
   align-items: center;
   text-align: center;
   gap: 8px;
-  padding: 12px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  margin-bottom: 12px;
 }
 
 .instruction-icon {
