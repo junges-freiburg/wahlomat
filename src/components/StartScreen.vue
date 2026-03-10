@@ -123,6 +123,7 @@ const screenStyles = computed(() => ({
 
 .brand-by {
   color: #f2f2f2;
+  opacity: 0.75;
 }
   
 .brand-signature {
@@ -135,6 +136,8 @@ const screenStyles = computed(() => ({
 
   font-size: 0.75rem;
   opacity: 0.7;
+  backdrop-filter: blur(4px);
+  
 }
   
 .brand-signature img {
