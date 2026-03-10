@@ -117,17 +117,12 @@ const screenStyles = computed(() => ({
   max-width: 400px;
 }
 
-.logo-container {
-  margin-bottom: 24px;
-}
 
-.logo-icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  border-radius: 24px;
-  display: flex;
+.intro-logo {
+  width: 200px;
+  height: 160px;
+  margin: 0 auto 20px;
+  display: block;
   align-items: center;
   justify-content: center;
   color: white;
