@@ -8,12 +8,16 @@
       "b": -1,
       "c": 0,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
       "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -25,12 +29,16 @@
       "b": 0,
       "c": -1,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Klimaschutz ist die wichtigste Aufgabe unserer Zeit.",
       "b": "Wir unterstützen einen technologieoffenen Ansatz.",
       "c": "Fossile Energien sind weiterhin unverzichtbar für die Wirtschaft.",
       "d": "Die Energiewende muss sozial gerecht gestaltet werden."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -42,12 +50,16 @@
       "b": -1,
       "c": -1,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Starke Schultern müssen mehr tragen.",
       "b": "Vermögenssteuern vertreiben Investoren und Arbeitsplätze.",
       "c": "Eigentum muss geschützt, nicht bestraft werden.",
       "d": "Extreme Ungleichheit gefährdet unsere Demokratie."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -59,12 +71,16 @@
       "b": -1,
       "c": -1,
       "d": 0
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Weniger Unfälle, weniger Emissionen - was spricht dagegen?",
       "b": "Freie Fahrt für freie Bürger!",
       "c": "Deutsche Autobahnen sind auch ohne Limit sicher.",
       "d": "Wir priorisieren den Ausbau des öffentlichen Nahverkehrs."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -76,12 +92,16 @@
       "b": 0,
       "c": -1,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Prohibition ist gescheitert, Regulierung ist besser.",
       "b": "Wir sind für eine kontrollierte Freigabe zu medizinischen Zwecken.",
       "c": "Drogen bleiben Drogen und gehören verboten.",
       "d": "Legalisierung mit starkem Jugendschutz ist der richtige Weg."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -93,12 +113,16 @@
       "b": 1,
       "c": 1,
       "d": -1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Diplomatie sollte Vorrang vor Aufrüstung haben.",
       "b": "Sicherheit ist eine Kernaufgabe des Staates.",
       "c": "Eine starke Armee schützt unsere Freiheit.",
       "d": "Wir brauchen Abrüstung, keine Aufrüstung."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -110,12 +134,16 @@
       "b": -1,
       "c": -1,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wohnen ist ein Grundrecht, keine Ware.",
       "b": "Regulierung verhindert Neubau und verschärft die Wohnungsnot.",
       "c": "Der Markt regelt Angebot und Nachfrage am besten.",
       "d": "Wir fordern einen bundesweiten Mietendeckel."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -127,12 +155,16 @@
       "b": 1,
       "c": 1,
       "d": -1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Menschen haben ein Recht auf einen würdigen Ruhestand.",
       "b": "Längere Lebensarbeitszeit ist demografisch notwendig.",
       "c": "Wer länger lebt, kann auch länger arbeiten.",
       "d": "Abschlagsfreie Rente nach 40 Beitragsjahren!"
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -144,12 +176,16 @@
       "b": 0,
       "c": -1,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Integration gelingt am besten durch Arbeit.",
       "b": "Wir prüfen jeden Einzelfall sorgfältig.",
       "c": "Erst muss der Aufenthaltsstatus geklärt sein.",
       "d": "Arbeit ist der Schlüssel zur Integration."
+      "e": "A..."
+      "f": "A..."
     }
   },
   {
@@ -161,12 +197,16 @@
       "b": 0,
       "c": -1,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Gleichstellung muss aktiv gefördert werden.",
       "b": "Wir setzen auf freiwillige Selbstverpflichtungen.",
       "c": "Qualifikation zählt, nicht das Geschlecht.",
       "d": "Verbindliche Quoten sind längst überfällig."
+      "e": "A..."
+      "f": "A..."
       }
   },
   {
@@ -178,12 +218,16 @@
       "b": -1,
       "c": 0,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
-      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+      "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang." 
+      "e": "A..."
+      "f": "A..."
     }
  },
   {
@@ -195,12 +239,16 @@
       "b": -1,
       "c": 0,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
       "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+      "e": "A..."
+      "f": "A..."
     }
     },
 {
@@ -212,12 +260,16 @@
       "b": -1,
       "c": 0,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
       "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+      "e": "A..."
+      "f": "A..."
     }
  },
 {
@@ -229,12 +281,16 @@
       "b": -1,
       "c": 0,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
       "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+      "e": "A..."
+      "f": "A..."
     }
  },
 {
@@ -246,12 +302,16 @@
       "b": -1,
       "c": 0,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
       "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+      "e": "A..."
+      "f": "A..."
     }
  },
 {
@@ -263,12 +323,16 @@
       "b": -1,
       "c": 0,
       "d": 1
+      "e": 1
+      "f": 1
     },
     "erklaerungen": {
       "a": "Wir setzen uns für faire Löhne ein, die zum Leben reichen.",
       "b": "Höhere Mindestlöhne gefährden Arbeitsplätze im Mittelstand.",
       "c": "Der Markt sollte Löhne regulieren, nicht der Staat.",
       "d": "Arbeit muss sich wieder lohnen - 15 Euro sind ein guter Anfang."  
+      "e": "A..."
+      "f": "A..."
     }
   }
 ]
