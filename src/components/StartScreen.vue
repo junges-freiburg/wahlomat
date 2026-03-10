@@ -2,7 +2,7 @@
   <div class="start-screen" :style="screenStyles">
     <div class="start-content">
       <div class="brand-signature">
-        <span>by</span>
+        <span class="brand-by">by</span>
         <img src="/jflogo.svg" alt="Junges Freiburg">
       </div>
         <div class="intro-icon">
@@ -121,6 +121,10 @@ const screenStyles = computed(() => ({
   max-width: 400px;
 }
 
+.brand-by {
+  color: #f2f2f2;
+}
+  
 .brand-signature {
   position: fixed;
   top: 16px;
@@ -132,6 +136,10 @@ const screenStyles = computed(() => ({
 
   font-size: 0.75rem;
   opacity: 0.7;
+}
+  
+.brand-signature img {
+  height: 16px;
 }
   
 .intro-logo {
