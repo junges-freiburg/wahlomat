@@ -1,9 +1,13 @@
 <template>
   <div class="start-screen" :style="screenStyles">
     <div class="start-content">
-      <div class="intro-icon">
-        <img src="/logo.svg" alt="Logo" class="intro-logo">
+      <div class="brand-signature">
+        <span>by</span>
+        <img src="/jflogo.svg" alt="Junges Freiburg">
       </div>
+        <div class="intro-icon">
+          <img src="/logo.svg" alt="Logo" class="intro-logo">
+        </div>
 
       <p class="app-subtitle">{{ appSubtitle }}</p>
 
@@ -117,7 +121,19 @@ const screenStyles = computed(() => ({
   max-width: 400px;
 }
 
+.brand-signature {
+  position: fixed;
+  top: 16px;
+  right: 16px;
 
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+  
 .intro-logo {
   width: 200px;
   height: 160px;
