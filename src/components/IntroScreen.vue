@@ -96,7 +96,10 @@ const screenStyles = computed(() => ({
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
-  color: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
   
 .intro-disclaimer {
