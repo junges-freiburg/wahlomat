@@ -6,7 +6,7 @@
       </div>
       
   <p class="intro-tagline">
-    Swipe deinen Oberbürgermeister-Kandidaten für Freiburg.
+    Swipe deinen Oberbürgermeister-Kandidaten <br> für Freiburg.
   </p>
       
      <div class="intro-disclaimer">
