@@ -17,9 +17,9 @@
   <h2 class="intro-subtitle">Disclaimer</h2>
        
   <p class="intro-text">
-    Dein-Freiburg-Match ist ein Informationstool, das von Junges Freiburg e.V.
+    Dein-Freiburg-Match ist ein kostenloses Informationstool, das von Junges Freiburg e.V.
     bereitgestellt wird. Die Inhalte spiegeln die Perspektive des Vereins wider
-    und erheben keinen Anspruch auf vollständige politische Neutralität.
+    und erheben keinen Anspruch auf vollständige politische Neutralität oder Vollständigkeit.
   </p>
 
   <p class="intro-note">
