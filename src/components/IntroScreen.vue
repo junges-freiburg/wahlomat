@@ -83,6 +83,30 @@ const screenStyles = computed(() => ({
   max-width: 400px;
 }
 
+.brand-by {
+  color: #f2f2f2;
+  opacity: 0.75;
+}
+  
+.brand-signature {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 0.75rem;
+  opacity: 0.7;
+  backdrop-filter: blur(4px);
+  
+}
+  
+.brand-signature img {
+  height: 50px;
+  width: auto;
+}
+  
 .intro-logo {
   width: 200px;
   height: 160px;
