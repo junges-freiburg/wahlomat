@@ -166,8 +166,8 @@ const screenStyles = computed(() => ({
 }
 
 .instruction-icon {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 10px;
   display: flex;
   align-items: center;
