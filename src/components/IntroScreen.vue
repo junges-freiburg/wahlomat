@@ -19,7 +19,7 @@
   </p>
 
   <p class="intro-note">
-    Alternative: Kommunal-O-Mat der Landeszentrale für politische Bildung.
+    Alternative: <a href="https://www.kommunal-o-mat.de/" target="_blank">Kommunal-O-Mat</a> der Landeszentrale für politische Bildung.
   </p>
 </div>
 
