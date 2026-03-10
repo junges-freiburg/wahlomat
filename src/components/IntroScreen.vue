@@ -135,6 +135,11 @@ const screenStyles = computed(() => ({
   margin-top: 8px;
   line-height: 1.5;
 }
+.intro-note a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
   
 .intro-buttons {
   display: flex;
