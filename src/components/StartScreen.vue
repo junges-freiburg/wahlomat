@@ -1,19 +1,10 @@
 <template>
   <div class="start-screen" :style="screenStyles">
     <div class="start-content">
-      <div class="logo-container">
-        <div class="logo-icon">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-            <path d="M2 17l10 5 10-5"></path>
-            <path d="M2 12l10 5 10-5"></path>
-          </svg>
-        </div>
+      <div class="intro-icon">
+        <img src="/logo.svg" alt="Logo" class="intro-logo">
       </div>
 
-      <h1 class="app-title"
-        v-html="appTitle"
-      ></h1>
       <p class="app-subtitle">{{ appSubtitle }}</p>
 
       <div class="instructions">
