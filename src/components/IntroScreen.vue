@@ -136,7 +136,7 @@ const screenStyles = computed(() => ({
   line-height: 1.5;
 }
 .intro-note a {
-  color: blue;
+  color: #1a73e8;
   text-decoration: underline;
   cursor: pointer;
 }
