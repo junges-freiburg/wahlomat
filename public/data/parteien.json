@@ -39,4 +39,12 @@
     "logo": "mut.svg",
     "beschreibung": "Unternehmer (CDU)"
 }
+  {
+    "id": "f",
+    "name": "Florian Braune",
+    "kurzname": "FB",
+    "farbe": "#ebf55d",
+    "logo": "mut.svg",
+    "beschreibung": "Anwalt (Freie Wähler)"
+}
 ]
