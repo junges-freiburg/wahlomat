@@ -46,5 +46,21 @@
     "farbe": "#ebf55d",
     "logo": "mut.svg",
     "beschreibung": "Anwalt (Freie Wähler)"
+},
+  {
+    "id": "g",
+    "name": "Martin Borgmann",
+    "kurzname": "MB",
+    "farbe": "#E31B23",
+    "logo": "mut.svg",
+    "beschreibung": "Doktorand in der Krebsforschung (Die PARTEI)"
+},
+  {
+    "id": "h",
+    "name": "Claudio Probst",
+    "kurzname": "CP",
+    "farbe": "#000000",
+    "logo": "mut.svg",
+    "beschreibung": "Arbeitssuchend (APPD)"
 }
 ]
