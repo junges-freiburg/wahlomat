@@ -163,7 +163,6 @@ const screenStyles = computed(() => ({
   padding: 18px 20px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 16px;
-  margin-bottom: 12px;
 }
 
 .instruction-icon {
