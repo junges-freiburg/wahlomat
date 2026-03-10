@@ -139,7 +139,7 @@ const screenStyles = computed(() => ({
 }
   
 .brand-signature img {
-  height: 16px;
+  height: 32px;
 }
   
 .intro-logo {
