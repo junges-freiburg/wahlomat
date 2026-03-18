@@ -357,6 +357,7 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
   justify-content: space-between;
   overflow: hidden;
+  min-height: 0;
 }
 
 .card-container {
