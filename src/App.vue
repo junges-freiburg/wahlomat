@@ -355,6 +355,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: env(safe-area-inset-bottom);
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .card-container {
