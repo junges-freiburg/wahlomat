@@ -367,6 +367,7 @@ body {
   width: 100%;
   padding: 20px;
   position: relative;
+  min-height: 0;
 }
 
 .no-more-cards {
