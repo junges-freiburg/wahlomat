@@ -308,7 +308,7 @@ body {
 
 <style scoped>
 .app {
-  height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
