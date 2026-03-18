@@ -354,7 +354,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
   justify-content: space-between;
   overflow: hidden;
   min-height: 0;
