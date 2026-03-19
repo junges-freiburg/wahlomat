@@ -288,7 +288,10 @@ defineExpose({ swipeLeft, swipeRight })
   margin: 0 auto;
   max-width: 360px;
   min-height: 350px;
-  background: var(--card-bg);
+  background: linear-gradient(
+    135deg,
+    #fb923c,
+    #f97316	);
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
     		  0 8px 20px rgba(0, 0, 0, 0.3);
