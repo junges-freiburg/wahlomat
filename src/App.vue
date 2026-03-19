@@ -403,7 +403,7 @@ body {
   right: 0;
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .undo-btn {
