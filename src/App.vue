@@ -87,7 +87,7 @@
           class="undo-btn"
           @click="undoLast"
         >
-          ↩ Rückgängig
+          ↩ zurück
         </button>
       </div>
 
