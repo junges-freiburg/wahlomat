@@ -49,13 +49,13 @@
         />
 
         <div class="card-container">
-          <div class="card-wrapper">
+          <div class="card-stack">
             <div v-if="!hasMorePositions" class="no-more-cards">
               <h2>{{ config.texts.noMoreCards }}</h2>
               <button class="show-results-btn" @click="showResults">
                 {{ config.texts.showResults }}
               </button>
-            </div>
+            
 
           <SwipeCard
             v-else
@@ -72,7 +72,7 @@
             @toggle-weight="toggleWeightForCurrent"
           />
 
-          <div class="undo-container">
+        <div class="undo-container">
         <button
           v-if="canUndo"
           class="undo-btn"
@@ -82,7 +82,6 @@
         </button>
       </div>
     </div>
-          
         </div>
 
         <ActionButtons
@@ -387,13 +386,12 @@ body {
   min-height: 0;
 }
 
-.card-wrapper {
-  position: relative;
-  width: 100%;
-  height: 400px; /* oder deine Card-Höhe */
+.card-stack {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 400px;
 }
   
 .undo-container {
@@ -428,7 +426,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
