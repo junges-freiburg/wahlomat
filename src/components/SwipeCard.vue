@@ -356,7 +356,8 @@ defineExpose({ swipeLeft, swipeRight })
 }
 
 .swipe-card.is-weighted {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+    		  0 0 0 2px rgba(249, 115, 22, 0.6);
 }
 	
 .card-body {
