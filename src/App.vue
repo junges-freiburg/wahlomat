@@ -200,11 +200,13 @@ function handleAgree() {
 
 function handleDisagree() {
   if (swipeCard.value) {
+    history.value.push(currentIndex.value)
     swipeCard.value.swipeLeft()
   }
 }
 
 function handleNeutral() {
+  history.value.push(currentIndex.value)
   answerPosition(0)
 }
 
