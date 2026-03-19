@@ -290,8 +290,8 @@ defineExpose({ swipeLeft, swipeRight })
   min-height: 350px;
   background: linear-gradient(
     135deg,
-    #fb923c,
-    #f97316	);
+	#ffaa33,
+    #ff953e );
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
     		  0 8px 20px rgba(0, 0, 0, 0.3);
