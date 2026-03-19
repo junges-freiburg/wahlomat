@@ -118,6 +118,8 @@ import ActionButtons from './components/ActionButtons.vue'
 import ProgressBar from './components/ProgressBar.vue'
 import ResultsView from './components/ResultsView.vue'
 
+const history = ref([])
+  
 const { config } = useConfig()
 const {
   parteien,
@@ -176,7 +178,17 @@ function startQuiz() {
 }
 
 function handleSwipe(direction) {
+  history.value.push(currentIndex.value)
   answerPosition(direction)
+}
+
+const canUndo = computed(() => history.value.length > 0)
+
+function undoLast() {
+  const last = history.value.pop()
+  if (last !== undefined) {
+    currentIndex.value = last
+  }
 }
 
 function handleAgree() {
@@ -218,7 +230,7 @@ function handleKeydown(e) {
     }
     return
   }
-
+  
   if (screen.value === 'start') {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
