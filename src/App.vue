@@ -70,6 +70,17 @@
             @swipe="handleSwipe"
             @toggle-weight="toggleWeightForCurrent"
           />
+
+          <div class="undo-container">
+        <button
+          v-if="canUndo"
+          class="undo-btn"
+          @click="undoLast"
+        >
+          ↩ zurück
+        </button>
+      </div>
+          
         </div>
 
         <ActionButtons
@@ -81,15 +92,6 @@
           @neutral="handleNeutral"
         />
        
-       <div class="undo-container">
-        <button
-          v-if="canUndo"
-          class="undo-btn"
-          @click="undoLast"
-        >
-          ↩ zurück
-        </button>
-      </div>
 </div>
       <ResultsView
         v-else-if="screen === 'results'"
