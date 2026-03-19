@@ -284,8 +284,9 @@ defineExpose({ swipeLeft, swipeRight })
 <style scoped>
 .swipe-card {
   position: absolute;
-  width: 100%;
-  max-width: 400px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  max-width: 360px;
   min-height: 350px;
   background: var(--card-bg);
   border-radius: 20px;
