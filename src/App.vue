@@ -428,7 +428,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 400px;
   width: 100%;
+  margin: 0 auto;
   padding: 20px;
   position: relative;
   min-height: 0;
