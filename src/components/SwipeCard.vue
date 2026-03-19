@@ -384,7 +384,7 @@ defineExpose({ swipeLeft, swipeRight })
   gap: 8px;
   background: none;
   border: none;
-  color: gray;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
   cursor: pointer;
   padding: 8px 0;
