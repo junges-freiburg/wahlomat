@@ -250,7 +250,9 @@ function finishSwipe() {
     }, 300)
   } else {
     if (!didMove.value) {
-      emitNeutralAnswer()
+      offsetX.value = 0
+  	  offsetY.value = 0
+      return
     } else {
       isAnimating.value = true
       offsetX.value = 0
