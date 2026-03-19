@@ -49,12 +49,13 @@
         />
 
         <div class="card-container">
-          <div v-if="!hasMorePositions" class="no-more-cards">
-            <h2>{{ config.texts.noMoreCards }}</h2>
-            <button class="show-results-btn" @click="showResults">
-              {{ config.texts.showResults }}
-            </button>
-          </div>
+          <div class="card-wrapper">
+            <div v-if="!hasMorePositions" class="no-more-cards">
+              <h2>{{ config.texts.noMoreCards }}</h2>
+              <button class="show-results-btn" @click="showResults">
+                {{ config.texts.showResults }}
+              </button>
+            </div>
 
           <SwipeCard
             v-else
@@ -80,6 +81,7 @@
           ↩ zurück
         </button>
       </div>
+    </div>
           
         </div>
 
@@ -385,14 +387,23 @@ body {
   min-height: 0;
 }
 
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px; /* oder deine Card-Höhe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
 .undo-container {
   position: relative;
-  z-index: 10;
   bottom: 10px;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
+  margin-top: 12px;
 }
 
 .undo-btn {
