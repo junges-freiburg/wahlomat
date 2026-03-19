@@ -402,7 +402,7 @@ body {
   right: 0;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
 .undo-btn {
@@ -414,6 +414,7 @@ body {
   padding: 4px 8px;
   border-radius: 6px;
   transition: all 0.2s ease;
+  opacity: 0.6;
 }
 
 .undo-btn:hover {
