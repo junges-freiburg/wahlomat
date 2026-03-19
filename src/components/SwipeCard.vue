@@ -445,21 +445,21 @@ defineExpose({ swipeLeft, swipeRight })
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .slide-enter-from,
 .slide-leave-to {
   opacity: 0;
-  max-height: 0;
+  transform: translateY(-6px);
 }
 
 .slide-enter-to,
 .slide-leave-from {
   opacity: 1;
-  max-height: 200px;
+  transform: translateY(0);
 }
-
+	
 @media (min-width: 768px) {
   .swipe-card {
     min-height: 400px;
