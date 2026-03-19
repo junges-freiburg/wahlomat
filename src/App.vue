@@ -90,7 +90,7 @@
           ↩ zurück
         </button>
       </div>
-
+</div>
       <ResultsView
         v-else-if="screen === 'results'"
         :results="results"
