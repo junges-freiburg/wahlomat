@@ -80,6 +80,15 @@
           @disagree="handleDisagree"
           @neutral="handleNeutral"
         />
+       
+       <div class="undo-container">
+        <button
+          v-if="canUndo"
+          class="undo-btn"
+          @click="undoLast"
+        >
+          ↩ Rückgängig
+        </button>
       </div>
 
       <ResultsView
@@ -359,6 +368,28 @@ body {
   min-height: 0;
 }
 
+  .undo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.undo-btn {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.undo-btn:hover {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.08);
+}
+  
 .card-container {
   flex: 1;
   display: flex;
