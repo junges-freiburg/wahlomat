@@ -8,6 +8,21 @@
     @touchend="onTouchEnd"
     @mousedown="onMouseDown"
   >
+  <div
+    class="swipe-label like"
+    v-if="offsetX > 10"
+    :style="{ opacity: Math.min(offsetX / 100, 1) }"
+  >
+    👍 JA
+  </div>
+
+  <div
+    class="swipe-label nope"
+    v-if="offsetX < -10"
+    :style="{ opacity: Math.min(Math.abs(offsetX) / 100, 1) }"
+  >
+    👎 NEIN
+  </div>
     <div class="card-content">
       <div class="card-header">
         <button class="weight-toggle" :class="{ active: isWeighted }" @click.stop="emit('toggle-weight')">
@@ -349,6 +364,29 @@ defineExpose({ swipeLeft, swipeRight })
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(99, 102, 241, 0.5);
 }
 
+.swipe-label {
+  position: absolute;
+  top: 20px;
+  font-size: 26px;
+  font-weight: 900;
+  padding: 10px 18px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.like {
+  left: 20px;
+  color: #22c55e;
+  border: 3px solid #22c55e;
+}
+
+.nope {
+  right: 20px;
+  color: #ef4444;
+  border: 3px solid #ef4444;
+}
+	
 .card-body {
   flex: 1;
   display: flex;
