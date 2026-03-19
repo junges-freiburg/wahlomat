@@ -386,7 +386,8 @@ body {
 }
 
 .undo-container {
-  position: absolute;
+  position: relative;
+  z-index: 10;
   bottom: 10px;
   left: 0;
   right: 0;
