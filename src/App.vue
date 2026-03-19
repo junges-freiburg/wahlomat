@@ -385,10 +385,13 @@ body {
   min-height: 0;
 }
 
-  .undo-container {
+.undo-container {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
-  margin-top: 6px;
 }
 
 .undo-btn {
