@@ -290,11 +290,13 @@ defineExpose({ swipeLeft, swipeRight })
   min-height: 350px;
   background: var(--card-bg);
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+    		  0 8px 20px rgba(0, 0, 0, 0.3);
   cursor: grab;
   user-select: none;
   transition: box-shadow 0.3s ease;
   will-change: transform;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .swipe-card:active {
