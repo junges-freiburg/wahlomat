@@ -193,6 +193,7 @@ function undoLast() {
 
 function handleAgree() {
   if (swipeCard.value) {
+    history.value.push(currentIndex.value)
     swipeCard.value.swipeRight()
   }
 }
