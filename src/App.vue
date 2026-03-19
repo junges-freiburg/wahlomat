@@ -387,7 +387,7 @@ body {
 }
 
 .card-stack {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
