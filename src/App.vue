@@ -55,6 +55,7 @@
               <button class="show-results-btn" @click="showResults">
                 {{ config.texts.showResults }}
               </button>
+            </div>
             
 
           <SwipeCard
@@ -82,7 +83,7 @@
         </button>
       </div>
     </div>
-        </div>
+  </div>
 
         <ActionButtons
           v-if="hasMorePositions"
