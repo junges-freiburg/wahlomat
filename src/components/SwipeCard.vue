@@ -121,10 +121,17 @@ const swipeDirection = computed(() => {
 })
 
 const cardStyle = computed(() => {
-  const rotate = offsetX.value * 0.1
-  const opacity = Math.max(0.5, 1 - Math.abs(offsetX.value) / 500)
+  const rotate = offsetX.value * 0.15
+  const scale = 1 - Math.min(Math.abs(offsetX.value) / 800, 0.05)
+  const opacity = Math.max(0.6, 1 - Math.abs(offsetX.value) / 400)
+
   return {
-    transform: `translateX(${offsetX.value}px) translateY(${offsetY.value}px) rotate(${rotate}deg)`,
+    transform: `
+      translateX(${offsetX.value}px)
+      translateY(${offsetY.value}px)
+      rotate(${rotate}deg)
+      scale(${scale})
+    `,
     opacity,
     transition: isAnimating.value ? 'transform 0.3s ease, opacity 0.3s ease' : 'none',
     '--card-bg': props.colors.cardBackground,
