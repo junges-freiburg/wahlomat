@@ -227,6 +227,8 @@ function getWeightedPositions(positions = []) {
   padding: 20px;
   min-height: 100vh;
   color: var(--text-primary);
+  height: 100%;
+  overflow-y: auto;
 }
 
 .results-header {
