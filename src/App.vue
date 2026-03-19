@@ -75,10 +75,10 @@
 
         <div class="undo-container">
         <button
-          v-if="canUndo"
-          class="undo-btn"
-          @click="undoLast"
-        >
+    class="undo-btn"
+    :class="{ visible: canUndo }"
+    @click="undoLast"
+      >
           ↩ zurück
         </button>
       </div>
@@ -403,9 +403,18 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 18px;
+  height: 24px;
 }
 
 .undo-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+  
+.undo-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
   background: none;
