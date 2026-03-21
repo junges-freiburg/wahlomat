@@ -143,6 +143,13 @@ const {
   reset
 } = useWahlomat()
 
+const screenStyles = computed(() => ({
+  '--primary-color': props.colors.primary,
+  '--secondary-color': props.colors.secondary,
+  '--text-primary': props.colors.textPrimary,
+  '--text-secondary': props.colors.textSecondary,
+  '--card-bg': props.colors.cardBackground
+    
 const screen = ref('start')
 const results = ref([])
 const swipeCard = ref(null)
