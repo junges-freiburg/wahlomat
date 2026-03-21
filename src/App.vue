@@ -128,6 +128,7 @@ const { config } = useConfig()
 const {
   parteien,
   positionen,
+  userAnswers,
   currentIndex,
   currentPosition,
   hasMorePositions,
@@ -191,6 +192,12 @@ const canUndo = computed(() => history.value.length > 0)
 function undoLast() {
   const last = history.value.pop()
   if (last !== undefined) {
+    const position = positionen.value[last]
+
+    if (position) {
+      delete userAnswers.value[position.id]   // 🔥 DAS ist der Fix
+    }
+
     currentIndex.value = last
   }
 }
