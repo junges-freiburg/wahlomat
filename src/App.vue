@@ -1,9 +1,10 @@
 <template>
   <div class="app" :style="appStyles">
-    <div v-if="isLoading" class="loading">
-      <div class="loading-spinner"></div>
-      <p>Laden...</p>
-    </div>
+    <div class="start-screen" :style="screenStyles">
+      <div v-if="isLoading" class="loading">
+        <div class="loading-spinner"></div>
+        <p>Laden...</p>
+      </div>
 
     <div v-else-if="error" class="error">
       <p>Fehler beim Laden der Daten</p>
@@ -107,6 +108,7 @@
         @restart="restart"
       />
     </template>
+  </div>
   </div>
 </template>
 
