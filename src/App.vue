@@ -145,6 +145,13 @@ const {
   reset
 } = useWahlomat()
 
+const props = defineProps({
+  show-results-btn: {
+    type: Boolean,
+    default: false
+  }
+})
+  
 const screenStyles = computed(() => ({
   '--primary-color': props.colors.primary,
   '--secondary-color': props.colors.secondary,
