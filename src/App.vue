@@ -1,6 +1,5 @@
 <template>
-  <div class="app" :style="appStyles">
-    <div class="start-screen" :style="screenStyles">
+  <div class="app" :style="[appStyles, screenStyles]">
       <div v-if="isLoading" class="loading">
         <div class="loading-spinner"></div>
         <p>Laden...</p>
@@ -109,7 +108,6 @@
       />
     </template>
   </div>
-  </div>
 </template>
 
 <script setup>
@@ -145,20 +143,18 @@ const {
   reset
 } = useWahlomat()
 
-const props = defineProps({
-  show-results-btn: {
-    type: Boolean,
-    default: false
+const screenStyles = computed(() => {
+  if (!config.value) return {}
+
+  return {
+    '--primary-color': config.value.colors.primary,
+    '--secondary-color': config.value.colors.secondary,
+    '--text-primary': config.value.colors.textPrimary,
+    '--text-secondary': config.value.colors.textSecondary,
+    '--card-bg': config.value.colors.cardBackground
   }
 })
   
-const screenStyles = computed(() => ({
-  '--primary-color': props.colors.primary,
-  '--secondary-color': props.colors.secondary,
-  '--text-primary': props.colors.textPrimary,
-  '--text-secondary': props.colors.textSecondary,
-  '--card-bg': props.colors.cardBackground }))
-    
 const screen = ref('start')
 const results = ref([])
 const swipeCard = ref(null)
