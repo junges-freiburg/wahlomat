@@ -463,7 +463,7 @@ body {
 
 .show-results-btn {
   padding: 16px 32px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border: none;
   border-radius: 12px;
