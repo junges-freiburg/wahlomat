@@ -475,6 +475,7 @@ body {
 
 .show-results-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 167, 84, 0.3);
 }
 
 @media (min-width: 768px) {
