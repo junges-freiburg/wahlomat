@@ -462,12 +462,9 @@ defineExpose({ swipeLeft, swipeRight })
 }
 	
 @media (min-width: 768px) {
-  .swipe-card {
-    height: min(60vh, 520px);
-  }
-
+	
   .these-text {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .card-body {
   	display: flex;
