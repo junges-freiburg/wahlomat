@@ -68,6 +68,7 @@ defineEmits(['show-results'])
   flex-direction: column;
   min-height: 0;
   padding-bottom: 100px;
+  flex: 1;
 }
   
 .header {
@@ -150,7 +151,7 @@ defineEmits(['show-results'])
 }
 
 .actions {
-    position: sticky;
+  margin-top: auto;
   bottom: 0;
   background: var(--background);
   padding: 16px 20px;
