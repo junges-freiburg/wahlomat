@@ -100,7 +100,6 @@ defineEmits(['show-results'])
   flex-direction: column;
   gap: 8px;
   padding-bottom: 120px;
-  margin-bottom: 10px;
 }
 
 .position-item {
@@ -214,6 +213,6 @@ defineEmits(['show-results'])
   display: flex;
   justify-content: center;
   margin-top: 8px;
-
+  margin-bottom: 5px;
 }
 </style>
