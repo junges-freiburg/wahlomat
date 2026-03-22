@@ -95,6 +95,16 @@
         />
        
 </div>
+      <WeightingScreen
+        v-else-if="screen === 'weighting'"
+        :answered-positions="answeredPositions"
+        :colors="config.colors"
+        :texts="config.texts"
+        :is-position-weighted="isPositionWeighted"
+        :toggle-weight="toggleWeight"
+        @show-results="showResults"
+      />
+
       <ResultsView
         v-else-if="screen === 'results'"
         :results="results"
@@ -107,6 +117,8 @@
         @restart="restart"
       />
     </template>
+
+    <FooterLinks v-if="config" :footer="config.footer" />
   </div>
 </template>
 
@@ -121,6 +133,8 @@ import SwipeCard from './components/SwipeCard.vue'
 import ActionButtons from './components/ActionButtons.vue'
 import ProgressBar from './components/ProgressBar.vue'
 import ResultsView from './components/ResultsView.vue'
+import WeightingScreen from './components/WeightingScreen.vue'
+import FooterLinks from './components/FooterLinks.vue'
 
 const history = ref([])
   
@@ -162,6 +176,10 @@ const isCurrentPositionWeighted = computed(() => {
   if (!currentPosition.value) return false
   return isPositionWeighted(currentPosition.value.id)
 })
+
+const answeredPositions = computed(() =>
+  positionen.value.filter(p => userAnswers.value[p.id] !== undefined)
+)
 
 const appStyles = computed(() => {
   if (!config.value) return {}
@@ -239,6 +257,10 @@ function toggleWeightForCurrent() {
 }
 
 function showResults() {
+  if (config.value?.settings?.showWeightingScreen && screen.value !== 'weighting') {
+    screen.value = 'weighting'
+    return
+  }
   results.value = calculateResults()
   screen.value = 'results'
 }
@@ -311,6 +333,14 @@ function handleKeydown(e) {
       e.preventDefault()
       showResults()
     }
+  }
+
+  if (screen.value === 'weighting') {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      showResults()
+    }
+    return
   }
 
   if (screen.value === 'results') {

@@ -50,7 +50,9 @@
     "shareDownloadButton": "Sharepic speichern",
     "shareImageError": "Sharepic konnte nicht erstellt werden.",
     "copyLinkButton": "Link kopieren",
-    "linkCopied": "Link kopiert!"
+    "linkCopied": "Link kopiert!",
+    "weightingScreenTitle": "Thesen gewichten",
+    "weightingScreenSubtitle": "Markiere Thesen, die dir besonders wichtig sind – sie zählen dann doppelt."
   },
  "intro": {
   "enabled": true,
@@ -62,12 +64,23 @@
     }
   ]
 },
+  "footer": {
+    "privacyPolicy": {
+      "label": "Datenschutz",
+      "url": "https://jungesfreiburg.de/impressum/"
+    },
+    "imprint": {
+      "label": "Impressum",
+      "url": "https://jungesfreiburg.de/impressum/"
+    }
+  },
   "settings": {
     "showPartyLogos": true,
     "showExplanations": true,
     "enableSwipeGestures": true,
     "cardAnimationDuration": 300,
     "showIntro": true,
-    "showPartiesBeforeStart": true
+    "showPartiesBeforeStart": true,
+    "showWeightingScreen": true
   }
 }
