@@ -36,8 +36,6 @@
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
     </div>
-
-    <FooterLinks :footer="footer" />
   </div>
 </div>
   </div>
