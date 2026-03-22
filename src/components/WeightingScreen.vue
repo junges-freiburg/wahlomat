@@ -192,30 +192,27 @@ defineEmits(['show-results'])
   bottom: 0;
   left: 0;
   right: 0;
-
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
+  background: var(--background);  /* ← hier */
   padding: 12px 16px;
-  
   z-index: 999;
-}
-
-  .footer {
-  bottom-margin: 2%;
-  width: 100%;
-  background-color: black;
 }
 
 .bottom-inner {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 12px;
 }
 
-  </style>
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+</style>
