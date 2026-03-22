@@ -29,14 +29,17 @@
     </div>
 </div>
     
-    <div class="bottom-area">
-  <div class="actions">
-    <button class="results-btn" @click="$emit('show-results')">
-      {{ texts.showResults || 'Ergebnisse anzeigen' }}
-    </button>
-  </div>
+  <div class="bottom-area">
+  <div class="bottom-inner">
+    <div class="actions">
+      <button class="results-btn" @click="$emit('show-results')">
+        {{ texts.showResults || 'Ergebnisse anzeigen' }}
+      </button>
+    </div>
 
-  <FooterLinks :footer="footer" />
+    <FooterLinks :footer="footer" />
+    <p style="color:red">TEST</p>
+  </div>
 </div>
   </div>
 </template>
@@ -159,6 +162,7 @@ defineEmits(['show-results'])
   right: 0;
 
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 
@@ -168,6 +172,14 @@ defineEmits(['show-results'])
   border-top: 1px solid rgba(255,255,255,0.1);
   
   z-index: 100;
+}
+
+.bottom-inner {
+  width: 100%;
+  max-width: 400px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 12px;
 }
   
 .footer-links {
