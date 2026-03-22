@@ -29,15 +29,13 @@
     </div>
 </div>
     
-    <div class="actions">
-      <div class="actions-inner">
-      <button class="results-btn" @click="$emit('show-results')" :style="{ background: `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})` }">
-        {{ texts.showResults || 'Ergebnisse anzeigen' }}
-      </button>
-    </div>
-    </div>
-    
-    <div class="footer">
+    <div class="bottom-area">
+  <div class="actions">
+    <button class="results-btn" @click="$emit('show-results')">
+      {{ texts.showResults || 'Ergebnisse anzeigen' }}
+    </button>
+  </div>
+
   <FooterLinks :footer="footer" />
 </div>
   </div>
@@ -96,7 +94,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-bottom: 120px;
+  padding-bottom: 160px;
 }
 
 .position-item {
@@ -154,7 +152,29 @@ defineEmits(['show-results'])
   white-space: nowrap;
 }
 
-.actions {
+.bottom-area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: var(--background);
+  padding: 12px 16px;
+  z-index: 100;
+}
+  
+.actions, 
+.footer-links {
+  .footer-links {
+  width: 100%;
+  max-width: 400px;
+}
+
+  .actions {
   position: fixed;
   bottom: 0;
   left: 0;
