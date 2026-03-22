@@ -24,16 +24,14 @@ const hasLinks = computed(() =>
 
 <style scoped>
 .footer-links {
-  position: fixed;
-  bottom: max(8px, env(safe-area-inset-bottom));
-  left: 0;
-  right: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto 20px auto;
+
   display: flex;
   justify-content: center;
   gap: 6px;
   align-items: center;
-  pointer-events: none;
-  z-index: 100;
 }
 
 .footer-links a {
