@@ -214,7 +214,7 @@ defineEmits(['show-results'])
   display: flex;
   justify-content: center;
   margin-top: 8px;
-  z-index: 10000;
+  margin-bottom: -30px;
 
 }
 </style>
