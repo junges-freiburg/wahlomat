@@ -35,6 +35,7 @@ const hasLinks = computed(() =>
   justify-content: center;
   gap: 6px;
   align-items: center;
+  background-color: black;
 }
 
 .footer-links a {
