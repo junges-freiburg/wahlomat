@@ -189,6 +189,7 @@ defineEmits(['show-results'])
   background: var(--background);  /* ← hier */
   padding: 12px 16px;
   z-index: 999;
+  margin-top: 10px;
 }
 
 .bottom-inner {
@@ -214,7 +215,7 @@ defineEmits(['show-results'])
   display: flex;
   justify-content: center;
   margin-top: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
 }
 </style>
