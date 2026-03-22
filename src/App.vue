@@ -392,6 +392,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  margin-top: auto;
 }
 
 .loading,
