@@ -174,6 +174,7 @@ defineEmits(['show-results'])
 .bottom-inner {
   width: 100%;
   max-width: 400px;
+  margin: 0 auto;
 
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 12px;
