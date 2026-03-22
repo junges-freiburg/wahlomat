@@ -106,7 +106,7 @@
       />
 
    </template>
-    <FooterLinks v-if="config" :footer="config.footer" />
+    <FooterLinks v-if="config && screen !== 'weighting'" :footer="config.footer" />
   </div>
 </template>
 
