@@ -36,11 +36,12 @@
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
     </div>
-    <div class="footer">
-      <FooterLinks :footer="footer" /> 
     </div>
   </div>
-</div>
+    
+<div class="footer">
+      <FooterLinks :footer="footer" /> 
+    </div>
   </div>
 </template>
 
