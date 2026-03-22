@@ -79,7 +79,7 @@
     :class="{ visible: canUndo }"
     @click="undoLast"
       >
-          ↩ zurück
+          zur vorigen These springen
         </button>
       </div>
     </div>
