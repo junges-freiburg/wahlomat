@@ -36,7 +36,9 @@
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
     </div>
-    <FooterLinks :footer="footer" /> 
+    <div class="footer">
+      <FooterLinks :footer="footer" /> 
+    </div>
   </div>
 </div>
   </div>
@@ -189,6 +191,12 @@ defineEmits(['show-results'])
   background: var(--background);
   padding: 16px;
   z-index: 100;
+}
+
+.footer {
+  bottom-margin: 2%;
+  width: 100%;
+  background-color: black;
 }
   
 .results-btn {
