@@ -54,7 +54,6 @@ defineEmits(['show-results'])
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   color: var(--text-secondary);
   min-height: 0;
 }
@@ -150,7 +149,6 @@ defineEmits(['show-results'])
 
 .actions {
   position: sticky;
-  margin-top: auto;
   bottom: 0;
   background: var(--background);
   padding: 16px 20px;
