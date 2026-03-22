@@ -28,20 +28,19 @@
       </div>
     </div>
 </div>
-    
+
   <div class="bottom-area">
   <div class="bottom-inner">
     <div class="actions">
       <button class="results-btn" @click="$emit('show-results')">
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
+      <div class="footer">
+      <FooterLinks :footer="footer" /> 
+    </div>
     </div>
     </div>
   </div>
-    
-<div class="footer">
-      <FooterLinks :footer="footer" /> 
-    </div>
   </div>
 </template>
 
@@ -158,23 +157,6 @@ defineEmits(['show-results'])
   white-space: nowrap;
 }
 
-.bottom-area {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
-  background: var(--background);
-  padding: 12px 16px;
-  
-  z-index: 999;
-}
-
 .bottom-inner {
   width: 100%;
   max-width: 400px;
@@ -218,3 +200,23 @@ defineEmits(['show-results'])
   transform: translateY(-2px);
 }
 </style>
+
+<style>
+  .bottom-area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: black;
+  padding: 12px 16px;
+  
+  z-index: 999;
+}
+
+  </style>
