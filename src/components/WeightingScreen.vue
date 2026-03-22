@@ -36,12 +36,15 @@
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
     </div>
+    <FooterLinks :footer="footer" /> 
   </div>
 </div>
   </div>
 </template>
 
 <script setup>
+import FooterLinks from './FooterLinks.vue'
+  
 defineProps({
   answeredPositions: { type: Array, required: true },
   colors: { type: Object, required: true },
