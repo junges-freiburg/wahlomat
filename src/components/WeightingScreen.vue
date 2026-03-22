@@ -164,12 +164,27 @@ defineEmits(['show-results'])
 
   background: var(--background);
   padding: 12px 16px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+  
   z-index: 100;
 }
   
 .footer-links {
   width: 100%;
   max-width: 400px;
+
+  argin-top: 8px;
+
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+}
+
+.footer-links a {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .actions {
@@ -193,6 +208,7 @@ defineEmits(['show-results'])
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
 .results-btn:hover {
