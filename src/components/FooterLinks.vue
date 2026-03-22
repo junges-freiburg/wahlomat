@@ -26,7 +26,8 @@ const hasLinks = computed(() =>
 .footer-links {
   width: 100%;
   max-width: 400px;
-  margin: 40px auto 20px auto;
+
+  margin-top: 8px;
 
   display: flex;
   justify-content: center;
@@ -35,15 +36,14 @@ const hasLinks = computed(() =>
 }
 
 .footer-links a {
-  pointer-events: auto;
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .footer-links a:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .separator {
