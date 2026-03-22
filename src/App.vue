@@ -50,14 +50,7 @@
 
         <div class="card-container">
           <div class="card-stack">
-            <div v-if="!hasMorePositions" class="no-more-cards">
-              <h2>{{ config.texts.noMoreCards }}</h2>
-              <button class="show-results-btn" @click="showResults">
-                {{ config.texts.showResults }}
-              </button>
-            </div>
             
-
           <SwipeCard
             v-else
             ref="swipeCard"
@@ -123,7 +116,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { loadConfig, useConfig } from './composables/useConfig'
 import { useWahlomat } from './composables/useWahlomat'
 import IntroScreen from './components/IntroScreen.vue'
@@ -181,6 +174,12 @@ const answeredPositions = computed(() =>
   positionen.value.filter(p => userAnswers.value[p.id] !== undefined)
 )
 
+watch(hasMorePositions, (newValue) => {
+  if (!newValue && screen.value === 'quiz') {
+    showResults()
+  }
+})
+  
 const appStyles = computed(() => {
   if (!config.value) return {}
   return {
