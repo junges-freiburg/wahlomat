@@ -56,7 +56,7 @@ defineEmits(['show-results'])
   flex-direction: column;
   justify-content: center;
   color: var(--text-secondary);
-  overflow: hidden;
+  overflow-y: auto;
   min-height: 0;
 }
 
@@ -66,7 +66,6 @@ defineEmits(['show-results'])
   margin: 0 auto;     
   display: flex;
   flex-direction: column;
-  flex: 1;
   min-height: 0;
 }
   
@@ -88,13 +87,10 @@ defineEmits(['show-results'])
 }
 
 .positions-list {
-  flex: 1;
-  overflow-y: auto;
   padding: 8px 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  min-height: 0;
 }
 
 .position-item {
@@ -153,9 +149,10 @@ defineEmits(['show-results'])
 }
 
 .actions {
-  padding: 16px 20px max(20px, env(safe-area-inset-bottom));
-  flex-shrink: 0;
-  margin-top: auto;
+    position: sticky;
+  bottom: 0;
+  background: var(--background);
+  padding: 16px 20px;
 }
 
 .results-btn {
