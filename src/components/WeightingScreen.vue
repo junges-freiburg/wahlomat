@@ -156,16 +156,6 @@ defineEmits(['show-results'])
   font-size: 0.65rem;
   white-space: nowrap;
 }
-
-.actions {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
-  background: var(--background);
-  padding: 16px;
-  z-index: 100;
-}
   
 .results-btn {
   width: 100%;
@@ -210,6 +200,15 @@ defineEmits(['show-results'])
   background-color: black;
 }
 
+.actions {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+  
 .footer {
   width: 100%;
   display: flex;
