@@ -38,8 +38,6 @@
     </div>
 
     <FooterLinks :footer="footer" />
-    <p style="color:red">TEST</p>
-    <pre style="color: white">{{ footer }}</pre>
   </div>
 </div>
   </div>
@@ -193,6 +191,7 @@ defineEmits(['show-results'])
   justify-content: center;
   gap: 6px;
   align-items: center;
+  z-index: 101;
 }
 
 .footer-links a {
