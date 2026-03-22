@@ -46,13 +46,6 @@
         </svg>
       </button>
 
-      <button v-if="showPartiesButton" class="parties-btn" @click="$emit('show-parties')">
-        <span>{{ texts.showPartiesButton }}</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="7 7 17 12 7 17"></polyline>
-        </svg>
-      </button>
-
       <p class="party-count">{{ partyCount }} Kandidaten · {{ questionCount }} Thesen</p>
     </div>
   </div>
@@ -85,14 +78,10 @@ const props = defineProps({
   questionCount: {
     type: Number,
     required: true
-  },
-  showPartiesButton: {
-    type: Boolean,
-    default: false
   }
 })
 
-defineEmits(['start', 'show-parties'])
+defineEmits(['start'])
 
 const screenStyles = computed(() => ({
   '--primary-color': props.colors.primary,
@@ -234,34 +223,6 @@ const screenStyles = computed(() => ({
 
 .start-btn:active {
   transform: translateY(0);
-}
-
-.parties-btn {
-  width: 100%;
-  margin-top: 16px;
-  padding: 16px 32px;
-  border-radius: 16px;
-  border: none;
-  background: rgba(255, 167, 84, 0.8);
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-}
-
-.parties-btn:hover {
-  border-color: var(--primary-color);
-  background: rgba(255, 167, 84, 0.7);
-  transform: translateY(-1px);
-}
-
-.parties-btn svg {
-  color: var(--text-secondary);
 }
 
 .party-count {
