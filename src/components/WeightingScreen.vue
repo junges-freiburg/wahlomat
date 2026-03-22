@@ -27,14 +27,14 @@
         </button>
       </div>
     </div>
-
+</div>
+    
     <div class="actions">
       <button class="results-btn" @click="$emit('show-results')" :style="{ background: `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})` }">
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
     </div>
   </div>
-</div>
 </template>
 
 <script setup>
