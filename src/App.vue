@@ -35,15 +35,6 @@
         @show-parties="showParties"
       />
 
-      <PartiesOverview
-        v-else-if="screen === 'parties'"
-        :parteien="parteien"
-        :colors="config.colors"
-        :texts="config.texts"
-        @back="screen = 'start'"
-        @start="startQuiz"
-      />
-
       <div v-else-if="screen === 'quiz'" class="quiz-screen">
         <ProgressBar
           :current="progress.current"
@@ -89,7 +80,6 @@
           @neutral="handleNeutral"
         />
        
-</div>
       <WeightingScreen
         v-else-if="screen === 'weighting'"
         :answered-positions="answeredPositions"
@@ -114,6 +104,7 @@
       />
 
       </template>
+    </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
