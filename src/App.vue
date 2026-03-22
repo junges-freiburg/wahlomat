@@ -106,6 +106,7 @@
       />
 
    </template>
+    <FooterLinks v-if="config" :footer="config.footer" />
   </div>
 </template>
 
