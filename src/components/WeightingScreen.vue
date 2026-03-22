@@ -52,12 +52,14 @@ defineEmits(['show-results'])
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: var(--text-secondary);
   overflow: hidden;
+  min-height: 0;
 }
 
 .header {
-  padding: 24px 20px 12px;
+  padding: 20px 20px 12px;
   text-align: center;
   flex-shrink: 0;
 }
@@ -80,6 +82,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-height: 0;
 }
 
 .position-item {
@@ -140,6 +143,7 @@ defineEmits(['show-results'])
 .actions {
   padding: 16px 20px max(20px, env(safe-area-inset-bottom));
   flex-shrink: 0;
+  margin-top: auto;
 }
 
 .results-btn {
