@@ -67,6 +67,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   min-height: 0;
+  padding-bottom: 100px;
 }
   
 .header {
@@ -153,6 +154,7 @@ defineEmits(['show-results'])
   bottom: 0;
   background: var(--background);
   padding: 16px 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .results-btn {
