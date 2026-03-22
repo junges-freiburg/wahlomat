@@ -39,6 +39,7 @@
 
     <FooterLinks :footer="footer" />
     <p style="color:red">TEST</p>
+    <pre style="color: white">{{ footer }}</pre>
   </div>
 </div>
   </div>
