@@ -54,7 +54,7 @@ defineEmits(['show-results'])
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   color: var(--text-secondary);
   overflow: hidden;
   min-height: 0;
@@ -62,11 +62,12 @@ defineEmits(['show-results'])
 
 .content {
   width: 100%;
-  max-width: 420px;   
+  max-width: 400px;   
   margin: 0 auto;     
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-height: 0;
 }
   
 .header {
