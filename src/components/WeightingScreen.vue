@@ -1,5 +1,6 @@
 <template>
   <div class="weighting-screen">
+    <div class="content">
     <div class="header">
       <h1>{{ texts.weightingScreenTitle || 'Doppelt gewichten' }}</h1>
       <p class="subtitle">{{ texts.weightingScreenSubtitle || 'Welche Thesen sind dir besonders wichtig?' }}</p>
@@ -33,6 +34,7 @@
       </button>
     </div>
   </div>
+</div>
 </template>
 
 <script setup>
@@ -58,6 +60,15 @@ defineEmits(['show-results'])
   min-height: 0;
 }
 
+.content {
+  width: 100%;
+  max-width: 420px;   
+  margin: 0 auto;     
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+  
 .header {
   padding: 20px 20px 12px;
   text-align: center;
