@@ -1,5 +1,8 @@
 <template>
-  <div class="app" :style="[appStyles, screenStyles]">
+  <div class="app"
+  :class="{ 'has-bottom-ui': screen === 'weighting' }"
+  :style="[appStyles, screenStyles]"
+>
       <div v-if="isLoading" class="loading">
         <div class="loading-spinner"></div>
         <p>Laden...</p>
@@ -504,6 +507,10 @@ body {
   font-size: 1.5rem;
 }
 
+.has-bottom-ui .footer-links {
+  margin-bottom: 120px;
+}
+  
 .show-results-btn {
   padding: 16px 32px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
