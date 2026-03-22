@@ -175,12 +175,6 @@ defineEmits(['show-results'])
   padding: 16px;
   z-index: 100;
 }
-
-.footer {
-  bottom-margin: 2%;
-  width: 100%;
-  background-color: black;
-}
   
 .results-btn {
   width: 100%;
@@ -202,7 +196,7 @@ defineEmits(['show-results'])
 </style>
 
 <style>
-  .bottom-area {
+.bottom-area {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -213,10 +207,15 @@ defineEmits(['show-results'])
   flex-direction: column;
   align-items: center;
 
-  background-color: black;
   padding: 12px 16px;
   
   z-index: 999;
+}
+
+  .footer {
+  bottom-margin: 2%;
+  width: 100%;
+  background-color: black;
 }
 
   </style>
