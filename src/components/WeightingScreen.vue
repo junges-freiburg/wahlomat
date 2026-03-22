@@ -96,7 +96,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-bottom: 160px;
+  padding-bottom: 200px;
 }
 
 .position-item {
@@ -168,7 +168,7 @@ defineEmits(['show-results'])
   background: var(--background);
   padding: 12px 16px;
   
-  z-index: 100;
+  z-index: 999;
 }
 
 .bottom-inner {
