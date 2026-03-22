@@ -29,7 +29,7 @@
 
       <div class="intro-buttons">
         <button class="btn-primary" @click="$emit('done')">
-          Zur Erklärung
+          Weiter
         </button>
       </div>
     </div>
