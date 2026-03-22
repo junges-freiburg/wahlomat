@@ -56,7 +56,6 @@ defineEmits(['show-results'])
   flex-direction: column;
   justify-content: center;
   color: var(--text-secondary);
-  overflow-y: auto;
   min-height: 0;
 }
 
@@ -151,11 +150,13 @@ defineEmits(['show-results'])
 }
 
 .actions {
+  position: sticky;
   margin-top: auto;
   bottom: 0;
   background: var(--background);
   padding: 16px 20px;
   border-top: 1px solid rgba(255,255,255,0.1);
+  z-index: 10;
 }
 
 .results-btn {
