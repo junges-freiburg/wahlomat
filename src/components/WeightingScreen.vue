@@ -30,17 +30,17 @@
 </div>
 
   <div class="bottom-area">
-  <div class="bottom-inner">
-    <div class="actions">
-      <button class="results-btn" @click="$emit('show-results')">
-        {{ texts.showResults || 'Ergebnisse anzeigen' }}
-      </button>
+    <div class="bottom-inner">
+      <div class="actions">
+        <button class="results-btn" @click="$emit('show-results')">
+          {{ texts.showResults || 'Ergebnisse anzeigen' }}
+        </button>
       </div>
-      <div class="footer">
-      <FooterLinks :footer="footer" /> 
+        <div class="footer">
+        <FooterLinks :footer="footer" /> 
+      </div>
+      </div>
     </div>
-    </div>
-  </div>
   </div>
 </template>
 
