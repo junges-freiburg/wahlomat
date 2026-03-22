@@ -100,6 +100,7 @@ defineEmits(['show-results'])
   flex-direction: column;
   gap: 8px;
   padding-bottom: 120px;
+  margin-bottom: 10px;
 }
 
 .position-item {
@@ -189,7 +190,6 @@ defineEmits(['show-results'])
   background: var(--background);  /* ← hier */
   padding: 12px 16px;
   z-index: 999;
-  margin-top: 10px;
 }
 
 .bottom-inner {
@@ -198,7 +198,6 @@ defineEmits(['show-results'])
   margin: 0 auto;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 12px;
-  background-color: black;
 }
 
 .actions {
@@ -215,7 +214,7 @@ defineEmits(['show-results'])
   display: flex;
   justify-content: center;
   margin-top: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
 }
 </style>
