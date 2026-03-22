@@ -79,7 +79,9 @@
           @disagree="handleDisagree"
           @neutral="handleNeutral"
         />
-       
+
+         </div>
+      
       <WeightingScreen
         v-else-if="screen === 'weighting'"
         :answered-positions="answeredPositions"
