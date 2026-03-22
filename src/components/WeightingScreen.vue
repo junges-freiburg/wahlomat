@@ -207,7 +207,6 @@ defineEmits(['show-results'])
   margin: 0 auto;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 12px;
-  margin-top: 8px;
 }
 
 .footer {
@@ -216,5 +215,7 @@ defineEmits(['show-results'])
   justify-content: center;
   margin-top: 8px;
   background-color: black;
+  z-index: 10000;
+
 }
 </style>
