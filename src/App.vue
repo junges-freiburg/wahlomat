@@ -52,7 +52,6 @@
           <div class="card-stack">
             
           <SwipeCard
-            v-else
             ref="swipeCard"
             :position="currentPosition"
             :current-index="currentIndex"
@@ -110,10 +109,11 @@
         @restart="restart"
       />
 
-      <FooterLinks 
-        v-if="config" :footer="config.footer" />
-  </div>
-    </template>
+      </template>
+
+        <FooterLinks v-if="config" :footer="config.footer" />
+        </div>
+      </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
