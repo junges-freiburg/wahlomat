@@ -39,7 +39,7 @@
             </svg>
           </button>
           <Transition name="slide">
-            <p v-if="explanationOpen" class="explanation-text">
+            <p v-show="explanationOpen" class="explanation-text">
               {{ position.erklaerung }}
             </p>
           </Transition>
@@ -377,7 +377,7 @@ defineExpose({ swipeLeft, swipeRight })
 }
 
 .explanation {
-  margin-top: auto;
+  margin-top: 12px;
 }
 
 .explanation-toggle {
@@ -445,19 +445,20 @@ defineExpose({ swipeLeft, swipeRight })
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 0.25s ease;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+  overflow: hidden;
 }
 
 .slide-enter-from,
 .slide-leave-to {
+  max-height: 0;
   opacity: 0;
-  transform: translateY(-6px);
 }
 
 .slide-enter-to,
 .slide-leave-from {
+  max-height: 200px;
   opacity: 1;
-  transform: translateY(0);
 }
 	
 @media (min-width: 768px) {
