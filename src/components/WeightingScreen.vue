@@ -30,9 +30,11 @@
 </div>
     
     <div class="actions">
+      <div class="actions-inner">
       <button class="results-btn" @click="$emit('show-results')" :style="{ background: `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})` }">
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
+    </div>
     </div>
   </div>
 </template>
@@ -156,10 +158,17 @@ defineEmits(['show-results'])
   justify-content: center;
   background: var(--background);
   padding: 16px;
-  border-top: 1px solid rgba(255,255,255,0.1);
   z-index: 100;
 }
 
+.actions-inner {
+  width: 100%;
+  max-width: 400px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 12px;
+}
+  
 .results-btn {
   width: 100%;
   max-width: 400px;
