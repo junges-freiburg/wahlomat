@@ -35,9 +35,9 @@
       <button class="results-btn" @click="$emit('show-results')">
         {{ texts.showResults || 'Ergebnisse anzeigen' }}
       </button>
+      </div>
       <div class="footer">
       <FooterLinks :footer="footer" /> 
-    </div>
     </div>
     </div>
   </div>
