@@ -36,6 +36,10 @@
       </button>
     </div>
     </div>
+    
+    <div class="footer">
+  <FooterLinks :footer="footer" />
+</div>
   </div>
 </template>
 
@@ -46,6 +50,7 @@ defineProps({
   texts: { type: Object, required: true },
   isPositionWeighted: { type: Function, required: true },
   toggleWeight: { type: Function, required: true }
+  footer: { type: Object, required: true }
 })
 
 defineEmits(['show-results'])
