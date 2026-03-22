@@ -167,8 +167,6 @@ defineEmits(['show-results'])
 
   background: var(--background);
   padding: 12px 16px;
-
-  border-top: 1px solid rgba(255,255,255,0.1);
   
   z-index: 100;
 }
@@ -179,24 +177,6 @@ defineEmits(['show-results'])
 
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 12px;
-}
-  
-.footer-links {
-  width: 100%;
-  max-width: 400px;
-
-  argin-top: 8px;
-
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  align-items: center;
-  z-index: 101;
-}
-
-.footer-links a {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .actions {
