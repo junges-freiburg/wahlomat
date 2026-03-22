@@ -94,6 +94,7 @@
         :texts="config.texts"
         :is-position-weighted="isPositionWeighted"
         :toggle-weight="toggleWeight"
+        :footer="config.footer"
         @show-results="showResults"
       />
 
