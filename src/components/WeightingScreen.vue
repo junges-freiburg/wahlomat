@@ -167,31 +167,19 @@ defineEmits(['show-results'])
   z-index: 100;
 }
   
-.actions, 
 .footer-links {
-  .footer-links {
   width: 100%;
   max-width: 400px;
 }
 
-  .actions {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.actions {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   background: var(--background);
   padding: 16px;
   z-index: 100;
-}
-
-.actions-inner {
-  width: 100%;
-  max-width: 400px;
-
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 12px;
 }
   
 .results-btn {
