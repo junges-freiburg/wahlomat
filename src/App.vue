@@ -103,8 +103,9 @@
         @restart="restart"
       />
 
-      </template>
-    </template>
+   </template>
+  </div>
+</template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
