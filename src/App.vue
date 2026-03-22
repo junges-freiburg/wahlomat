@@ -109,11 +109,11 @@
         :app-title="config.appTitle"
         @restart="restart"
       />
-    </template>
 
-    <FooterLinks v-if="config" :footer="config.footer" />
+      <FooterLinks 
+        v-if="config" :footer="config.footer" />
   </div>
-</template>
+    </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
