@@ -75,6 +75,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   min-height: 0;
+  margin-bottom: 20px;
 }
   
 .header {
