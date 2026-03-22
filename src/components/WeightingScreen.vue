@@ -157,15 +157,6 @@ defineEmits(['show-results'])
   white-space: nowrap;
 }
 
-.bottom-inner {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 12px;
-}
-
 .actions {
   width: 100%;
   max-width: 400px;
@@ -216,6 +207,15 @@ defineEmits(['show-results'])
   bottom-margin: 2%;
   width: 100%;
   background-color: black;
+}
+
+.bottom-inner {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 12px;
 }
 
   </style>
