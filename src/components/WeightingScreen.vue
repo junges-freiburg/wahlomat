@@ -148,17 +148,21 @@ defineEmits(['show-results'])
 }
 
 .actions {
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
   background: var(--background);
-  padding: 16px 20px;
+  padding: 16px;
   border-top: 1px solid rgba(255,255,255,0.1);
-  z-index: 10;
-  height: 80px;
+  z-index: 100;
 }
 
 .results-btn {
   width: 100%;
+  max-width: 400px;
   padding: 16px;
   color: white;
   border: none;
