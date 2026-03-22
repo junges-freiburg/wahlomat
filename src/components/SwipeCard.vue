@@ -289,7 +289,7 @@ defineExpose({ swipeLeft, swipeRight })
   width: calc(100% - 32px);
   margin: 0 auto;
   max-width: 360px;
-  min-height: 350px;
+  height: 375px;
   background: linear-gradient(
     135deg,
 	#ffaa33,
