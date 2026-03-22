@@ -26,6 +26,7 @@ const hasLinks = computed(() =>
 .footer-links {
   width: 100%;
   max-width: 400px;
+  margin: 8px auto 0 auto;
 
   margin-top: 8px;
 
