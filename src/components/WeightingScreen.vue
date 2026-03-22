@@ -66,9 +66,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   min-height: 0;
-  padding-bottom: 80px;
-  flex: 1;
-  overflow-y: auto;
+  padding-bottom: 120px;
 }
   
 .header {
