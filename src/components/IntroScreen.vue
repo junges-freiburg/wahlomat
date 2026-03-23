@@ -69,10 +69,11 @@ const screenStyles = computed(() => ({
 
 <style scoped>
 .intro-screen {
-  min-height: 100dvh;
+	 height: 100dvh;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+	 flex direction: column;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
   box-sizing: border-box;
 }
