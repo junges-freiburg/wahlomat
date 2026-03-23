@@ -27,6 +27,7 @@ const hasLinks = computed(() =>
   width: 100%;
   max-width: 400px;
   margin: 8px auto 0 auto;
+	 padding-bottom: 16px;
 
   display: flex;
   justify-content: center;
