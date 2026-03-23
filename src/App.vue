@@ -32,6 +32,7 @@
         :party-count="parteien.length"
         :question-count="positionen.length"
         :show-parties-button="config.settings.showPartiesBeforeStart"
+					  :footer="config.footer"
         @start="startQuiz"
         @show-parties="showParties"
       />
@@ -107,7 +108,7 @@
       />
 
    </template>
-    <FooterLinks v-if="config && screen !== 'weighting' && screen !== 'intro'" :footer="config.footer" />
+    <FooterLinks v-if="config && screen !== 'weighting' && screen !== 'intro' && screen !== 'start'" :footer="config.footer" />
   </div>
 </template>
 
