@@ -48,11 +48,13 @@
 
       <p class="party-count">{{ partyCount }} Kandidaten · {{ questionCount }} Thesen</p>
     </div>
+		<FooterLinks :footer="footer" />
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
+import FooterLinks from './FooterLinks.vue'
 
 const props = defineProps({
   appTitle: {
@@ -78,7 +80,8 @@ const props = defineProps({
   questionCount: {
     type: Number,
     required: true
-  }
+  },
+	 footer: { type: Object, default: () => ({}) }
 })
 
 defineEmits(['start'])
@@ -97,10 +100,11 @@ const screenStyles = computed(() => ({
 
 <style scoped>
 .start-screen {
-  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 8px;
   color: var(--text-primary);
 }
