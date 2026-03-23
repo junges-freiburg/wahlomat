@@ -74,7 +74,7 @@ const screenStyles = computed(() => ({
 .intro-screen {
 	 height: 100dvh;
   display: flex;
-	 flex direction: column;
+	 flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
