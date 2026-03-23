@@ -1,3 +1,4 @@
+
 <template>
   <div class="weighting-screen">
     <div class="content">
@@ -100,7 +101,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-bottom: 180px;
+  padding-bottom: 160px;
 }
 
 .position-item {
