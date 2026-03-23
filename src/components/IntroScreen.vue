@@ -33,11 +33,13 @@
         </button>
       </div>
     </div>
+		<FooterLinks :footer="footer" />
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
+import FooterLinks from './FooterLinks.vue'
 
 const props = defineProps({
   screens: {
@@ -51,7 +53,8 @@ const props = defineProps({
   texts: {
     type: Object,
     required: true
-  }
+  },
+footer: { type: Object, default: () => ({}) }
 })
 
 defineEmits(['done'])
