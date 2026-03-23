@@ -19,6 +19,7 @@
         :screens="config.intro.screens"
         :colors="config.colors"
         :texts="config.texts"
+						:footer="config.footer"
         @done="finishIntro"
       />
 
@@ -106,7 +107,7 @@
       />
 
    </template>
-    <FooterLinks v-if="config && screen !== 'weighting'" :footer="config.footer" />
+    <FooterLinks v-if="config && screen !== 'weighting' && screen !== 'intro'" :footer="config.footer" />
   </div>
 </template>
 
