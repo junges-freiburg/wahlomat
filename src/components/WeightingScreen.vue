@@ -100,7 +100,7 @@ defineEmits(['show-results'])
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-bottom: 120px;
+  padding-bottom: 180px;
 }
 
 .position-item {
