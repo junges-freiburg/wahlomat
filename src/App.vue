@@ -379,11 +379,13 @@ body {
 
 <style scoped>
 .app {
-  height: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  margin-top: auto;
+}
+
+.app > *:not(.footer-links) {
+  flex: 1;
 }
 
 .loading,
