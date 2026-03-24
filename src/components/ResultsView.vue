@@ -222,7 +222,7 @@ function getWeightedPositions(positions = []) {
 <style scoped>
 .results-view {
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px 20px 60px 20px;
   min-height: 100vh;
