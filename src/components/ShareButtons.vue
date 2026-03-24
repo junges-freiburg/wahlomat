@@ -228,12 +228,14 @@ async function shareUniversal() {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 	 margin-bottom: 16px;
+	 max-width: 400px;
+  margin: 16px auto;
 }
 
 .share-section h3 {
   font-size: 1.1rem;
   color: var(--text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-weight: 600;
 }
 
