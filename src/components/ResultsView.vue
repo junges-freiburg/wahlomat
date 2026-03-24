@@ -594,7 +594,7 @@ function getWeightedPositions(positions = []) {
 .restart-btn {
   width: 100%;
   padding: 16px;
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border: none;
   border-radius: 12px;
