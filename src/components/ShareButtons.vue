@@ -223,10 +223,11 @@ async function shareUniversal() {
 
 <style scoped>
 .share-section {
-  margin-top: 30px;
-  padding-top: 30px;
+  margin-top: 16px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
+	 margin-bottom: 16px;
 }
 
 .share-section h3 {
