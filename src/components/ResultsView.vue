@@ -222,11 +222,19 @@ function getWeightedPositions(positions = []) {
 <style scoped>
 .results-view {
   width: 100%;
-  max-width: 400px;
   margin: 0 auto;
   padding: 10px 10px 50px 10px;
   min-height: 100vh;
   color: var(--text-primary);
+}
+
+.results-header,
+.top-result,
+.results-list,
+.restart-btn {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .results-header {
@@ -324,6 +332,10 @@ function getWeightedPositions(positions = []) {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }
 
