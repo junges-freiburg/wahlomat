@@ -137,7 +137,7 @@ defineEmits(['show-results'])
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
   transition: all 0.2s;
-  width: 100px;
+  width: 120px;
 }
 
 .weight-btn.active {
