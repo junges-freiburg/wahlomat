@@ -328,7 +328,7 @@ function getWeightedPositions(positions = []) {
 }
 
 .result-item {
-  background: linear-gradient(135deg, #ffaa33, #ff953e);
+  background: linear-gradient(135deg, #ff953e, #ffaa33);
   border-radius: 16px;
   padding: 20px;
   cursor: pointer;
