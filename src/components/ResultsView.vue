@@ -614,6 +614,9 @@ function getWeightedPositions(positions = []) {
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
+	 display: block;          
+  margin-left: auto;       
+  margin-right: auto;   
 }
 
 .restart-btn:hover {
