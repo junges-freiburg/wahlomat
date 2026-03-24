@@ -224,7 +224,7 @@ function getWeightedPositions(positions = []) {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px 20px 60px 20px;
+  padding: 10px 10px 50px 10px;
   min-height: 100vh;
   color: var(--text-primary);
 }
