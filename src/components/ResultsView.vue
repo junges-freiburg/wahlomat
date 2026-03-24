@@ -328,7 +328,7 @@ function getWeightedPositions(positions = []) {
 }
 
 .result-item {
-  background: var(--card-bg);
+  background: background: linear-gradient(135deg, #ffaa33, #ff953e);
   border-radius: 16px;
   padding: 20px;
   cursor: pointer;
