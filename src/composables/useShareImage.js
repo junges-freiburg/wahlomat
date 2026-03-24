@@ -74,8 +74,8 @@ async function drawBackground(ctx, shareConfig, colors) {
     } catch (err) {
       console.warn(err.message)
       const gradient = ctx.createLinearGradient(0, 0, 0, CANVAS_HEIGHT)
-      const primary = colors?.primary || '#8b5cf6'
-      const background = colors?.background || '#0f172a'
+      const primary = colors?.primary || '#e27b29'
+      const background = colors?.background || '#2f2f2f'
       gradient.addColorStop(0, background)
       gradient.addColorStop(1, primary)
       ctx.fillStyle = gradient
@@ -84,8 +84,8 @@ async function drawBackground(ctx, shareConfig, colors) {
     }
   } else {
     const gradient = ctx.createLinearGradient(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
-    const primary = colors?.primary || '#8b5cf6'
-    const secondary = colors?.secondary || '#6366f1'
+    const primary = colors?.primary || '#e27b29'
+    const secondary = colors?.secondary || '#ffa754'
     gradient.addColorStop(0, primary)
     gradient.addColorStop(1, secondary)
     ctx.fillStyle = gradient
@@ -93,8 +93,8 @@ async function drawBackground(ctx, shareConfig, colors) {
   }
 
   const overlay = ctx.createLinearGradient(0, SAFE_AREA, 0, CANVAS_HEIGHT - SAFE_AREA)
-  overlay.addColorStop(0, 'rgba(15, 23, 42, 0.55)')
-  overlay.addColorStop(1, 'rgba(15, 23, 42, 0.2)')
+  overlay.addColorStop(0, 'rgba(47, 47, 47, 0.55)')
+  overlay.addColorStop(1, 'rgba(47, 47, 47, 0.2)')
   ctx.fillStyle = overlay
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
 }
@@ -112,19 +112,31 @@ function drawHearts(ctx) {
   ctx.setLineDash([])
 }
 
-function drawFooter(ctx, footerText, appTitle) {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.85)'
-  ctx.textAlign = 'center'
-  ctx.textBaseline = 'bottom'
-  ctx.font = "600 44px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  ctx.fillText(appTitle, CANVAS_WIDTH / 2, CANVAS_HEIGHT - SAFE_AREA + 40)
+function getImgRatio(img, fallbackRatio = 1) {
+  const w = img.naturalWidth || img.width || 0
+  const h = img.naturalHeight || img.height || 0
+  return (w > 0 && h > 0) ? w / h : fallbackRatio
+}
 
-  ctx.font = "400 34px 'Poppins', 'Montserrat', 'Segoe UI', sans-serif"
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.75)'
-  const lines = wrapText(ctx, footerText, CANVAS_WIDTH - SAFE_AREA * 2)
-  lines.forEach((line, index) => {
-    ctx.fillText(line, CANVAS_WIDTH / 2, CANVAS_HEIGHT - SAFE_AREA + 110 + index * 42)
-  })
+async function drawLogos(ctx, logoImg, jfLogoImg, logoSize = 120, jfLogoSize = 120) {
+  const gap = 48
+
+
+  // logo.svg viewBox: 1500 × 1350 → ratio ≈ 1.111
+  const mainRatio = getImgRatio(logoImg, 1500 / 1350)
+  const mainW = logoSize * mainRatio
+
+  // jflogo.svg viewBox: 2000 × 2000 → ratio = 1
+  const jfRatio = getImgRatio(jfLogoImg, 1)
+  const jfW = jfLogoSize * jfRatio
+
+  const totalW = mainW + gap + jfW
+  const startX = (CANVAS_WIDTH - totalW) / 2
+  // vertikale Mitte der verfügbaren Footer-Zone
+  const centerY = CANVAS_HEIGHT - SAFE_AREA + SAFE_AREA / 2
+
+  if (logoImg) ctx.drawImage(logoImg, startX, centerY - logoSize / 2, mainW, logoSize)
+  if (jfLogoImg) ctx.drawImage(jfLogoImg, startX + mainW + gap, centerY - jfLogoSize / 2, jfW, jfLogoSize)
 }
 
 function wrapText(ctx, text, maxWidth) {
@@ -150,8 +162,7 @@ export async function generateShareImage({
   topResult,
   shareConfig,
   colors,
-  texts,
-  appTitle
+  texts
 }) {
   if (!topResult) {
     throw new Error('TOP_RESULT_REQUIRED')
@@ -162,13 +173,18 @@ export async function generateShareImage({
   canvas.height = CANVAS_HEIGHT
   const ctx = canvas.getContext('2d')
 
+  const [logoImg, jfLogoImg] = await Promise.all([
+    loadImage('/logo.svg').catch(() => null),
+    loadImage('/jflogo.svg').catch(() => null)
+  ])
+
   await drawBackground(ctx, shareConfig, colors)
   drawHearts(ctx)
 
   const partyColor = topResult.partei?.farbe || colors?.primary || '#f472b6'
   const title = shareConfig?.title || "It's a match!"
   const percentageLabel = shareConfig?.percentageLabel || 'Übereinstimmung'
-  const footerText = shareConfig?.footerText || texts?.shareText || ''
+
   const partyName = topResult.partei?.name || 'Deine Partei'
   const percentage = Math.round(topResult.percentage)
   const statsTitle = shareConfig?.statsTitle || 'Deine Antworten'
@@ -254,7 +270,7 @@ export async function generateShareImage({
     ctx.fillText(stat.label, centerX, statY + 86)
   })
 
-  drawFooter(ctx, footerText, appTitle || 'Dein-Freiburg-Match')
+  await drawLogos(ctx, logoImg, jfLogoImg, shareConfig?.logoSize, shareConfig?.jfLogoSize)
 
   const blob = await new Promise((resolve, reject) => {
     canvas.toBlob(value => {

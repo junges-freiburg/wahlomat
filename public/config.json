@@ -8,7 +8,9 @@
     "title": "It's a match!",
     "subtitlePrefix": "Dein Match",
     "percentageLabel": "Übereinstimmung",
-    "footerText": "Swipe dich durch die Thesen und finde dein Bürgermeister-Match."
+    "footerText": "Swipe dich durch die Thesen und finde dein Bürgermeister-Match.",
+    "logoSize": 120,
+    "jfLogoSize": 200
   },
   "colors": {
     "primary": "#e27b29",
