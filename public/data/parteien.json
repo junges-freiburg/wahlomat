@@ -4,7 +4,7 @@
     "name": "Martin Horn",
     "kurzname": "MH",
     "farbe": "#e11d48",
-    "logo": "sfp.svg",
+    "logo": "horn.jpg",
     "beschreibung": "Amtierender Oberbürgermeister (Parteilos)"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Monika Stein",
     "kurzname": "MS",
     "farbe": "#27ae60",
-    "logo": "bm.svg",
+    "logo": "stein.jpeg",
     "beschreibung": "Ehemalige Stadträtin und Lehrerin (Parteilos)"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Florian Braune",
     "kurzname": "FB",
     "farbe": "#ebf55d",
-    "logo": "mut.svg",
+    "logo": "braune.png",
     "beschreibung": "Anwalt (Freie Wähler)"
 },
   {
@@ -44,7 +44,7 @@
     "name": "Martin Borgmann",
     "kurzname": "MB",
     "farbe": "#E31B23",
-    "logo": "mut.svg",
+    "logo": "borgmann.png",
     "beschreibung": "Doktorand in der Krebsforschung (Die PARTEI)"
 },
   {
