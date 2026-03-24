@@ -174,8 +174,8 @@ export async function generateShareImage({
   const ctx = canvas.getContext('2d')
 
   const [logoImg, jfLogoImg] = await Promise.all([
-    loadImage('/logo.svg').catch(() => null),
-    loadImage('/jflogo.svg').catch(() => null)
+    loadImage('./logo.svg').catch(() => null),
+    loadImage('./jflogo.svg').catch(() => null)
   ])
 
   await drawBackground(ctx, shareConfig, colors)

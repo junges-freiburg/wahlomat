@@ -4,7 +4,7 @@
   "shareUrl": "https://example.com/wahlomat",
   "shareHashtags": "Wahlomat,Politik,Wahl2026,Freiburg,Oberbürgermeister",
   "shareImage": {
-    "background": "/share/match-bg.svg",
+    "background": "./share/match-bg.svg",
     "title": "It's a match!",
     "subtitlePrefix": "Dein Match",
     "percentageLabel": "Übereinstimmung",
