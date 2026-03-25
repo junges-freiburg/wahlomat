@@ -606,7 +606,7 @@ function getWeightedPositions(positions = []) {
   margin-top: 8px;
   font-style: normal;
   background: rgba(0, 0, 0, 0.08);
-	 line-height: 0.5;
+	 line-height: 1.5;
   padding: 8px 10px;
 	 border-radius: 6px;
 	 border-left: 3px solid rgba(0, 0, 0, 0.2);
