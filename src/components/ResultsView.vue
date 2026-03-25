@@ -550,8 +550,8 @@ function getWeightedPositions(positions = []) {
   align-self: flex-start;
   font-size: 0.75rem;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.7);
-  background: rgba(255, 220, 50, 0.5);
+  color: rgba(180, 80, 0, 0.5);
+  background: rgba(255, 255,255, 0.9);
   border-radius: 12px;
   padding: 2px 8px;
 }
