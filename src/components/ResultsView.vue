@@ -600,7 +600,7 @@ function getWeightedPositions(positions = []) {
 
 .party-explanation {
   font-size: 13px;
-  color: color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
   margin-top: 8px;
   font-style: normal;
   background: rgba(0, 0, 0, 0.08);
