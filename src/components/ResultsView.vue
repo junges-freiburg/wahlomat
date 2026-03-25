@@ -65,11 +65,6 @@
 
         <Transition name="expand">
           <div v-if="expandedParty === result.partei.id" class="result-details">
-            <div class="detail-header">
-              <span class="detail-stat agree">{{ result.agrees }} Zustimmungen</span>
-              <span class="detail-stat neutral">{{ result.neutrals }} Neutral</span>
-              <span class="detail-stat disagree">{{ result.disagrees }} Ablehnungen</span>
-            </div>
             <div class="position-list">
               <div
                 v-for="pos in result.positions"
