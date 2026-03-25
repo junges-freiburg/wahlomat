@@ -408,6 +408,9 @@ defineExpose({ swipeLeft, swipeRight })
   padding: 12px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
+	 max-height: 120px;
+  overflow-y: auto;
+	 touch-action: pan-y;
 }
 
 .swipe-indicator {
@@ -475,5 +478,16 @@ defineExpose({ swipeLeft, swipeRight })
   .explanation {
   	overflow-y: auto;
 }
+}
+
+@media (max-width: 767px) {
+  .explanation-text {
+    font-size: 13px;
+    max-height: 100px;
+  }
+
+  .these-text {
+    font-size: 1.2rem;
+  }
 }
 </style>
