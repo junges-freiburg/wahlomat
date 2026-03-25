@@ -926,7 +926,7 @@ function getWeightedPositions(positions = []) {
 .intro-logo {
   width: 200px;
   height: 160px;
-  margin: 0 auto 20px;
+  margin: 0 auto 8px;
   display: block;
   align-items: center;
   justify-content: center;
