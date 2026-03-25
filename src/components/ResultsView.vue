@@ -607,6 +607,17 @@ function getWeightedPositions(positions = []) {
 	 line-height: 1.5;
   padding: 8px 10px;
 	 border-radius: 6px;
+	 border-left: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.explanation-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
 }
 
 .restart-btn {
