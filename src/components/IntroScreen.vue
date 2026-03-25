@@ -79,6 +79,7 @@ const screenStyles = computed(() => ({
   justify-content: space-between;
   padding: 20px;
   box-sizing: border-box;
+	 position: relative;
 }
 
 .intro-content {
@@ -92,7 +93,7 @@ const screenStyles = computed(() => ({
 }
   
 .brand-signature {
-  position: fixed;
+  position: absolute;
   top: 8px;
   right: 8px;
 
