@@ -12,14 +12,14 @@
         :class="{ active: activeView === 'candidates' }"
         @click="activeView = 'candidates'"
       >
-        👤 Nach Kandidaten
+        Nach Kandidaten
       </button>
       <button
         class="tab-btn"
         :class="{ active: activeView === 'topics' }"
         @click="activeView = 'topics'"
       >
-        📋 Nach Thesen
+        Nach Thesen
       </button>
     </div>
 
