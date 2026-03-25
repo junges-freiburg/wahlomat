@@ -90,7 +90,7 @@
                   </div>
                 </div>
                 <p v-if="pos.partyExplanation" class="party-explanation">
-  												<span class="explanation-label">💬 Begründung</span>
+  												<span class="explanation-label">💬 Begründung des Kandidaten</span>
   													{{ pos.partyExplanation }}
 													</p>
               </div>
