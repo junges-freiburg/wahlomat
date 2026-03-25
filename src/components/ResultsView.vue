@@ -1,5 +1,15 @@
 <template>
   <div class="results-view" :style="viewStyles">
+
+
+      <div class="brand-signature">
+        <span class="brand-by">by</span>
+        <img src="/jflogo.svg" alt="Junges Freiburg">
+      </div>
+      <div class="intro-icon">
+        <img src="/logo.svg" alt="Logo" class="intro-logo">
+      </div>
+
     <header class="results-header">
       <h1>{{ texts.resultsTitle }}</h1>
       <p>{{ texts.resultsSubtitle }}</p>
