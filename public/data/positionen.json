@@ -2,7 +2,7 @@
   {
     "id": "1",
     "these": "Das Nachtleben (z.B. Clubs, Bars und Konzerte) soll leichter zugänglich gemacht und stärker gefördert werden",
-    "erklaerung": "wip",
+    "erklaerung": "Freiburgs Attraktivität für junge Menschen hängt auch von der kulturellen Vielfalt des Nachtlebens ab. Wie offen ist die Stadt für Partykultur?",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -25,7 +25,7 @@
   {
     "id": "2",
     "these": "Zur Gestaltung von Schulhöfen soll mehr Geld bereitgestellt werden",
-    "erklaerung": "wip",
+    "erklaerung": "Gute Schulhöfe fördern Bewegung, Sozialverhalten und psychisches Wohlbefinden. Muss mehr investiert werden?",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -48,7 +48,7 @@
   {
     "id": "3",
     "these": "In Freiburg gibt es genug überdachte Orte, an denen man sich kostenlos aufhalten kann",
-    "erklaerung": "wip",
+    "erklaerung": "Kostenlose Treffpunkte, an denen sich junge Menschen unabhängig von Wetter aufhalten können sind essentiell für Freizeitgestaltung.",
     "positionen": {
       "a": -1,
       "b": -1,
@@ -71,7 +71,7 @@
   {
     "id": "4",
     "these": "Kinder und Jugendliche sollen bei Entscheidungen der Stadt mehr mit einbezogen werden",
-    "erklaerung": "wip",
+    "erklaerung": "Junge Menschen sind eine Minderheit und sollten deshalb demokratisch gefördert werden. Reicht die jetzige Beteiligung aus?",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -94,7 +94,7 @@
   {
     "id": "5",
     "these": "Das Verbot von Musikboxen und Instrumenten in Parks ab 22 Uhr soll wie bisher fortbestehen",
-    "erklaerung": "wip",
+    "erklaerung": "Abwägung zwischen Lärmschutz und Freiheitsrechten: Können sich junge Menschen frei in Parks treffen, oder überwiegt der Schutz der Anwohner*innen?",
     "positionen": {
       "a": -1,
       "b": -1,
@@ -117,7 +117,7 @@
   {
     "id": "6",
     "these": "Die/Der Oberbürgermeister*in sollte nicht auf Social Media präsent sein",
-    "erklaerung": "wip",
+    "erklaerung": "Sollen Politiker*innen Kanäle nutzen, auf denen sich junge Menschen informieren oder schadet Social Media der politischen Seriosität?",
     "positionen": {
       "a": -1,
       "b": -1,
@@ -140,7 +140,7 @@
   {
     "id": "7",
     "these": "Die Stadt sollte das Fahren mit Straßenbahnen und Bussen für junge Menschen zukünftig kostengünstiger gestalten",
-    "erklaerung": "wip",
+    "erklaerung": "Günstigere Mobilität für Jugendliche fördert Klimaschutz und Chancengleichheit. Nicht alle Familien können sich Fahrkarten leisten.",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -163,7 +163,7 @@
   {
     "id": "8",
     "these": "In neuen Wohngebieten soll ein fester Anteil bezahlbaren Wohnraums explizit für Studierende und Auszubildende reserviert werden",
-    "erklaerung": "wip",
+    "erklaerung": "Wohnraummangel trifft besonders junge Menschen. Gezielt reservierter Wohnraum könnte Überpreisungen verhindern.",
     "positionen": {
       "a": -1,
       "b": 1,
@@ -186,7 +186,7 @@
   {
     "id": "9",
     "these": "Die Stadt soll einen konkreten Plan entwickeln, damit Schultoiletten sauberer werden und funktionieren",
-    "erklaerung": "wip",
+    "erklaerung": "Funktionsfähige und saubere Schultoiletten sind Grundvoraussetzung für würdevollen Schulalltag und beeinflussen Gesundheit.",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -209,7 +209,7 @@
   {
     "id": "10",
     "these": "Einwegverpackungen von To-go-Speisen sollen weiterhin besteuert werden",
-    "erklaerung": "wip",
+    "erklaerung": "Steuer auf Verpackungen reduziert Plastikmüll und fördert Mehrwegsysteme. Zu viel Belastung oder Umweltverantwortung?",
     "positionen": {
       "a": -1,
       "b": 1,
@@ -232,7 +232,7 @@
   {
     "id": "11",
     "these": "Wichtige Busverbindungen in die Ortschaften und ins Freiburger Umland sollen an Wochenenden auch nach Mitternacht stündlich befahren werden",
-    "erklaerung": "wip",
+    "erklaerung": "Es werden Mobilitätsalternativen zum Auto geschaffen. Späte Rückkehroptionen sind vor allem nach Freizeitaktivitäten relevant.",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -255,7 +255,7 @@
   {
     "id": "12",
     "these": "Die Freiburger Innenstadt soll vollständig mit kostenfreiem WLAN ausgestattet werden",
-    "erklaerung": "wip",
+    "erklaerung": "Internet für alle schafft Chancengleichheit. Eine großflächige Austattung kann aber sehr teuer sein.",
     "positionen": {
       "a": 0,
       "b": 1,
@@ -278,7 +278,7 @@
 {
     "id": "13",
     "these": "In Schulmensen soll ausschließlich vegetarisches Essen angeboten werden",
-    "erklaerung": "wip",
+    "erklaerung": "Schule als Vorbild: Vegetarisches Essen ist tendenziell gesünder, klimaschützender und günstiger. Sinnvoll oder eine Beschränkung der Wahlfreiheit?",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -301,7 +301,7 @@
 {
     "id": "14",
     "these": "Die Rempartstraße sollte schnellstmöglich für Autos gesperrt werden, um den Universitätscampus autofrei zu machen",
-    "erklaerung": "wip",
+    "erklaerung": "Ein autofreier Campus verbessert Aufenthaltsqualität, Sicherheit und Klima an der Universität. Autos würden aber eine wichtige Durchfahrtsstraße verlieren.",
     "positionen": {
       "a": 1,
       "b": 1,
@@ -324,7 +324,7 @@
 {
     "id": "15",
     "these": "Polizei und Vollzugsdienst sollen nachts häufiger an öffentlichen Orten unterwegs sein",
-    "erklaerung": "wip",
+    "erklaerung": "Mehr Polizeipräsenz kann die Sicherheit erhöhen, aber auch als Überwachung empfunden werden.",
     "positionen": {
       "a": -1,
       "b": -1,
@@ -347,7 +347,7 @@
 {
     "id": "16",
     "these": "Schulen sollten Ruheräume haben, in die sich Schüler*innen zurückziehen können",
-    "erklaerung": "wip",
+    "erklaerung": "Schutzräume für Reizüberflutung und psychische Belastung, zugunsten mentaler Gesundheit im Schulalltag.",
     "positionen": {
       "a": 1,
       "b": 1,
