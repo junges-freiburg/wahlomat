@@ -485,9 +485,5 @@ defineExpose({ swipeLeft, swipeRight })
     font-size: 13px;
     max-height: 100px;
   }
-
-  .these-text {
-    font-size: 1.2rem;
-  }
 }
 </style>
