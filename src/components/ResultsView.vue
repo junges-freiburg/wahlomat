@@ -405,6 +405,7 @@ function getWeightedPositions(positions = []) {
 .party-name {
   font-weight: 500;
   font-size: 0.95rem;
+	 color: rgba(0, 0, 0, 0.9);
 }
 
 .match-info {
@@ -415,7 +416,7 @@ function getWeightedPositions(positions = []) {
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .match-label {
@@ -522,7 +523,7 @@ function getWeightedPositions(positions = []) {
 .position-item {
   padding: 12px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.15);  
   border-left: 3px solid transparent;
 }
 
@@ -563,6 +564,7 @@ function getWeightedPositions(positions = []) {
 .position-these {
   font-size: 14px;
   line-height: 1.4;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .position-comparison {
@@ -598,9 +600,13 @@ function getWeightedPositions(positions = []) {
 
 .party-explanation {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: color: rgba(0, 0, 0, 0.75);
   margin-top: 8px;
-  font-style: italic;
+  font-style: normal;
+  background: rgba(0, 0, 0, 0.08);
+	 line-height: 1.5;
+  padding: 8px 10px;
+	 border-radius: 6px;
 }
 
 .restart-btn {
