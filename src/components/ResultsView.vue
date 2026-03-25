@@ -536,9 +536,9 @@ function getWeightedPositions(positions = []) {
 }
 
 .position-item.weighted {
-  background: rgba(99, 102, 241, 0.15);
-  border-left-color: var(--primary-color);
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25);
+  background: rgba(0, 0, 0, 0.15);
+  border-left-color: rgba(0,0,0,0.4);
+  box-shadow: none;
 }
 
 .position-header {
@@ -551,8 +551,8 @@ function getWeightedPositions(positions = []) {
   align-self: flex-start;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--primary-color);
-  background: rgba(99, 102, 241, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 12px;
   padding: 2px 8px;
 }
