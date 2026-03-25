@@ -537,7 +537,7 @@ function getWeightedPositions(positions = []) {
 
 .position-item.weighted {
   background: rgba(0, 0, 0, 0.15);
-  border-left-color: rgba(0,0,0,0.4);
+  border-left: 3px solid rgba(255,220,50,0.9);
   box-shadow: none;
 }
 
@@ -552,7 +552,7 @@ function getWeightedPositions(positions = []) {
   font-size: 0.75rem;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.7);
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(255, 220, 50, 0.5);
   border-radius: 12px;
   padding: 2px 8px;
 }
