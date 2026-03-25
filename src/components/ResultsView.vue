@@ -90,8 +90,9 @@
                   </div>
                 </div>
                 <p v-if="pos.partyExplanation" class="party-explanation">
-                  {{ texts.partyPositionLabel }}: {{ pos.partyExplanation }}
-                </p>
+  												<span class="explanation-label">💬 Begründung</span>
+  													{{ pos.partyExplanation }}
+													</p>
               </div>
             </div>
             <div v-if="getWeightedPositions(result.positions).length" class="weighted-summary">
