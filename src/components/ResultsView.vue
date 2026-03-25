@@ -600,15 +600,17 @@ function getWeightedPositions(positions = []) {
 }
 
 .party-explanation {
+	 content: '„';
   font-size: 13px;
   color: rgba(0, 0, 0, 0.75);
   margin-top: 8px;
   font-style: normal;
   background: rgba(0, 0, 0, 0.08);
-	 line-height: 1.5;
+	 line-height: 0.5;
   padding: 8px 10px;
 	 border-radius: 6px;
 	 border-left: 3px solid rgba(0, 0, 0, 0.2);
+	 vertical-align: -0.4em;
 }
 
 .explanation-label {
