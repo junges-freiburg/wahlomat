@@ -923,6 +923,16 @@ function getWeightedPositions(positions = []) {
   width: auto;
 }
 
+.intro-logo {
+  width: 200px;
+  height: 160px;
+  margin: 0 auto 20px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
 @media (min-width: 768px) {
   .results-view { padding: 40px; }
   .results-header h1 { font-size: 2.2rem; }
