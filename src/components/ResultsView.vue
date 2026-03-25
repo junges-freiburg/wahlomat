@@ -91,7 +91,7 @@
                 </div>
                 <p v-if="pos.partyExplanation" class="party-explanation">
   												<span class="explanation-label">💬 Begründung des Kandidaten</span>
-  													{{ pos.partyExplanation }}
+  													„{{ pos.partyExplanation }}"
 													</p>
               </div>
             </div>
@@ -605,7 +605,7 @@ function getWeightedPositions(positions = []) {
   color: rgba(0, 0, 0, 0.75);
   margin-top: 8px;
   font-style: normal;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.35);
 	 line-height: 1.5;
   padding: 8px 10px;
 	 border-radius: 6px;
