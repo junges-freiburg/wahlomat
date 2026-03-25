@@ -379,7 +379,7 @@ defineExpose({ swipeLeft, swipeRight })
 
 .explanation {
   margin-top: 6px;
-	 min height: 0;
+	 min-height: 0;
 }
 
 .explanation-toggle {
