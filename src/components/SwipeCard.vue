@@ -374,10 +374,12 @@ defineExpose({ swipeLeft, swipeRight })
   color: var(--text-primary);
   font-weight: 600;
   margin-bottom: 20px;
+	 overflow: hidden;
 }
 
 .explanation {
   margin-top: 6px;
+	 min height: 0;
 }
 
 .explanation-toggle {
