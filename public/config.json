@@ -1,7 +1,7 @@
 {
   "appTitle": "Dein-Freiburg-Match",
   "appSubtitle": "Dein Info-Tool zur OB-Wahl Freiburg 2026",
-  "shareUrl": "https://example.com/wahlomat",
+  "shareUrl": "https://dein-freiburg-match.jungesfreiburg.de",
   "shareHashtags": "Wahlomat,Politik,Wahl2026,Freiburg,Oberbürgermeister",
   "shareImage": {
     "background": "./share/match-bg.svg",
