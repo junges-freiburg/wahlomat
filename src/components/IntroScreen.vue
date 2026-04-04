@@ -23,7 +23,7 @@
   </p>
 
   <p class="intro-note">
-    Alternative: <strong><a href="https://www.kandidatomat.de/">Kandidat-O-Mat</a></strong> der Landeszentrale für <br> politische Bildung.
+    Alternative: <strong><a href="https://www.kandidatomat.de/" target="_blank">Kandidat-O-Mat</a></strong> der Landeszentrale für <br> politische Bildung.
   </p>
 </div>
 
