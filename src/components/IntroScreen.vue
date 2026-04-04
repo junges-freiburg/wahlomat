@@ -19,11 +19,11 @@
   <p class="intro-text">
     Dein-Freiburg-Match ist ein kostenloses Informationstool, das von Junges Freiburg e.V.
     bereitgestellt wird. Die Inhalte spiegeln die Perspektive des Vereins wider
-    und erheben keinen Anspruch auf vollständige politische Neutralität oder Vollständigkeit.
+    und erheben keinen Anspruch auf politische Neutralität oder Vollständigkeit.
   </p>
 
   <p class="intro-note">
-    Alternative: <strong><a href="https://www.kommunal-o-mat.de/" target="_blank">Kommunal-O-Mat</a></strong> der Landeszentrale für <br> politische Bildung.
+    Alternative: <strong><a href="https://www.kandidatomat.de/">Kandidat-O-Mat</a></strong> der Landeszentrale für <br> politische Bildung.
   </p>
 </div>
 
